@@ -21,7 +21,7 @@ const Appointment = () => {
                 </button>
         </div>
 
-        <div className="flex items-center justify-center gap-6 mt-6">
+        <div className="flex items-center justify-center gap-6 my-6">
             <p>
                 <img src={assets.email_icon} alt="" className="text-red-700 inline-block" />
                 <span className="ml-2 text-white dark:text-gray-200">
