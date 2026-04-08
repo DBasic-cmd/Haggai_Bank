@@ -65,9 +65,9 @@ const Category = () => {
     return () => observer.disconnect();
   }, [categories]);
   return (
-    <div className="w-full py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 text-center">
+    <div className="w-full bg-gray-50 dark:bg-gray-700 py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 text-center">
       <div className="max-w-6xl mx-auto space-y-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl py-5 font-bold text-white dark:text-gray-200">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl py-5 font-bold text-gray-700 dark:text-gray-200">
           All Our Mortgage products you need to run your Housing plans with ease
         </h1>
 
@@ -106,17 +106,17 @@ const Category = () => {
               <h6 className="font-bold rounded-full bg-red-100 text-red-500 p-2 px-4 inline-block text-sm md:text-base mb-4">
                 {category.name}
               </h6>
-              <h3 className="text-xl md:text-2xl font-bold text-white dark:text-gray-200 mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-200 mb-4">
                 {category.title}
               </h3>
-              <p className="text-white dark:text-gray-400 text-base md:text-lg mb-6">
+              <p className="text-gray-700 dark:text-gray-400 text-base md:text-lg mb-6">
                 {category.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-white text-red-700 px-6 py-2 rounded-lg font-semibold hover:bg-red-700 hover:text-white transition-colors duration-200">
+                <button className="bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 hover:text-white transition-colors duration-200">
                   Open Account
                 </button>
-                <button className="text-white bg-transparent border border-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-red-700 transition-colors duration-200">
+                <button className="text-red-700 dark:bg-white dark:border-0 bg-transparent border border-red-700 px-6 py-2 rounded-lg font-semibold hover:bg-red-700 hover:text-white transition-colors duration-200">
                   Learn More
                 </button>
               </div>

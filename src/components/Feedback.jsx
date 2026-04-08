@@ -41,7 +41,7 @@ const Feedback = () => {
   return (
     <div className="w-full py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto space-y-12">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-gray-200 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200 text-center">
           Why Customers Choose Haggai
         </h1>
 

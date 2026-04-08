@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div id='banner' className='grid grid-cols-4 px-5 gap-3 bg-white py-5 text-red-700'>
+    <div id='banner' className='grid grid-cols-4 px-5 gap-3 bg-red-700 py-5 text-white'>
         <div className='text-center items-center' >
             <h6>8710+</h6>
             <p className='opacity-75'>Clients Served</p>

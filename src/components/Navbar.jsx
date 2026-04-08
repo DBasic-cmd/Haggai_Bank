@@ -16,7 +16,7 @@ const Navbar = ({theme, setTheme}) => {
         height={20}
       />
 
-      <div className={`flex text-white dark:text-white lg:text-sm ${!sidebarOpen ? 'max-lg:w-0 overflow-hidden': 'max-lg:w-60 max-lg:pl-10'} max-lg:fixed top-0 bottom-0 right-0 max-lg:min-h-screen max-lg:h-full max-lg:flex-col max-lg:bg-red-500 max-lg:text-white max-lg:pt-20 lg:items-center gap-5 transition-all`}>
+      <div className={`flex text-gray-700 dark:text-white lg:text-sm ${!sidebarOpen ? 'max-lg:w-0 overflow-hidden': 'max-lg:w-60 max-lg:pl-10'} max-lg:fixed top-0 bottom-0 right-0 max-lg:min-h-screen max-lg:h-full max-lg:flex-col max-lg:bg-white max-lg:text-white max-lg:pt-20 lg:items-center gap-5 transition-all`}>
         
         <img src={assets.close_icon} alt="" className="w-5 absolute right-4 top-4 lg:hidden " onClick={() => setSidebarOpen(false)}/>
         
@@ -47,7 +47,7 @@ const Navbar = ({theme, setTheme}) => {
 
          <a
           href="#internet-banking"
-          className=" border border-white text-sm rounded-lg  px-4 py-2  hover:bg-white hover:text-red-700 text-white transition-colors hidden md:inline-flex items-center gap-2"
+          className=" border border-red-700 text-sm rounded-lg dark:bg-white dark:border-0  px-4 py-2  hover:bg-red-700 hover:text-white text-red-700 transition-colors hidden md:inline-flex items-center gap-2"
         >
           Internet Banking
           
@@ -55,7 +55,7 @@ const Navbar = ({theme, setTheme}) => {
 
         <a
           href="#create-account"
-          className="bg-white text-sm rounded-lg  px-4 py-2   hover:text-red-700 hover:bg-white text-red-700 transition-colors hidden md:inline-flex items-center gap-2"
+          className="bg-red-700 text-sm rounded-lg  px-4 py-2   hover:text-white hover:bg-red-800 text-white transition-colors hidden md:inline-flex items-center gap-2"
         >
           Open Account
           {/* <img src={assets.arrow_icon} alt="" /> */}
