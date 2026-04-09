@@ -21,7 +21,7 @@ const Hero = () => {
             href="#internet-banking"
             className=" bg-red-700 text-sm rounded-lg  px-4 py-2  hover:bg-red-700 hover:text-white text-white transition-colors hidden md:inline-flex items-center gap-2"
           >
-            Explore Morthgage Plans
+            Explore Mortgage Plans
           </a>
 
           <a
