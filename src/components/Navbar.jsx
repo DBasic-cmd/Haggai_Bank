@@ -1,6 +1,7 @@
 import React from "react";
 import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
+import { Link } from "react-router-dom";
 
 const Navbar = ({theme, setTheme}) => {
 
@@ -10,7 +11,7 @@ const Navbar = ({theme, setTheme}) => {
     <div className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20  backdrop-blur-xl font-medium ">
       <img
         src={theme === "dark" ? assets.haggai_logo : assets.haggai_logo}
-        className="w-32 sm:w-40"
+        className="w-32 sm:w-24"
         alt=""
         width={20}
         height={20}
@@ -50,7 +51,7 @@ const Navbar = ({theme, setTheme}) => {
 
          <a
           href="#internet-banking"
-          className=" border border-red-700 text-sm rounded-lg dark:bg-white dark:border-0  px-4 py-2  hover:bg-red-700 hover:text-white text-red-700 transition-colors hidden md:inline-flex items-center gap-2"
+          className=" border border-red-700 text-sm rounded-sm dark:bg-white dark:border-0  px-4 py-2  hover:bg-red-700 hover:text-white text-red-700 transition-colors hidden md:inline-flex items-center gap-2"
         >
           Internet Banking
           
@@ -58,7 +59,7 @@ const Navbar = ({theme, setTheme}) => {
 
         <a
           href="#create-account"
-          className="bg-red-700 text-sm rounded-lg  px-4 py-2   hover:text-white hover:bg-red-800 text-white transition-colors hidden md:inline-flex items-center gap-2"
+          className="bg-red-700 text-sm rounded-sm  px-4 py-2   hover:text-white hover:bg-red-800 text-white transition-colors hidden md:inline-flex items-center gap-2"
         >
           Open Account
           {/* <img src={assets.arrow_icon} alt="" /> */}
