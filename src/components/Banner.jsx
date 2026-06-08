@@ -1,59 +1,63 @@
 import React from "react";
 
-const stats = [
-  {
-    value: "8710+",
-    label: "Clients Served",
-  },
-  {
-    value: "12",
-    label: "Industry Awards",
-  },
-  {
-    value: "20+",
-    label: "Years of Operation",
-  },
-  {
-    value: "100%",
-    label: "CBN & NDIC Regulated",
-  },
+const updates = [
+  "CBN LICENSED MORTGAGE BANK",
+  "20+ YEARS OF MORTGAGE EXPERTISE",
+  "HOME PURCHASE FINANCING",
+  "CONSTRUCTION FINANCE SOLUTIONS",
+  "DIGITAL BANKING PLATFORM",
+  "PROPERTY DEVELOPMENT SUPPORT",
+  "MORTGAGE ADVISORY SERVICES",
+  "COMPETITIVE INTEREST RATES",
+  "HOME EQUITY FINANCING",
+  "FLEXIBLE REPAYMENT PLANS",
+  "CUSTOMER CARE • +234 XXX XXX XXXX",
 ];
 
 const Banner = () => {
   return (
-    <div
-      id="banner"
-      className="relative bg-red-700 text-white py-14 px-6 sm:px-12 lg:px-24 xl:px-40"
-    >
-      {/* subtle top/bottom highlight lines */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-white/20" />
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
+    <section className="relative border-y border-white/10 bg-[#111111] overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-red-700/10 via-transparent to-red-700/10" />
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-10">
-        {stats.map((item, index) => (
-          <div
-            key={index}
-            className="relative flex-1 text-center md:text-left group"
-          >
-            {/* hover glow */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-white/5 blur-xl" />
+      <div className="relative flex items-center overflow-hidden">
+        <div className="hidden md:flex items-center justify-center px-8 py-4 border-r border-white/10 shrink-0">
+          <span className="text-[11px] font-bold tracking-[0.35em] text-red-500 uppercase">
+            Latest Updates
+          </span>
+        </div>
 
-            <h6 className="text-2xl sm:text-3xl font-light tracking-tight relative">
-              {item.value}
-            </h6>
+        <div className="flex overflow-hidden whitespace-nowrap flex-1">
+          <div className="flex min-w-full animate-[ticker_30s_linear_infinite] hover:[animation-play-state:paused]">
+            {[...updates, ...updates].map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center shrink-0"
+              >
+                <span className="px-8 text-[11px] font-semibold tracking-[0.22em] text-white/80 uppercase">
+                  {item}
+                </span>
 
-            <p className="text-white/70 text-sm sm:text-base mt-2 relative">
-              {item.label}
-            </p>
-
-            {/* vertical divider (desktop only) */}
-            {index !== stats.length - 1 && (
-              <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-10 bg-white/20" />
-            )}
+                <span className="h-1 w-1 rounded-full bg-red-600" />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+
+      <style>
+        {`
+          @keyframes ticker {
+            0% {
+              transform: translateX(0);
+            }
+
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}
+      </style>
+    </section>
   );
 };
 
