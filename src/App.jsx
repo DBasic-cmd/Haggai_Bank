@@ -21,6 +21,7 @@ import CustomerComplaintForm from "./components/CustomerComplaintForm";
 import SubjectAccessRequestForm from "./components/SubjectAccessRequestForm";
 import Career from "./components/Career";
 import WhistleBlower from "./components/WhistleBlower";
+import ManagementStaff from "./components/ManagementStaff";
 
 const HomePage = () => {
   return (
@@ -53,6 +54,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about/board-of-directors" element={<BoardOfDirectors />} />
+        <Route path="/about/management-staff" element={<ManagementStaff />} />
         <Route path="/about/our-story" element={<PlaceholderPage title="Our Story" />} />
         <Route path="/about/investor-relations" element={<InvestorRelations />} />
         <Route path="/about/whistle-blower" element={<WhistleBlower />} />
