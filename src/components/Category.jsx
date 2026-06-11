@@ -220,7 +220,7 @@ const Category = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-5 mt-12">
-                  <button className="group relative overflow-hidden border border-red-700 bg-red-700 px-8 py-4 uppercase tracking-[0.2em] text-sm text-white transition-all duration-500 hover:bg-transparent hover:text-red-700 dark:hover:text-red-400">
+                  {/* <button className="group relative overflow-hidden border border-red-700 bg-red-700 px-8 py-4 uppercase tracking-[0.2em] text-sm text-white transition-all duration-500 hover:bg-transparent hover:text-red-700 dark:hover:text-red-400">
                     <span className="relative z-10 flex items-center gap-2">
                       Open Account
                       <ArrowRight
@@ -228,9 +228,9 @@ const Category = () => {
                         className="transition-transform duration-300 group-hover:translate-x-1"
                       />
                     </span>
-                  </button>
+                  </button> */}
 
-                  <button className="group border border-gray-300 dark:border-gray-700 px-8 py-4 uppercase tracking-[0.2em] text-sm text-gray-800 dark:text-white hover:border-red-700 hover:text-red-700 dark:hover:text-red-400 transition-all duration-500">
+                  {/* <button className="group border border-gray-300 dark:border-gray-700 px-8 py-4 uppercase tracking-[0.2em] text-sm text-gray-800 dark:text-white hover:border-red-700 hover:text-red-700 dark:hover:text-red-400 transition-all duration-500">
                     <span className="flex items-center gap-2">
                       Learn More
                       <ChevronRight
@@ -238,7 +238,7 @@ const Category = () => {
                         className="transition-transform duration-300 group-hover:translate-x-1"
                       />
                     </span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
