@@ -3,9 +3,9 @@ import React from "react";
 
 const Offer = () => {
   return (
-    <div className="bg-gray-50 dark:bg-gray-700 p-20">
+    <div className="bg- dark:bg- p-20">
       <div className="max-w-6xl mx-auto space-y-4 ">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-200 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-700 dark:text text-center">
           Bank From Anywhere. Anytime.
         </h1>
         <p className=" text-gray-700 dark:text-gray-200 text-center">
