@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const heroSlides = [
   {
@@ -72,15 +73,15 @@ const Hero = () => {
               className="group relative overflow-hidden bg-red-700 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition duration-500 hover:bg-red-800"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition duration-700 group-hover:translate-x-full" />
-              <span className="relative">Explore Mortgages</span>
+              <Link to = "/products/haggai-plot-advance" className="relative">Explore Mortgages</Link>
             </a>
 
-            <a
-              href="#create-account"
+            <Link
+              to="/resources/mortgage-calculator"
               className="border border-white/35 bg-white/10 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-500 hover:bg-white hover:text-slate-950"
             >
               Mortgage Calculator
-            </a>
+            </Link>
           </div>
 
           <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-5 border-l border-white/20 pl-6">
