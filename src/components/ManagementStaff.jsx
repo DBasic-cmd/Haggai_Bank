@@ -203,7 +203,21 @@ Mr. Ojo remains committed to delivering value-driven financial solutions, promot
     role: "Branch Head",
     image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.06.24.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDYuMjQuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0NjIsImV4cCI6MjA5NzQ3NzQ2Mn0.DwF9zx4d3yF8L46bIZlv6T_07sp1DVd_Sd6QEZe2CBw",
     slug: "sehinde-aderibigbe",
-    hasProfile: false,
+    hasProfile: true,
+    text : `Olasehinde Aderibigbe – Branch Head, Redemption City Branch.
+
+Olasehinde Aderibigbe is an experienced banking professional with over 20 years in Nigeria’s financial services sector driving profitability, strategic deposit mobilization, and high-value risk asset creation. He specializes in managing large liability portfolios, optimizing liquidity, and leading cross-functional teams to deliver strong deposit growth and strict regulatory compliance.
+Throughout his career at Haggai Mortgage Bank Limited, he has advanced through key leadership roles across Risk Management, Branch Operations, Treasury, Business Development and Product & Assets Management.
+ 
+He holds a Chartered Banker MBA (CBMBA) from Bangor University, UK, and a Higher National Diploma (HND) in Business Administration from The Federal Polytechnic, Offa.
+A recognized industry expert, he is a Fellow of the Chartered Institute of Bankers of Nigeria (FCIB) and a Chartered Member of the Chartered Banker Institute, UK (MCBI).
+Prior to his career in mortgage banking, he gained valuable operational experience as an Import and Personnel Officer at Honda Manufacturing (Nig.) Limited.
+ 
+Known for building deep, lasting relationships with institutional, corporate, and retail clients, Olasehinde focuses on optimizing primary transactional account relationships (CASA), expanding mortgage uptake and driving sustainable growth.
+At the Redemption City Branch, he leads with a commitment to deepen customer engagement, operational excellence, and the highest standards of integrity.
+ 
+Connect with him for inquiries regarding mortgages, project financing, and institutional banking solutions at our Redemption City Branch.
+ `
   },
   {
     name: "Mrs. Morenike Owatemi",
