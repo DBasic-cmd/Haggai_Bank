@@ -87,7 +87,7 @@ Widely respected for his strategic thinking, disciplined leadership style, and d
     name: "Mr. Monday Kadiri",
     role: "Head, IT & E-Banking",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/mondaykadiri.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL21vbmRheWthZGlyaS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxMjA5NDM0LCJleHAiOjIwOTY1Njk0MzR9.pjBh7JmCbxA8fQykDsTIf00Z71s7RMPFSQDWKKyeWoo",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/kadiri.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL2thZGlyaS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTIzMTUzLCJleHAiOjIwOTc0ODMxNTN9.utcB3HxC9Uyk3IYHTTHcEJUlsnakmdCOWzTbRZuHpPo",
     slug: "monday-kadiri",
     hasProfile: true,
     text: `Monday A. Kadiri
@@ -110,7 +110,7 @@ He holds an MBA from Hult International Business School and has also completed e
     name: "Mr. Tayo Awopegba",
     role: "Head Financial Services",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/olawale.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL29sYXdhbGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTIwOTQ4OSwiZXhwIjoyMDk2NTY5NDg5fQ.8ZD6ZBUaLkfy_Yz2b2aL1-9DBcp2YIJEk-fXK5FwMYI",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/tayo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL3RheW8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMzA0NSwiZXhwIjoyMDk3NDgzMDQ1fQ.QCwobki98-dou2Wa4ANPXGr8ypR5qEP4PPSi_LRnOGo",
     slug: "tayo-awopegba",
     hasProfile: true,
     text: `Oluwatayo Kunle Awopegba, FCA, ACTI
@@ -131,7 +131,7 @@ Oluwatayo is recognized for his strong analytical capabilities, leadership acume
     name: "Mr. Johnson Ajani",
     role: "Head, Electronic Banking",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/AjaniJohnson.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0FqYW5pSm9obnNvbi5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxMjEwMjIwLCJleHAiOjIwOTY1NzAyMjB9.kM4L1t26XYHk3exlzqOMGBz4qFhpcFLOdXWzYq482UQ",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Johnson.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0pvaG5zb24ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMjgyNiwiZXhwIjoyMDk3NDgyODI2fQ.qwLtWroL1h4j2l_aZtXKESZ7ACJTsZU687fYgtbuuDU",
     slug: "johnson-ajani",
     hasProfile: true,
     text: `Mr. Ajani Johnson
@@ -154,7 +154,7 @@ He is married with Children.`,
     name: "Mr. Michael Adewole",
     role: "Head Corporate Services",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/olawale.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL29sYXdhbGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjExNzY0NCwiZXhwIjoyMDk3NDc3NjQ0fQ.WulwhNIDhjfBAD_mZtM-P_6nzDWhkRPAz4us8G9TaO0",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/michael.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL21pY2hhZWwucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMzMwMCwiZXhwIjoyMDk3NDgzMzAwfQ.x5XbU9_r0OO-mbBj111Pbq-HfsEwDHeDv8cepnvjEHI",
     slug: "michael-adewole",
     hasProfile: true,
     text: `ADEWOLE Michael Olawale, FCIPM, FNIM
@@ -177,7 +177,7 @@ He is married with children.`,
     name: "Mr. Ojo Gbadebo Olumakinwa",
     role: "Head, Product and Asset Management",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Gbadeboimg.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0diYWRlYm9pbWcucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTIwOTM5NSwiZXhwIjoyMDk2NTY5Mzk1fQ.YxEPU-2imM5pQxUtc19sEtQcTNbFVUQGZxBhNSvE7SY",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/gbadebo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL2diYWRlYm8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMjMxNSwiZXhwIjoyMDk3NDgyMzE1fQ.ciucpeS0TLJZD_HQ4KUy6oc1XWocTMArWFAsrk9aZOc",
     slug: "gbadebo-ojo",
     hasProfile: true,
     text: `Ojo Gbadebo Olumakinwa
@@ -223,7 +223,7 @@ Connect with him for inquiries regarding mortgages, project financing, and insti
     name: "Mrs. Morenike Owatemi",
     role: "Head, Treasury",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Morenike.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL01vcmVuaWtlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODEyMDk0NjMsImV4cCI6MjA5NjU2OTQ2M30.Q9N36VkvMwHvpLVLnmGRgMsQF1AzxIyTfiMmcs4kCI4",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Morenike%20(1).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL01vcmVuaWtlICgxKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTIyNzI0LCJleHAiOjIwOTc0ODI3MjR9.BTM_KL3aA2XEiA6vx-Z6-Ci4adxsfHPQ32xC1j_KzV4",
     slug: "morenike-owatemi",
     hasProfile: true,
     text: `Morenike Owatemi
@@ -246,7 +246,7 @@ She is recognized for her dedication, professionalism, integrity, and strong wor
     name: "Mr. Ojo L. Hassan",
     role: "Head, Risk Management and Control",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Lamidi%20Ojo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0xhbWlkaSBPam8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTIwOTM3NSwiZXhwIjoyMDk2NTY5Mzc1fQ.io9WHqj7ZYMF6qoc-tGT1EiJDxBoNfZmzSz9YD6asxk",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/lamidi.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL2xhbWlkaS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTIyNjE2LCJleHAiOjIwOTc0ODI2MTZ9.YfwsY_diTfN11gOI0UImzgxZopUuNPZbZZHGz1ZbskQ",
     slug: "ojo-l-hassan",
     hasProfile: true,
     text: `OJO L. Hassan
