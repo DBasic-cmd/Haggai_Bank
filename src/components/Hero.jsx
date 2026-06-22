@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="mb-8 flex items-center gap-4">
             <span className="h-px w-16 bg-red-500" />
             <p className="text-xs font-black uppercase tracking-[0.38em] text-white/80">
-              Haggai Mortgage Bank
+              Haggai Mortgage Bank Limited
             </p>
           </div>
 
