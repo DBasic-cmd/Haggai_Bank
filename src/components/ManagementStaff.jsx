@@ -300,7 +300,7 @@ const ManagementStaff = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                 />
               </div>
 
