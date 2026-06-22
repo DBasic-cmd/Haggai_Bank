@@ -9,9 +9,9 @@ export const managementStaff = [
     image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.05.52.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDUuNTIuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0OTAsImV4cCI6MjA5NzQ3NzQ5MH0.IiKg7F3hnl7DNtkso420f-clKgEd7xtiR40Omcx2ZL0",
     slug: "kofoworola-owode",
     hasProfile: true,
-    text: `Profile of Mrs. Kofoworola Adejoke Owode
+    text: `
 
-Professional Summary
+
 
 Mrs. Kofoworola Owode, Managing Director/Chief Executive Officer of Haggai Mortgage Bank Limited, has over three decades of managerial, strategic business development, and leadership experience in mortgage banking and financial services. 
 
@@ -51,9 +51,7 @@ Mrs Owode is married with children.`,
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Eugene.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0V1Z2VuZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTE3NjIxLCJleHAiOjIwOTc0Nzc2MjF9.cBwml-LfZ7bkyH-tLiSOIaWdh1tVUEjVTH7_Ah-nbF0",
     slug: "eugene-awadje",
     hasProfile: true,
-    text: `Profile of Eugene Awadje
-
-Professional Summary
+    text: `
 
 Mr. Eugene Awadje is a highly accomplished banking professional with over three decades of progressive experience in mortgage banking, financial services operations, business development, enterprise risk management, compliance, information technology, and electronic banking. Since joining Haggai Mortgage Bank Limited in 1996, he has consistently demonstrated exceptional leadership, strategic foresight, and operational excellence across several critical departments of the Bank.
 
@@ -90,9 +88,7 @@ Widely respected for his strategic thinking, disciplined leadership style, and d
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/mondaykadiri.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL21vbmRheWthZGlyaS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxMjA5NDM0LCJleHAiOjIwOTY1Njk0MzR9.pjBh7JmCbxA8fQykDsTIf00Z71s7RMPFSQDWKKyeWoo",
     slug: "monday-kadiri",
     hasProfile: true,
-    text: `Monday A. Kadiri
-
-Head, IT & E-Banking
+    text: `
 
 Monday A. Kadiri is a seasoned technology executive with over two decades of experience leading digital transformation, enterprise technology strategy, IT governance, cybersecurity, and banking technology operations across the financial services industry.
 
@@ -113,9 +109,8 @@ He holds an MBA from Hult International Business School and has also completed e
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/olawale.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL29sYXdhbGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTIwOTQ4OSwiZXhwIjoyMDk2NTY5NDg5fQ.8ZD6ZBUaLkfy_Yz2b2aL1-9DBcp2YIJEk-fXK5FwMYI",
     slug: "tayo-awopegba",
     hasProfile: true,
-    text: `Oluwatayo Kunle Awopegba, FCA, ACTI
+    text: `
 
-Chief Financial Officer
 
 Oluwatayo Kunle Awopegba is an accomplished finance executive with over 20 years of experience in financial management, regulatory compliance, and strategic leadership within Nigeria’s banking and financial services sector.
 
@@ -134,9 +129,7 @@ Oluwatayo is recognized for his strong analytical capabilities, leadership acume
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/AjaniJohnson.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0FqYW5pSm9obnNvbi5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxMjEwMjIwLCJleHAiOjIwOTY1NzAyMjB9.kM4L1t26XYHk3exlzqOMGBz4qFhpcFLOdXWzYq482UQ",
     slug: "johnson-ajani",
     hasProfile: true,
-    text: `Mr. Ajani Johnson
-
-Head, Electronic Banking
+    text: `
 
 Mr. Ajani Johnson is a seasoned banking professional with over 17 years of progressive experience in the financial services industry. His expertise spans branch operations, customer service management, treasury and domestic operations, card services, electronic banking, and digital transformation initiatives.
 
@@ -157,7 +150,7 @@ He is married with Children.`,
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/olawale.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL29sYXdhbGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjExNzY0NCwiZXhwIjoyMDk3NDc3NjQ0fQ.WulwhNIDhjfBAD_mZtM-P_6nzDWhkRPAz4us8G9TaO0",
     slug: "michael-adewole",
     hasProfile: true,
-    text: `ADEWOLE Michael Olawale, FCIPM, FNIM
+    text: `
 
 Adewole is currently, the Head Corporate Services at Haggai Mortgage Bank. 
 
@@ -180,9 +173,8 @@ He is married with children.`,
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Gbadeboimg.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0diYWRlYm9pbWcucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTIwOTM5NSwiZXhwIjoyMDk2NTY5Mzk1fQ.YxEPU-2imM5pQxUtc19sEtQcTNbFVUQGZxBhNSvE7SY",
     slug: "gbadebo-ojo",
     hasProfile: true,
-    text: `Ojo Gbadebo Olumakinwa
+    text: `
 
-Head, Product and Asset Management
 
 Mr. Ojo Gbadebo Olumakinwa is a seasoned banking and financial services professional with over 20 years of progressive experience spanning insurance, mortgage banking, credit administration, treasury management, operations, business development, and strategic leadership. He currently serves as Head, Products & Asset Management at Haggai Mortgage Bank Limited, where he provides strategic oversight for product development, business development, credit management and operational performance across the Bank.
 
@@ -212,9 +204,7 @@ Mr. Ojo remains committed to delivering value-driven financial solutions, promot
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Morenike.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL01vcmVuaWtlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODEyMDk0NjMsImV4cCI6MjA5NjU2OTQ2M30.Q9N36VkvMwHvpLVLnmGRgMsQF1AzxIyTfiMmcs4kCI4",
     slug: "morenike-owatemi",
     hasProfile: true,
-    text: `Morenike Owatemi
-
-Head, Treasury
+    text: `
 
 Morenike Owatemi is a seasoned banking professional with over two decades of extensive experience in the financial services industry, particularly in treasury management, banking operations, retail banking, and strategic financial administration. She currently serves as the Head of Treasury at Haggai Mortgage Bank Limited, where she oversees treasury operations, liquidity management, investment planning, and financial risk management for the Bank.
 
@@ -235,9 +225,7 @@ She is recognized for her dedication, professionalism, integrity, and strong wor
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Lamidi%20Ojo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0xhbWlkaSBPam8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTIwOTM3NSwiZXhwIjoyMDk2NTY5Mzc1fQ.io9WHqj7ZYMF6qoc-tGT1EiJDxBoNfZmzSz9YD6asxk",
     slug: "ojo-l-hassan",
     hasProfile: true,
-    text: `OJO L. Hassan
-
-Head, Risk Management and Control
+    text: `
 
 OJO L. Hassan is the Head of Risk Management & Control with over 24 years of progressive banking experience spanning risk management, internal audit, internal control and compliance, remedial management, and banking operations.
 
