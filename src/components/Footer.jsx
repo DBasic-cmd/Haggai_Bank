@@ -77,7 +77,7 @@ const Footer = () => {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="mb-12 border-b border-white/10 pb-12">
           <p className="text-xs font-black uppercase tracking-[0.35em] text-red-300">
-            Haggai Mortgage Bank
+            Haggai Mortgage Bank Limited
           </p>
 
           <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight tracking-[-0.055em] md:text-6xl">

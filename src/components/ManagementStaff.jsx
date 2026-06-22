@@ -6,7 +6,7 @@ export const managementStaff = [
   {
     name: "Mrs. Kofoworola Owode",
     role: "MD/CEO",
-    image: assets.md_ceo,
+    image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.05.52.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDUuNTIuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0OTAsImV4cCI6MjA5NzQ3NzQ5MH0.IiKg7F3hnl7DNtkso420f-clKgEd7xtiR40Omcx2ZL0",
     slug: "kofoworola-owode",
     hasProfile: true,
     text: `Profile of Mrs. Kofoworola Adejoke Owode
@@ -48,7 +48,7 @@ Mrs Owode is married with children.`,
     name: "Mr. Eugene Awadje",
     role: "Head, Banking Business",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Eugene.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0V1Z2VuZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxMjA5MTIxLCJleHAiOjE3ODIwNzMxMjF9.0kRVSkaeNBo3SYeSPshdS3efEqzVDqdIlcsyTXQ92g0",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Eugene.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0V1Z2VuZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTE3NjIxLCJleHAiOjIwOTc0Nzc2MjF9.cBwml-LfZ7bkyH-tLiSOIaWdh1tVUEjVTH7_Ah-nbF0",
     slug: "eugene-awadje",
     hasProfile: true,
     text: `Profile of Eugene Awadje
@@ -154,7 +154,7 @@ He is married with Children.`,
     name: "Mr. Michael Adewole",
     role: "Head Corporate Services",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/michaelolawale.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL21pY2hhZWxvbGF3YWxlLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODEyMDkzMzksImV4cCI6MTc4MjA3MzMzOX0.dEJa3AWe8gvQFnBwHEA_XyCQfaeF6G7pTkF88WB4B_s",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/olawale.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL29sYXdhbGUucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjExNzY0NCwiZXhwIjoyMDk3NDc3NjQ0fQ.WulwhNIDhjfBAD_mZtM-P_6nzDWhkRPAz4us8G9TaO0",
     slug: "michael-adewole",
     hasProfile: true,
     text: `ADEWOLE Michael Olawale, FCIPM, FNIM
@@ -201,7 +201,7 @@ Mr. Ojo remains committed to delivering value-driven financial solutions, promot
   {
     name: "Mr. Sehinde Aderibigbe",
     role: "Branch Head",
-    image: "/src/assets/sehindeaderibigbe.png",
+    image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.06.24.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDYuMjQuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0NjIsImV4cCI6MjA5NzQ3NzQ2Mn0.DwF9zx4d3yF8L46bIZlv6T_07sp1DVd_Sd6QEZe2CBw",
     slug: "sehinde-aderibigbe",
     hasProfile: false,
   },
