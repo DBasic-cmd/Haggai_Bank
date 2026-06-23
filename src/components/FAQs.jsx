@@ -4,12 +4,12 @@ import { Search, Plus, Minus, ArrowUpRight } from "lucide-react";
 
 const faqs = [
   {
-    question: "How Can I Open an Account in Haggai Bank ?",
+    question: "How Can I Open an Account in Haggai Bank  Limited?",
     answer:
       "Walk into any Haggai Bank Branch and meet with the Customer Service Officer, the staff will enlighten you on how & what type of account that would suit your purpose.",
   },
   {
-    question: "What is the Initial Deposit for Account Opening in Haggai Bank?",
+    question: "What is the Initial Deposit for Account Opening in  Limited?",
     answer:
       "This varies per Product type. You can also confirm from our Products page.",
   },
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question:
-      "Can I Operate My Account From Any Other Branch of Haggai Bank Outside where I Opened The Account?",
+      "Can I Operate My Account From Any Other Branch of  Limited Outside where I Opened The Account?",
     answer: "Yes, you can operate your account from any Haggai Bank Branch.",
   },
   {

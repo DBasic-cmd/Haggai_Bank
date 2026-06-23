@@ -36,7 +36,6 @@ import ContactPage from "./components/ContactPage";
 import GetACallBack from "./components/GetACallBack";
 import ScrollToTop from "./components/ScrollToTop";
 
-
 const HomePage = () => {
   return (
     <>
@@ -57,12 +56,19 @@ const App = () => {
   });
 
   React.useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    const root = document.documentElement;
+
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
-    <div className="relative flex min-h-screen flex-col dark:bg-black">
+    <div className="relative flex min-h-screen flex-col bg-white text-slate-950 transition-colors duration-300 dark:bg-black dark:text-white">
       <Navbar theme={theme} setTheme={setTheme} />
       <ScrollToTop />
 
@@ -94,11 +100,7 @@ const App = () => {
         />
         <Route path="/about/career" element={<Career />} />
         <Route path="/open-account" element={<OpenAccount />} />
-
-        <Route
-          path="/open-account/data-consent"
-          element={<DataConsent />}
-        />
+        <Route path="/open-account/data-consent" element={<DataConsent />} />
         <Route path="/about/rsa" element={<RSA />} />
 
         <Route path="/resources/mortgage-calculator" element={<MortgageCalculator />} />
@@ -112,7 +114,6 @@ const App = () => {
           path="/resources/dormant-account-reactivation-form"
           element={<DormantAccountForm />}
         />
-        
       </Routes>
 
       <Footer />
