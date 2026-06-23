@@ -159,7 +159,7 @@ He is married with Children.`,
     hasProfile: true,
     text: `ADEWOLE Michael Olawale, FCIPM, FNIM
 
-Adewole is currently, the Head Corporate Services at Haggai Mortgage Bank. 
+Adewole is currently, the Head of Corporate Services at Haggai Mortgage Bank. 
 
 A seasoned professional manager and thought leader with over two decades’ experience, in general human resource management practice and administrative functions, this cut across various sectors such as manufacturing, logistics, information technology and financial services. 
 

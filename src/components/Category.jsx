@@ -46,9 +46,9 @@ const Category = () => {
     },
     {
       name: "Haggai Rent",
-      title: "Flexible rental solutions",
+      title: "Refinance Your Rent",
       description:
-        "Find the perfect rental property with our comprehensive rental assistance.",
+        "Let us take the burden of a lump sum off your shoulders by refinancing your rent. Now you can pay your rent monthly, rather than yearly.",
       image:
         "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=90",
     },

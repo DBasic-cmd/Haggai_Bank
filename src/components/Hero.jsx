@@ -86,14 +86,14 @@ const Hero = () => {
 
           <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-5 border-l border-white/20 pl-6">
             <div>
-              <p className="text-3xl font-black text-white">20+</p>
+              <p className="text-3xl font-black text-white">30+</p>
               <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
                 Years
               </p>
             </div>
 
             <div>
-              <p className="text-3xl font-black text-white">8,710+</p>
+              <p className="text-3xl font-black text-white">50,000+</p>
               <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
                 Clients
               </p>
