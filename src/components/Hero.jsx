@@ -105,6 +105,13 @@ const Hero = () => {
                 Regulated
               </p>
             </div>
+
+            <div>
+              <p className="text-3xl font-black text-white">NDIC</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
+                Insured
+              </p>
+            </div>
           </div>
         </div>
       </div>

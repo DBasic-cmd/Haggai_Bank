@@ -15,3 +15,12 @@
   --color-nav-light: #fff;
   --color-nav-dark: #82181a;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
