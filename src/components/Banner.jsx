@@ -52,7 +52,7 @@ const Banner = () => {
             }
 
             100% {
-              transform: translateX(-50%);
+              transform: translateX(-0%);
             }
           }
         `}
