@@ -245,7 +245,7 @@ OJO L. Hassan is the Head of Risk Management & Control with over 24 years of pro
 
 He began his banking career with Fortune International Bank Plc, now in liquidation, in 2001, where he worked in Banking Operations as well as the Risk and Recovery Department before joining Haggai Mortgage Bank Limited in 2007.
 
-At Haggai Bank, where he currently serves, he has demonstrated strong expertise in credit risk management, operational risk management, liquidity monitoring, portfolio management, and enterprise risk management frameworks. He also has a proven track record in strengthening internal controls, safeguarding asset quality, and ensuring compliance with the regulatory requirements of the Central Bank of Nigeria (CBN).
+At Haggai Bank Limited, where he currently serves, he has demonstrated strong expertise in credit risk management, operational risk management, liquidity monitoring, portfolio management, and enterprise risk management frameworks. He also has a proven track record in strengthening internal controls, safeguarding asset quality, and ensuring compliance with the regulatory requirements of the Central Bank of Nigeria (CBN).
 
 Ojo graduated from Kwara State Polytechnic with a Higher National Diploma (HND) in Business Administration in 1997. He is also a Stock Market Agent (SMA, 2006), a Certified Information Systems Auditor (CISA, 2011), an Associate of the Chartered Institute of Stockbrokers (ACIS, 2019), and a Member of the Chartered Institute of Loan and Risk Management (MCILRM, 2006).`,
   },
@@ -261,7 +261,7 @@ const ManagementStaff = () => {
           </p>
 
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-            Management Staff
+            Management 
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#8e8e8e]">
@@ -288,7 +288,7 @@ const ManagementStaff = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
                 />
               </div>
 
