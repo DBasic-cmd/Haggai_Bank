@@ -140,6 +140,30 @@ const OurStory = () => {
             </div>
           </div>
 
+          {/* CORE VALUES */}
+          <div className="p-8 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-white/[0.02] backdrop-blur-xl flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 flex items-center justify-center bg-red-100 dark:bg-red-950/50 text-red-700 dark:text-red-400 mb-6">
+                <ShieldCheck size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Core Values</h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-slate-600 dark:text-gray-300 leading-relaxed font-semibold">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
+                  Integrity
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
+                  Customer Experience
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
+                  Expertise
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* FAITH-BASED */}
           <div className="p-8 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-white/[0.02] backdrop-blur-xl flex flex-col justify-between">
             <div>
@@ -152,21 +176,10 @@ const OurStory = () => {
               </p>
             </div>
           </div>
-
-          {/* CORE VALUES */}
-          <div className="p-8 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-white/[0.02] backdrop-blur-xl flex flex-col justify-between">
-            <div>
-              <div className="w-12 h-12 flex items-center justify-center bg-red-100 dark:bg-red-950/50 text-red-700 dark:text-red-400 mb-6">
-                <ShieldCheck size={24} />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Core Values</h3>
-              <p className="mt-3 text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
-                Built on the strong parameters of <strong className="text-slate-900 dark:text-white">Integrity</strong>, <strong className="text-slate-900 dark:text-white">Customer Experience</strong>, and <strong className="text-slate-900 dark:text-white">Expertise</strong>.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
+
+
 
       {/* TIMELINE SECTION */}
       <section className="relative bg-slate-100 dark:bg-[#0b0f19] px-5 py-24 sm:px-10 lg:px-16 xl:px-24 overflow-hidden">
