@@ -82,7 +82,7 @@ const ManagementStaffProfile = () => {
             return isHeading ? (
               <h2
                 key={index}
-                className="mb-4 mt-8 text-2xl font-bold tracking-[-0.03em] text-[#14171d] dark:text-white"
+                className="mb-4 mt-8 text-normal tracking-[-0.03em] text-[#14171d] dark:text-white"
               >
                 {paragraph}
               </h2>

@@ -152,8 +152,6 @@ He is married with Children.`,
     hasProfile: true,
     text: `
 
-Adewole is currently, the Head Corporate Services at Haggai Mortgage Bank. 
-
 A seasoned professional manager and thought leader with over two decades’ experience, in general human resource management practice and administrative functions, this cut across various sectors such as manufacturing, logistics, information technology and financial services. 
 
 Highly passionate and well rounded, result oriented HR practitioner with all-embracing experience in business strategy and leading all areas of Human Resources that encompasses but is not limited to talent acquisition, compensation management, employment law, employee relations, performance management, talent management, succession planning, leadership coaching, employee engagement, industrial relations, policy and procedures, learning and development.

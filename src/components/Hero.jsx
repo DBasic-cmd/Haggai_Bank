@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden bg-slate-950"
+      className="relative min-h-[82vh] overflow-hidden bg-slate-950"
     >
       <div className="absolute inset-0">
         {heroSlides.map((slide, index) => (
@@ -49,7 +49,7 @@ const Hero = () => {
 
       <div className="absolute left-0 top-0 h-full w-[44%] border-r border-white/10 bg-black/20 backdrop-blur-[1px]" />
 
-      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl items-center px-5 pt-28 sm:px-10 lg:px-16 xl:px-6">
+      <div className="relative z-20 mx-auto flex min-h-[96vh] max-w-7xl items-center px-5 pt-28 sm:px-10 lg:px-16 xl:px-6">
         <div className="max-w-3xl">
           <div className="mb-8 flex items-center gap-4">
             <span className="h-px w-16 bg-red-500" />
@@ -86,14 +86,14 @@ const Hero = () => {
 
           <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-5 border-l border-white/20 pl-6">
             <div>
-              <p className="text-3xl font-black text-white">20+</p>
+              <p className="text-3xl font-black text-white">30+</p>
               <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
                 Years
               </p>
             </div>
 
             <div>
-              <p className="text-3xl font-black text-white">8,710+</p>
+              <p className="text-3xl font-black text-white">50,000+</p>
               <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
                 Clients
               </p>
@@ -214,5 +214,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;
