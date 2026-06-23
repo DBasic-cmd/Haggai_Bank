@@ -4,12 +4,12 @@ const documents = [
   {
     title: "Proxy Form 2020 AGM",
     type: "AGM Document",
-    href: "src/assets/FORMS/PROXY FORM(2020).pdf",
+    href: "/FORMS/PROXY FORM(2020).pdf",
   },
   {
     title: "Shareholders E-Dividend Form",
     type: "Shareholder Form",
-    href: "src/assets/FORMS/E-DIVIDEND Form.pdf",
+    href: "/FORMS/E-DIVIDEND Form.pdf",
   },
 ];
 
@@ -17,7 +17,7 @@ const financialStatements = [
   {
     title: "HMB 2020 Financial Statements",
     type: "Financial Statement",
-    href: "src/assets/FORMS/HAGGAI Mortgage Bank 2020 FS_Reviewed.pdf",
+    href: "/FORMS/HAGGAI Mortgage Bank 2020 FS_Reviewed.pdf",
   },
 ];
 

@@ -3,19 +3,19 @@ import React from "react";
 const abridgedAccounts = [
   {
     title: "Abridged Account 2024",
-    href: "src/assets/INVESTOR RELATIONS/AbrigedFS_2024.pdf",
+    href: "/investor-relations/AbrigedFS_2024.pdf",
   },
   {
     title: "Abridged Account 2023",
-    href: "src/assets/INVESTOR RELATIONS/Abriged2023.pdf",
+    href: "/investor-relations/Abriged2023.pdf",
   },
   {
     title: "Abridged Account 2022",
-    href: "src/assets/INVESTOR RELATIONS/ABRIDGED_ACCOUNTS_2022.pdf",
+    href: "/investor-relations/ABRIDGED_ACCOUNTS_2022.pdf",
   },
   {
     title: "Abridged Account 2019",
-    href: "src/assets/INVESTOR RELATIONS/abridgedaccount2019.pdf",
+    href: "/investor-relations/abridgedaccount2019.pdf",
   },
   {
     title: "Abridged Account 2018",
@@ -23,50 +23,50 @@ const abridgedAccounts = [
   },
   {
     title: "Abridged Account 2017",
-    href: "src/assets/INVESTOR RELATIONS/abridgedaccount2017.pdf",
+    href: "/investor-relations/abridgedaccount2017.pdf",
   },
   {
     title: "Abridged Account 2016",
-    href: "src/assets/INVESTOR RELATIONS/abridged2016.pdf",
+    href: "/investor-relations/abridged2016.pdf",
   },
   {
     title: "Abridged Account 2015",
-    href: "src/assets/INVESTOR RELATIONS/abridged2015.pdf",
+    href: "/investor-relations/abridged2015.pdf",
   },
   {
     title: "Abridged Account 2014",
-    href: "src/assets/INVESTOR RELATIONS/abridged2014.pdf",
+    href: "/investor-relations/abridged2014.pdf",
   },
   {
     title: "Abridged Account 2013",
-    href: "src/assets/INVESTOR RELATIONS/abridged2013.pdf",
+    href: "/investor-relations/abridged2013.pdf",
   },
 ];
 
 const financialStatements = [
   {
     title: "HMB 2019 Financial Statements",
-    href: "src/assets/INVESTOR RELATIONS/hmb2019financialstatementscbn.pdf",
+    href: "/investor-relations/hmb2019financialstatementscbn.pdf",
   },
   {
     title: "HMB 2020 Financial Statements",
-    href: "src/assets/INVESTOR RELATIONS/HAGGAI Mortgage Bank 2020 FS_Reviewed.pdf",
+    href: "/investor-relations/HAGGAI Mortgage Bank 2020 FS_Reviewed.pdf",
   },
   {
     title: "HMB 2021 Financial Statements",
-    href: "src/assets/INVESTOR RELATIONS/HAGGAI Mortgage Bank 2021 FS.pdf",
+    href: "/investor-relations/HAGGAI Mortgage Bank 2021 FS.pdf",
   },
   {
     title: "HMB 2022 Financial Statements",
-    href: "src/assets/INVESTOR RELATIONS/HMB_FS_2022.pdf",
+    href: "/investor-relations/HMB_FS_2022.pdf",
   },
   {
     title: "HMB 2023 Financial Statements",
-    href: "src/assets/INVESTOR RELATIONS/HMB_FS_2023.pdf",
+    href: "/investor-relations/HMB_FS_2023.pdf",
   },
   {
     title: "HMB 2024 Financial Statements",
-    href: "src/assets/INVESTOR RELATIONS/AFS 2024 - HAGGAI MORTGAGE BANK LIMITED.pdf",
+    href: "/investor-relations/AFS 2024 - HAGGAI MORTGAGE BANK LIMITED.pdf",
   },
 ];
 
