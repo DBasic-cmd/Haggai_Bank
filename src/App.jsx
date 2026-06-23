@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 
 import BoardOfDirectors from "./components/BoardOfDirectors";
 import PlaceholderPage from "./components/PlaceholderPage";
+import OurStory from "./components/OurStory";
 import InvestorRelations from "./components/InvestorRelations";
 import CompanySecretariat from "./components/CompanySecretariat";
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -76,7 +77,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/about/management-staff" element={<ManagementStaff />} />
-        <Route path="/about/our-story" element={<PlaceholderPage title="Our Story" />} />
+        <Route path="/about/our-story" element={<OurStory />} />
         <Route path="/about/investor-relations" element={<InvestorRelations />} />
         <Route path="/about/whistle-blower" element={<WhistleBlower />} />
         <Route path="/about/company-secretariat" element={<CompanySecretariat />} />
