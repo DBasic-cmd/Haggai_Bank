@@ -522,13 +522,15 @@ const Navbar = ({ theme, setTheme }) => {
               })}
 
               <div className="mt-4 grid gap-3 border-t border-white/10 pt-6 lg:hidden">
-                <Link
-                  to="/products/internet-banking-and-mobile-application"
+                <a
+                  href="https://online.haggaisecure.com/haggaionline/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={closeMenus}
                   className="rounded-full border border-white/30 px-5 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:border-red-500 hover:bg-red-700"
                 >
                   Internet Banking
-                </Link>
+                </a>
 
                 <Link
                   to="/open-account"
@@ -542,12 +544,14 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link
-              to="/products/internet-banking-and-mobile-application"
+            <a
+              href="https://online.haggaisecure.com/haggaionline/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:border-red-500 hover:bg-red-700 md:inline-flex"
             >
               Internet Banking
-            </Link>
+            </a>
 
             <Link
               to="/open-account"

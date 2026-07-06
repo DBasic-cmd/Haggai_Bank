@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import assets from "../assets/assets";
 
 const Footer = () => {
   const footerSections = [
@@ -112,6 +113,15 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+              {section.title === "About Haggai" && (
+                <div className="mt-6">
+                  <img
+                    src={assets.ndpr_audit_compliant}
+                    alt="NDPR Audit Compliant 2024"
+                    className="h-24 w-auto rounded-lg bg-white p-1"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
