@@ -10,6 +10,7 @@ import Offer from "./components/Offer";
 import Appointment from "./components/Appointment";
 import History from "./components/History";
 import Footer from "./components/Footer";
+import WhatsAppBubble from "./components/WhatsAppBubble";
 
 import BoardOfDirectors from "./components/BoardOfDirectors";
 import PlaceholderPage from "./components/PlaceholderPage";
@@ -47,6 +48,7 @@ const HomePage = () => {
       <Offer />
       <Appointment />
       <History />
+      <WhatsAppBubble />
     </>
   );
 };
