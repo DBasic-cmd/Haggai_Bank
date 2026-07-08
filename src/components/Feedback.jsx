@@ -66,97 +66,50 @@ const Feedback = () => {
         </div>
 
         {/* FEATURES SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+  {features.map((feature, index) => (
+    <div key={index} className="relative group min-h-[300px] overflow-hidden">
+      <div className="absolute inset-0 border border-gray-200 transition-all duration-500 group-hover:border-red-600/40 dark:border-gray-800" />
 
-          {/* LARGE FEATURE PANEL */}
-          <div className="md:col-span-5 relative group min-h-[340px]">
+      <div className="absolute -top-5 -right-5 h-28 w-28 border border-red-600/30 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6" />
 
-            {/* frame */}
-            <div className="absolute inset-0 border border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-red-600/40" />
+      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gray-200 transition-all duration-500 group-hover:bg-red-600/30 dark:bg-gray-800" />
 
-            {/* floating geometry */}
-            <div className="absolute -top-5 -right-5 w-32 h-32 border border-red-600/30 transition-all duration-700 group-hover:scale-110 group-hover:rotate-6" />
+      <div className="absolute top-0 left-0 h-20 w-20 border-l border-t border-red-600/50 transition-all duration-500 group-hover:h-28 group-hover:w-28" />
 
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gray-200 dark:bg-gray-800 group-hover:bg-red-600/30 transition-all duration-500" />
+      <div className="absolute inset-0 bg-red-600/[0.03] opacity-0 transition duration-700 group-hover:opacity-100" />
 
-            {/* subtle glow */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-red-600/[0.03]" />
+      <div className="relative z-10 flex h-full flex-col justify-between p-8 lg:p-10">
+        <div>
+          <div className="mb-8 flex items-center justify-between gap-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-red-600">
+              Haggai Advantage
+            </p>
 
-            {/* content */}
-            <div className="relative z-10 p-8 lg:p-12 flex flex-col justify-between h-full">
-
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-red-600 mb-6">
-                  Customer Experience
-                </p>
-
-                <h3 className="text-3xl lg:text-4xl font-light text-gray-900 dark:text-white leading-tight">
-                  {features[0].title}
-                </h3>
-
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-6 text-lg">
-                  {features[0].description}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-3 mt-10">
-                <div className="w-10 h-[1px] bg-red-600" />
-                <span className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-widest">
-                  Haggai Advantage
-                </span>
-              </div>
-
-            </div>
+            <span className="text-4xl font-thin text-red-600 opacity-30 transition duration-500 group-hover:opacity-100">
+              {String(index + 1).padStart(2, "0")}
+            </span>
           </div>
 
-          {/* RIGHT STACK */}
-          <div className="md:col-span-7 space-y-8">
+          <h3 className="text-3xl font-light leading-tight tracking-tight text-gray-900 dark:text-white">
+            {feature.title}
+          </h3>
 
-            {features.slice(1).map((feature, index) => (
-              <div
-                key={index}
-                className="relative group overflow-hidden"
-              >
-
-                {/* outer frame */}
-                <div className="absolute inset-0 border border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-white/20 dark:group-hover:border-red-600/30" />
-
-                {/* animated fill */}
-                <div className="absolute top-0 left-0 w-0 h-full bg-red-600/[0.04] transition-all duration-700 group-hover:w-full" />
-
-                {/* edge geometry */}
-                <div className="absolute top-0 left-0 w-20 h-20 border-l border-t border-red-600/60 transition-all duration-500 group-hover:w-28 group-hover:h-28" />
-
-                {/* moving accent */}
-                <div className="absolute bottom-0 right-0 w-16 h-16 border-r border-b border-gray-300 dark:border-gray-700 transition-all duration-500 group-hover:border-red-600" />
-
-                {/* content */}
-                <div className="relative z-10 p-8 lg:p-10">
-
-                  <div className="flex items-start justify-between gap-6 flex-wrap">
-
-                    <div>
-                      <h3 className="text-2xl font-light text-gray-900 dark:text-white tracking-tight">
-                        {feature.title}
-                      </h3>
-
-                      <p className="text-gray-600 dark:text-gray-300 mt-4 leading-relaxed max-w-xl">
-                        {feature.description}
-                      </p>
-                    </div>
-
-                    <div className="text-red-600 text-4xl font-thin opacity-30 group-hover:opacity-100 transition-all duration-500">
-                      0{index + 2}
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            ))}
-
-          </div>
+          <p className="mt-6 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            {feature.description}
+          </p>
         </div>
+
+        <div className="mt-10 flex items-center gap-3">
+          <div className="h-[1px] w-10 bg-red-600" />
+          <span className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400">
+            Customer Experience
+          </span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
         {/* TESTIMONIAL HEADER */}
         <div className="space-y-5">

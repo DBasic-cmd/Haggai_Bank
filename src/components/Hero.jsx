@@ -113,8 +113,65 @@ const Hero = () => {
               </p>
             </div>
           </div>
+          <div className="mt-12 max-w-5xl">
+  <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+    <div className="flex items-center gap-3">
+      {/* <span className="text-red-500 text-lg">📍</span> */}
+
+      <div>
+        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+          Head Office
+        </p>
+
+        <p className="text-sm leading-6 text-white/80">
+          119, Bode Thomas Street,<br className="sm:hidden" />
+          Surulere, Lagos State, Nigeria
+        </p>
+      </div>
+    </div>
+
+    <div className="hidden h-10 w-px bg-white/10 lg:block" />
+
+    <div className="flex items-center gap-3">
+      {/* <span className="text-red-500 text-lg">✉</span> */}
+
+      <div>
+        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+          Email
+        </p>
+
+        <a
+          href="mailto:info@haggaibank.com"
+          className="text-sm text-white/80 transition hover:text-white"
+        >
+          info@haggaibank.com
+        </a>
+      </div>
+    </div>
+
+    <div className="hidden h-10 w-px bg-white/10 lg:block" />
+
+        <div className="flex items-center gap-3">
+          {/* <span className="flex h-9 w-9 items-center justify-center rounded-full border border-green-500/40 bg-green-500/10">
+            ✓
+          </span> */}
+
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+              Regulatory Status
+            </p>
+
+            <p className="text-sm text-white/80">
+              Licensed by the Central Bank of Nigeria
+            </p>
+          </div>
         </div>
       </div>
+    </div>
+        </div>
+      </div>
+
+      
 
       <div className="absolute bottom-8 right-8 z-20 hidden max-w-sm border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
         <p className="text-xs font-black uppercase tracking-[0.3em] text-red-200">
