@@ -19,6 +19,30 @@ const culture = [
   },
 ];
 
+const openPositions = [
+  {
+    title: "Mortgage Advisory Officer",
+    type: "Full-Time",
+    location: "Lagos, NG",
+    department: "Retail & Mortgage Advisory",
+    description: "Guide clients through the mortgage application process, analyze financial data, and recommend the best home finance plans.",
+  },
+  {
+    title: "Electronic Banking Specialist",
+    type: "Full-Time",
+    location: "Lagos, NG",
+    department: "Operations & IT",
+    description: "Support electronic banking applications (USSD, Mobile app, Internet Banking, Remita) and manage inter-bank funds transfers.",
+  },
+  {
+    title: "Credit Risk Analyst",
+    type: "Full-Time",
+    location: "Lagos, NG",
+    department: "Credit & Risk Management",
+    description: "Evaluate credit applications, assess loan risk portfolios, and ensure regulatory alignment with CBN guidelines.",
+  },
+];
+
 const fields = [
   {
     id: "title",
@@ -204,8 +228,68 @@ const Career = () => {
         </div>
       </section>
 
+      <section className="relative z-20 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:p-10">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+              Careers
+            </p>
+            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
+              Available Positions
+            </h2>
+            <p className="mt-4 text-base text-slate-600">
+              Explore current opportunities to join our team at Haggai Mortgage Bank.
+            </p>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {openPositions.map((position) => (
+                <div
+                  key={position.title}
+                  className="group relative flex flex-col justify-between bg-[#f8f4ed] p-7 shadow-lg transition duration-500 hover:-translate-y-2 hover:shadow-red-700/5 hover:border-red-700/30 border border-slate-200/60"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="inline-block bg-red-100 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-red-800 rounded-full">
+                        {position.type}
+                      </span>
+                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.1em]">
+                        {position.location}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-6 text-lg font-black tracking-[-0.04em] text-slate-900 group-hover:text-red-700 transition duration-300">
+                      {position.title}
+                    </h3>
+
+                    <p className="mt-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">
+                      {position.department}
+                    </p>
+
+                    <p className="mt-4 text-sm leading-6 text-slate-600">
+                      {position.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 border-t border-slate-200/60 pt-5">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        document.getElementById("career-application-form")?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="inline-flex items-center text-xs font-bold uppercase tracking-[0.15em] text-red-700 transition duration-300 hover:text-red-900"
+                    >
+                      Apply Now <span className="ml-2 group-hover:translate-x-1 transition duration-300">→</span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative z-20 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
-        <div className="mx-auto max-w-6xl">
+        <div id="career-application-form" className="mx-auto max-w-6xl">
           <div className="overflow-hidden bg-white shadow-[0_40px_120px_rgba(0,0,0,0.38)] animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="grid lg:grid-cols-[0.78fr_1.22fr]">
               <aside className="relative overflow-hidden bg-[#111111] p-8 text-white sm:p-10 lg:p-12">

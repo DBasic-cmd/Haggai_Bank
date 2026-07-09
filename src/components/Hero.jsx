@@ -73,7 +73,7 @@ const Hero = () => {
               className="group relative overflow-hidden bg-red-700 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition duration-500 hover:bg-red-800"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition duration-700 group-hover:translate-x-full" />
-              <Link to = "/products/haggai-plot-advance" className="relative">Explore Mortgages</Link>
+              <Link to="/products/haggai-plot-advance" className="relative">Explore Mortgages</Link>
             </a>
 
             <Link
@@ -114,66 +114,73 @@ const Hero = () => {
             </div>
           </div>
           <div className="mt-12 max-w-5xl">
-  <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-    <div className="flex items-center gap-3">
-      {/* <span className="text-red-500 text-lg">📍</span> */}
+            <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+              <div className="flex items-center gap-3">
+                {/* <span className="text-red-500 text-lg">📍</span> */}
 
-      <div>
-        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
-          Head Office
-        </p>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+                    Head Office
+                  </p>
 
-        <p className="text-sm leading-6 text-white/80">
-          119, Bode Thomas Street,<br className="sm:hidden" />
-          Surulere, Lagos State, Nigeria
-        </p>
-      </div>
-    </div>
+                  <p className="text-sm leading-6 text-white/80">
+                    119, Bode Thomas Street,<br className="sm:hidden" />
+                    Surulere, Lagos State, Nigeria
+                  </p>
+                </div>
+              </div>
 
-    <div className="hidden h-10 w-px bg-white/10 lg:block" />
+              <div className="hidden h-10 w-px bg-white/10 lg:block" />
 
-    <div className="flex items-center gap-3">
-      {/* <span className="text-red-500 text-lg">✉</span> */}
+              <div className="flex items-center gap-3">
+                {/* <span className="text-red-500 text-lg">✉</span> */}
 
-      <div>
-        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
-          Email
-        </p>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+                    Email
+                  </p>
 
-        <a
-          href="mailto:info@haggaibank.com"
-          className="text-sm text-white/80 transition hover:text-white"
-        >
-          info@haggaibank.com
-        </a>
-      </div>
-    </div>
+                  <a
+                    href="mailto:info@haggaibank.com"
+                    className="text-sm text-white/80 transition hover:text-white"
+                  >
+                    info@haggaibank.com
+                  </a>
+                </div>
+              </div>
 
-    <div className="hidden h-10 w-px bg-white/10 lg:block" />
+              <div className="hidden h-10 w-px bg-white/10 lg:block" />
 
-        <div className="flex items-center gap-3">
-          {/* <span className="flex h-9 w-9 items-center justify-center rounded-full border border-green-500/40 bg-green-500/10">
+              <div className="flex items-center gap-3">
+                {/* <span className="flex h-9 w-9 items-center justify-center rounded-full border border-green-500/40 bg-green-500/10">
             ✓
           </span> */}
 
-          <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
-              Regulatory Status
-            </p>
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+                    Regulatory Status
+                  </p>
 
-            <p className="text-sm text-white/80">
-              Licensed by the Central Bank of Nigeria
-            </p>
+                  <p className="text-sm text-white/80">
+                    Licensed by the Central Bank of Nigeria
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-        </div>
+
+
+      <div className="absolute bottom-[250px] right-8 z-20 hidden w-[320px] text-white lg:block">
+        <Link
+          to="/products/remita-electronic-collection-solution"
+          className="block w-full bg-red-700 py-4 text-center text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg shadow-red-900/30 transition duration-300 hover:bg-red-800"
+        >
+          Remittance Processing
+        </Link>
       </div>
-
-      
-
-      <div className="absolute bottom-8 right-8 z-20 hidden max-w-sm border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
+      <div className="absolute bottom-8 right-8 z-20 hidden w-[320px] border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
         <p className="text-xs font-black uppercase tracking-[0.3em] text-red-200">
           Mortgage Advisory
         </p>

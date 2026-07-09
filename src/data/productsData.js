@@ -238,7 +238,28 @@ export const productGroups = [
       title: "Retail Products",
       slug: "retail-products",
       products: [
-        { name: "Fixed Deposit", slug: "fixed-deposit", shortName: "FD", content: "" },
+        {
+          name: "Fixed Deposit",
+          slug: "fixed-deposit",
+          shortName: "FD",
+          content: `FIXED DEPOSIT
+  
+Don’t keep your money; invest it!
+We operate investment accounts for our esteemed clients, where we offer the best of competitive interest rates. This product is open to churches, individual and corporate clients who intend to accumulate their funds for future use. Here is a low-down of our accepted fixed deposit call term:
+
+Call/Term deposits of:
+· 30 days deposits
+· 60 days deposits
+· 90 days deposits
+· 180 days deposits and above
+
+With option to obtain the interest at backend or rollover the principal at maturity.
+
+Features and benefits:
+· Good returns on investment
+· Minimum amount for deposit N50,000.00
+· Competitive Interest rate.`,
+        },
         {
           name: "Personal Current/Corporate Account",
           slug: "personal-current-corporate-account",
