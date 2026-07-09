@@ -45,28 +45,28 @@ const abridgedAccounts = [
 
 const financialStatements = [
   {
-    title: "HMB 2019 Financial Statements",
-    href: "/investor-relations/hmb2019financialstatementscbn.pdf",
-  },
-  {
-    title: "HMB 2020 Financial Statements",
-    href: "/investor-relations/HAGGAI Mortgage Bank 2020 FS_Reviewed.pdf",
-  },
-  {
-    title: "HMB 2021 Financial Statements",
-    href: "/investor-relations/HAGGAI Mortgage Bank 2021 FS.pdf",
-  },
-  {
-    title: "HMB 2022 Financial Statements",
-    href: "/investor-relations/HMB_FS_2022.pdf",
+    title: "HMB 2024 Financial Statements",
+    href: "/investor-relations/AFS 2024 - HAGGAI MORTGAGE BANK LIMITED.pdf",
   },
   {
     title: "HMB 2023 Financial Statements",
     href: "/investor-relations/HMB_FS_2023.pdf",
   },
   {
-    title: "HMB 2024 Financial Statements",
-    href: "/investor-relations/AFS 2024 - HAGGAI MORTGAGE BANK LIMITED.pdf",
+    title: "HMB 2022 Financial Statements",
+    href: "/investor-relations/HMB_FS_2022.pdf",
+  },
+  {
+    title: "HMB 2021 Financial Statements",
+    href: "/investor-relations/HAGGAI Mortgage Bank 2021 FS.pdf",
+  },
+  {
+    title: "HMB 2020 Financial Statements",
+    href: "/investor-relations/HAGGAI Mortgage Bank 2020 FS_Reviewed.pdf",
+  },
+  {
+    title: "HMB 2019 Financial Statements",
+    href: "/investor-relations/hmb2019financialstatementscbn.pdf",
   },
 ];
 
@@ -78,9 +78,7 @@ const ReportLink = ({ item, index }) => {
       href={isDisabled ? undefined : item.href}
       aria-disabled={isDisabled}
       className={`group relative flex items-center justify-between border-b border-slate-200 py-5 transition duration-300 ${
-        isDisabled
-          ? "cursor-not-allowed opacity-45"
-          : "hover:border-red-700"
+        isDisabled ? "cursor-not-allowed opacity-45" : "hover:border-red-700"
       }`}
     >
       <div>
@@ -149,7 +147,7 @@ const InvestorRelations = () => {
               </div>
 
               <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
-                2013 — 2024
+                2024 — 2013
               </p>
             </div>
 
@@ -173,7 +171,7 @@ const InvestorRelations = () => {
               </div>
 
               <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
-                2019 — 2024
+                2024 — 2019
               </p>
             </div>
 
