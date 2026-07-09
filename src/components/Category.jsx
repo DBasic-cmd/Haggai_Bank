@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Building2,
-  ChevronRight,
-  Landmark,
-} from "lucide-react";
+import { Building2, Landmark } from "lucide-react";
 
 const Category = () => {
   const [activeTab, setActiveTab] = useState("Haggai Plot Advance");
@@ -14,6 +10,7 @@ const Category = () => {
   const categories = [
     {
       name: "Haggai Plot Advance",
+      slug: "haggai-plot-advance",
       title: "Secure land today, build tomorrow",
       description:
         "Get financial support to acquire land now and take the first step toward owning your dream property.",
@@ -22,6 +19,7 @@ const Category = () => {
     },
     {
       name: "Haggai House Completion",
+      slug: "haggai-house-completion",
       title: "Complete your home construction",
       description:
         "Get the funds you need to finish building your house and move in sooner.",
@@ -30,6 +28,7 @@ const Category = () => {
     },
     {
       name: "Haggai House Purchase",
+      slug: "haggai-house-purchase",
       title: "Buy your dream home",
       description:
         "Make your home ownership dreams a reality with our flexible mortgage options.",
@@ -38,6 +37,7 @@ const Category = () => {
     },
     {
       name: "Haggai House Renovation",
+      slug: "haggai-house-renovation",
       title: "Transform your space",
       description:
         "Renovate and modernize your home with our renovation financing solutions.",
@@ -46,6 +46,7 @@ const Category = () => {
     },
     {
       name: "Haggai Rent",
+      slug: "haggai-rent",
       title: "Refinance Your Rent",
       description:
         "Let us take the burden of a lump sum off your shoulders by refinancing your rent. Now you can pay your rent monthly, rather than yearly.",
@@ -54,6 +55,7 @@ const Category = () => {
     },
     {
       name: "Haggai Camp Home",
+      slug: "haggai-camp-home",
       title: "Temporary housing solutions",
       description:
         "Get comfortable temporary housing while you build your permanent home.",
@@ -103,44 +105,44 @@ const Category = () => {
   return (
     <section
       id="products"
-      className="relative overflow-hidden bg-white dark:bg-[#05070d] py-24 md:py-32 px-4 sm:px-8 lg:px-20"
+      className="relative overflow-hidden bg-white px-4 py-24 dark:bg-[#05070d] sm:px-8 md:py-32 lg:px-20"
     >
-      <div className="absolute top-[-150px] right-[-100px] w-[350px] h-[350px] bg-red-600/10 blur-[120px]" />
-      <div className="absolute bottom-[5%] left-[-120px] w-[300px] h-[300px] bg-pink-500/10 blur-[120px]" />
-      <div className="absolute top-[40%] right-[10%] w-[180px] h-[180px] border border-red-600/10 rotate-45" />
+      <div className="absolute right-[-100px] top-[-150px] h-[350px] w-[350px] bg-red-600/10 blur-[120px]" />
+      <div className="absolute bottom-[5%] left-[-120px] h-[300px] w-[300px] bg-pink-500/10 blur-[120px]" />
+      <div className="absolute right-[10%] top-[40%] h-[180px] w-[180px] rotate-45 border border-red-600/10" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mb-20"
+          className="mb-20 max-w-4xl"
         >
-          <div className="inline-flex items-center gap-2 border border-red-600/20 bg-red-600/10 px-5 py-2 text-red-700 dark:text-red-400 uppercase tracking-[0.25em] text-xs mb-8">
+          <div className="mb-8 inline-flex items-center gap-2 border border-red-600/20 bg-red-600/10 px-5 py-2 text-xs uppercase tracking-[0.25em] text-red-700 dark:text-red-400">
             <Landmark size={14} />
             Mortgage Products
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight text-gray-900 dark:text-white">
+          <h1 className="text-5xl font-light leading-[1.05] tracking-tight text-gray-900 dark:text-white md:text-6xl lg:text-7xl">
             Mortgage Solutions
             <span className="block text-red-700 dark:text-red-400">
               Built Around Real Lives
             </span>
           </h1>
 
-          <p className="mt-8 text-lg md:text-xl leading-9 text-gray-600 dark:text-gray-300 max-w-3xl">
+          <p className="mt-8 max-w-3xl text-lg leading-9 text-gray-600 dark:text-gray-300 md:text-xl">
             Discover flexible financing solutions designed to help individuals,
             families, and communities move confidently toward sustainable home
             ownership.
           </p>
         </motion.div>
 
-        <div className="sticky top-24 z-30 hidden lg:block mb-20">
-          <div className="border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-white/[0.03] backdrop-blur-2xl px-4 py-4 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/5 to-transparent pointer-events-none" />
+        <div className="sticky top-24 z-30 mb-20 hidden lg:block">
+          <div className="overflow-hidden border border-gray-200 bg-white/70 px-4 py-4 backdrop-blur-2xl dark:border-gray-800 dark:bg-white/[0.03]">
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-red-600/5 to-transparent" />
 
-            <div className="relative flex flex-nowrap gap-3 overflow-x-auto scrollbar-hide">
+            <div className="scrollbar-hide relative flex flex-nowrap gap-3 overflow-x-auto">
               {categories.map((category) => {
                 const active = activeTab === category.name;
 
@@ -148,10 +150,10 @@ const Category = () => {
                   <button
                     key={category.name}
                     onClick={() => scrollToSection(category.name)}
-                    className={`group relative shrink-0 px-5 py-3 border transition-all duration-500 overflow-hidden ${
+                    className={`group relative shrink-0 overflow-hidden border px-5 py-3 transition-all duration-500 ${
                       active
                         ? "border-red-600 bg-red-600 text-white"
-                        : "border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300 hover:border-red-600/40 hover:text-red-700 dark:hover:text-red-400"
+                        : "border-gray-200 text-gray-700 hover:border-red-600/40 hover:text-red-700 dark:border-gray-800 dark:text-gray-300 dark:hover:text-red-400"
                     }`}
                   >
                     <div
@@ -162,7 +164,7 @@ const Category = () => {
                       }`}
                     />
 
-                    <span className="relative text-sm uppercase tracking-wider whitespace-nowrap">
+                    <span className="relative whitespace-nowrap text-sm uppercase tracking-wider">
                       {category.name}
                     </span>
                   </button>
@@ -182,29 +184,29 @@ const Category = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
               viewport={{ once: true }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center"
+              className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24"
             >
               <div
                 className={`relative ${
                   index % 2 === 1 ? "lg:order-2" : ""
                 }`}
               >
-                <div className="absolute -left-6 top-0 h-40 w-[1px] bg-gradient-to-b from-red-600 to-transparent hidden lg:block" />
+                <div className="absolute -left-6 top-0 hidden h-40 w-[1px] bg-gradient-to-b from-red-600 to-transparent lg:block" />
 
-                <div className="inline-flex items-center gap-2 border border-red-600/20 bg-red-600/10 px-4 py-2 text-red-700 dark:text-red-400 uppercase tracking-[0.2em] text-xs mb-7">
+                <div className="mb-7 inline-flex items-center gap-2 border border-red-600/20 bg-red-600/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-red-700 dark:text-red-400">
                   <Building2 size={14} />
                   {category.name}
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-light leading-tight tracking-tight text-gray-900 dark:text-white max-w-xl">
+                <h2 className="max-w-xl text-4xl font-light leading-tight tracking-tight text-gray-900 dark:text-white md:text-5xl">
                   {category.title}
                 </h2>
 
-                <p className="mt-8 text-lg leading-9 text-gray-600 dark:text-gray-300 max-w-xl">
+                <p className="mt-8 max-w-xl text-lg leading-9 text-gray-600 dark:text-gray-300">
                   {category.description}
                 </p>
 
-                <div className="flex flex-wrap gap-4 mt-10">
+                <div className="mt-10 flex flex-wrap gap-4">
                   {[
                     "Flexible Plans",
                     "Fast Processing",
@@ -212,33 +214,11 @@ const Category = () => {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-white/[0.03] px-4 py-3 text-sm uppercase tracking-wider text-gray-700 dark:text-gray-300"
+                      className="border border-gray-200 bg-white/60 px-4 py-3 text-sm uppercase tracking-wider text-gray-700 dark:border-gray-800 dark:bg-white/[0.03] dark:text-gray-300"
                     >
                       {item}
                     </div>
                   ))}
-                </div>
-
-                <div className="flex flex-wrap gap-5 mt-12">
-                  {/* <button className="group relative overflow-hidden border border-red-700 bg-red-700 px-8 py-4 uppercase tracking-[0.2em] text-sm text-white transition-all duration-500 hover:bg-transparent hover:text-red-700 dark:hover:text-red-400">
-                    <span className="relative z-10 flex items-center gap-2">
-                      Open Account
-                      <ArrowRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      />
-                    </span>
-                  </button> */}
-
-                  {/* <button className="group border border-gray-300 dark:border-gray-700 px-8 py-4 uppercase tracking-[0.2em] text-sm text-gray-800 dark:text-white hover:border-red-700 hover:text-red-700 dark:hover:text-red-400 transition-all duration-500">
-                    <span className="flex items-center gap-2">
-                      Learn More
-                      <ChevronRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      />
-                    </span>
-                  </button> */}
                 </div>
               </div>
 
@@ -253,35 +233,49 @@ const Category = () => {
                   index % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-red-700/5 to-transparent" />
+                <Link
+                  to={`/products/${category.slug}`}
+                  className="group block"
+                  aria-label={`View ${category.name}`}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-700/5 to-transparent" />
 
-                <div className="relative aspect-square border border-gray-200 dark:border-gray-800 bg-white dark:bg-white/[0.03] overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-red-600/60 to-transparent z-20" />
+                  <div className="relative aspect-square overflow-hidden border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
+                    <div className="absolute left-0 top-0 z-20 h-[1px] w-full bg-gradient-to-r from-transparent via-red-600/60 to-transparent" />
 
-                  <div className="absolute top-6 left-6 z-20">
-                    <span className="text-white text-6xl font-black opacity-90 drop-shadow-2xl">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                    <div className="absolute left-6 top-6 z-20">
+                      <span className="text-6xl font-black text-white opacity-90 drop-shadow-2xl">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      className="h-full w-full object-cover transition duration-1000 group-hover:scale-110"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
+
+                    <div className="absolute inset-0 z-10 bg-red-700/0 transition duration-500 group-hover:bg-red-700/10" />
+
+                    <div className="absolute bottom-6 left-6 right-6 z-20">
+                      <p className="mb-2 text-xs uppercase tracking-[0.25em] text-red-200">
+                        Haggai Mortgage Bank
+                      </p>
+
+                      <div className="flex items-end justify-between gap-5">
+                        <h3 className="text-3xl font-semibold tracking-tight text-white">
+                          {category.name}
+                        </h3>
+
+                        <span className="hidden shrink-0 border border-white/25 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-white/80 transition duration-300 group-hover:border-red-500 group-hover:bg-red-700 group-hover:text-white sm:inline-flex">
+                          View Product
+                        </span>
+                      </div>
+                    </div>
                   </div>
-
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-full object-cover transition duration-1000 hover:scale-110"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
-
-                  <div className="absolute bottom-6 left-6 right-6 z-20">
-                    <p className="text-xs uppercase tracking-[0.25em] text-red-200 mb-2">
-                      Haggai Mortgage Bank
-                    </p>
-
-                    <h3 className="text-3xl font-semibold tracking-tight text-white">
-                      {category.name}
-                    </h3>
-                  </div>
-                </div>
+                </Link>
               </motion.div>
             </motion.div>
           ))}
