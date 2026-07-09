@@ -115,7 +115,7 @@ const InvestorRelations = () => {
     <main className="min-h-screen bg-[#f7f3ef] text-slate-950">
       <section className="relative overflow-hidden bg-[#070707] px-5 pb-24 pt-40 text-white sm:px-10 lg:px-16 xl:px-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(185,28,28,0.35),transparent_30%),radial-gradient(circle_at_85%_10%,rgba(255,255,255,0.1),transparent_28%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:90px_90px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-size-[90px_90px]" />
 
         <div className="relative mx-auto max-w-7xl">
           <p className="text-xs font-black uppercase tracking-[0.38em] text-red-400">
