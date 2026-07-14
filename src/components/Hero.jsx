@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const heroSlides = [
@@ -45,6 +45,7 @@ const heroSlides = [
 ];
 
 const Hero = () => {
+  const [activeTab, setActiveTab] = useState("personal");
   return (
     <section
       id="hero"
@@ -214,20 +215,44 @@ const Hero = () => {
             animationDelay: `${index * 8}s`,
           }}
         >
-          <p className="text-xs font-black uppercase tracking-[0.3em] text-red-200">
-            Mortgage Advisory
-          </p>
 
-          <p className="mt-3 text-2xl font-black leading-tight">
+          <div className="mt-4 flex border-b border-white/10 pb-2">
+            <button
+              onClick={() => setActiveTab("personal")}
+              className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "personal"
+                ? "border-red-600 text-white"
+                : "border-transparent text-white/45 hover:text-white/70"
+                }`}
+            >
+              Personal
+            </button>
+            <button
+              onClick={() => setActiveTab("corporate")}
+              className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "corporate"
+                ? "border-red-600 text-white"
+                : "border-transparent text-white/45 hover:text-white/70"
+                }`}
+            >
+              Corporate
+            </button>
+          </div>
+
+          <p className="mt-4 text-xl font-black leading-tight min-h-[56px]">
             {slide.advisoryTitle}
           </p>
 
-          <Link
-            to="/get-a-call-back"
-            className="mt-5 inline-flex text-sm font-bold uppercase tracking-[0.2em] text-white/80 transition hover:text-white"
+          <a
+            href={
+              activeTab === "personal"
+                ? "https://ibank.haggaibank.com/login"
+                : "https://corpbanking.haggaibank.com"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 block w-full bg-red-700 py-3.5 text-center text-xs font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-red-800 shadow-md shadow-red-900/10"
           >
-            Speak to an advisor →
-          </Link>
+            Login
+          </a>
         </div>
       ))}
 
