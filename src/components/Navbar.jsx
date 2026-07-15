@@ -141,8 +141,8 @@ const Navbar = ({ theme, setTheme }) => {
 
                 <div
                   className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[820px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${aboutOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
                     }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
@@ -273,8 +273,8 @@ const Navbar = ({ theme, setTheme }) => {
 
                 <div
                   className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[1100px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${productsOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
                     }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
@@ -370,8 +370,8 @@ const Navbar = ({ theme, setTheme }) => {
 
                 <div
                   className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[720px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${resourcesOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
                     }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
@@ -446,8 +446,8 @@ const Navbar = ({ theme, setTheme }) => {
 
                 <div
                   className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-72 lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${contactOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
                     }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
@@ -515,7 +515,7 @@ const Navbar = ({ theme, setTheme }) => {
                   onClick={closeMenus}
                   className="rounded-full border border-white/30 px-5 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:border-red-500 hover:bg-red-700"
                 >
-                  Internet Banking
+                  Old Internet Banking
                 </a>
 
                 <Link
@@ -536,7 +536,7 @@ const Navbar = ({ theme, setTheme }) => {
               rel="noopener noreferrer"
               className="hidden rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:border-red-500 hover:bg-red-700 md:inline-flex"
             >
-              Internet Banking
+              Old Internet Banking
             </a>
 
             <Link

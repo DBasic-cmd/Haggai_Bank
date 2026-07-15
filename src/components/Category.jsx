@@ -142,7 +142,7 @@ const Category = () => {
           <div className="overflow-hidden border border-gray-200 bg-white/70 px-4 py-4 backdrop-blur-2xl dark:border-gray-800 dark:bg-white/[0.03]">
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-red-600/5 to-transparent" />
 
-            <div className="scrollbar-hide relative flex flex-nowrap gap-3 overflow-x-auto">
+            <div className="custom-scrollbar relative flex flex-nowrap gap-3 overflow-x-auto pb-3">
               {categories.map((category) => {
                 const active = activeTab === category.name;
 
@@ -281,6 +281,35 @@ const Category = () => {
           ))}
         </div>
       </div>
+
+      <style>
+        {`
+          .custom-scrollbar::-webkit-scrollbar {
+            height: 5px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: 6px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(185, 28, 28, 0.25);
+            border-radius: 6px;
+            transition: background 0.3s ease;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(185, 28, 28, 0.7);
+          }
+          .dark .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+          }
+          .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(239, 68, 68, 0.25);
+          }
+          .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(239, 68, 68, 0.7);
+          }
+        `}
+      </style>
     </section>
   );
 };
