@@ -78,9 +78,7 @@ const ReportLink = ({ item, index }) => {
       href={isDisabled ? undefined : item.href}
       aria-disabled={isDisabled}
       className={`group relative flex items-center justify-between border-b border-slate-200 py-5 transition duration-300 ${
-        isDisabled
-          ? "cursor-not-allowed opacity-45"
-          : "hover:border-red-700"
+        isDisabled ? "cursor-not-allowed opacity-45" : "hover:border-red-700"
       }`}
     >
       <div>
@@ -149,7 +147,7 @@ const InvestorRelations = () => {
               </div>
 
               <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
-                2013 — 2024
+                2024 — 2013
               </p>
             </div>
 
