@@ -37,17 +37,17 @@ const Offer = () => {
           </button>
         </div>
 
-        
+
 
         <div className="flex items-center justify-center pt-7">
-          
+
           <a
             href="https://online.haggaisecure.com/haggaionline/"
-              target="_blank"
-              rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-red-700 text-sm rounded-lg  px-4 py-2   hover:text-white hover:bg-red-800 text-white transition-colors hidden md:inline-flex items-center gap-2"
           >
-            Access Internet Banking
+            Old Internet Banking
             {/* <img src={assets.arrow_icon} alt="" /> */}
           </a>
         </div>

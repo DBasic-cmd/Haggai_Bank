@@ -12,6 +12,74 @@ const ProductPage = () => {
 
   const hasContent = product.content && product.content.trim().length > 0;
 
+  const parseProductContent = (content) => {
+    if (!content) return [];
+    // Normalize newlines and split by empty lines
+    const blocks = content.split(/\n\s*\n/).map(block => block.trim()).filter(Boolean);
+    
+    const sections = [];
+    let overviewBodyParts = [];
+    let overviewListParts = [];
+
+    blocks.forEach((block) => {
+      const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+      if (lines.length === 0) return;
+
+      const firstLine = lines[0];
+      const isHeader = firstLine.endsWith(':') || 
+                       firstLine.toLowerCase().startsWith('who can apply') ||
+                       firstLine.toLowerCase().startsWith('requirements') ||
+                       firstLine.toLowerCase().startsWith('eligibility') ||
+                       firstLine.toLowerCase().startsWith('benefits');
+
+      if (isHeader) {
+        const sectionTitle = firstLine.replace(/:$/, '').trim();
+        const sectionItems = lines.slice(1);
+        
+        // Check if items are bullet points (e.g. starting with '·' or '-' or '*')
+        const hasBullets = sectionItems.some(item => item.startsWith('·') || item.startsWith('-') || item.startsWith('*') || item.startsWith('.'));
+        
+        if (hasBullets) {
+          sections.push({
+            title: sectionTitle,
+            list: sectionItems.map(item => item.replace(/^[·\-\*\.]\s*/, '').trim())
+          });
+        } else {
+          sections.push({
+            title: sectionTitle,
+            body: sectionItems.join('\n')
+          });
+        }
+      } else {
+        // Unheaded blocks are collected under Overview
+        const hasBullets = lines.some(line => line.startsWith('·') || line.startsWith('-') || line.startsWith('*') || line.startsWith('.'));
+        if (hasBullets) {
+          lines.forEach(line => {
+            overviewListParts.push(line.replace(/^[·\-\*\.]\s*/, '').trim());
+          });
+        } else {
+          if (lines.length > 1 && lines[0] === lines[0].toUpperCase() && lines[0].length < 50) {
+            overviewBodyParts.push(lines.slice(1).join('\n'));
+          } else {
+            overviewBodyParts.push(block);
+          }
+        }
+      }
+    });
+
+    const overviewSection = {
+      title: "Overview",
+    };
+    if (overviewBodyParts.length > 0) {
+      overviewSection.body = overviewBodyParts.join('\n\n');
+    }
+    if (overviewListParts.length > 0) {
+      overviewSection.list = overviewListParts;
+    }
+
+    return [overviewSection, ...sections];
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-white text-slate-950">
       <div
@@ -67,37 +135,113 @@ const ProductPage = () => {
               </div>
             </aside>
 
-            <article className="overflow-hidden bg-white px-6 py-10 shadow-[0_40px_120px_rgba(0,0,0,0.22)] sm:px-10 lg:px-14">
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
-                Product Details
-              </p>
-
-              <h2 className="mt-5 text-5xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-                {product.name}
-              </h2>
-
-              <div className="my-10 h-px bg-slate-200" />
+            <div className="space-y-8">
+              {/* Product Header Card */}
+              <div className="bg-white/90 p-8 shadow-xl shadow-slate-900/5 border border-slate-100 backdrop-blur sm:p-10 relative overflow-hidden animate-[slideFromLeft_900ms_ease_both]">
+                <div className="absolute left-0 top-0 h-full w-1.5 bg-red-700" />
+                <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+                  Product Details
+                </p>
+                <h2 className="mt-5 text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-5xl">
+                  {product.name}
+                </h2>
+              </div>
 
               {hasContent ? (
-                <p className="whitespace-pre-line text-[20px] leading-[1.65] text-slate-600">
-                  {product.content}
-                </p>
+                parseProductContent(product.content).map((section, index) => (
+                  <article
+                    key={`${section.title}-${index}`}
+                    className={`group relative overflow-hidden bg-white/90 p-8 shadow-xl shadow-slate-900/5 border border-slate-100 backdrop-blur transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10 sm:p-10 ${
+                      index % 2 === 0
+                        ? "animate-[slideFromLeft_900ms_ease_both]"
+                        : "animate-[slideFromRight_900ms_ease_both]"
+                    }`}
+                    style={{
+                      animationDelay: `${index * 90}ms`,
+                    }}
+                  >
+                    <div className="absolute left-0 top-0 h-full w-1 bg-red-700 transition duration-500 group-hover:w-2" />
+
+                    <div className="flex flex-col gap-6">
+                      <div>
+                        <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                          {String(index + 1).padStart(2, "0")}
+                        </p>
+
+                        <h3 className="mt-4 text-2xl font-black leading-tight tracking-[-0.04em]">
+                          {section.title}
+                        </h3>
+
+                        {section.body && (
+                          <p className="mt-6 whitespace-pre-line text-base leading-8 text-slate-600">
+                            {section.body}
+                          </p>
+                        )}
+
+                        {section.list && (
+                          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                            {section.list.map((item, idx) => (
+                              <li
+                                key={`${item}-${idx}`}
+                                className="flex gap-3 text-base leading-7 text-slate-600"
+                              >
+                                <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-red-700" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
+                  </article>
+                ))
               ) : (
-                <div className="bg-[#f8f4ed] p-8">
+                <div className="bg-white/90 p-8 shadow-xl shadow-slate-900/5 border border-slate-100 backdrop-blur sm:p-10 relative overflow-hidden animate-[slideFromRight_900ms_ease_both]">
+                  <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
                   <h3 className="text-3xl font-semibold tracking-[-0.04em]">
                     Product information coming soon.
                   </h3>
-
                   <p className="mt-4 text-lg leading-8 text-slate-600">
-                    This page will be updated once
-                    the full content is available.
+                    This page will be updated once the full content is available.
                   </p>
                 </div>
               )}
-            </article>
+            </div>
           </div>
         </div>
       </section>
+
+      <style>
+        {`
+          @keyframes slideFromLeft {
+            0% {
+              opacity: 0;
+              transform: translateX(-80px) scale(0.98);
+              filter: blur(12px);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateX(0) scale(1);
+              filter: blur(0);
+            }
+          }
+
+          @keyframes slideFromRight {
+            0% {
+              opacity: 0;
+              transform: translateX(80px) scale(0.98);
+              filter: blur(12px);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateX(0) scale(1);
+              filter: blur(0);
+            }
+          }
+        `}
+      </style>
     </main>
   );
 };

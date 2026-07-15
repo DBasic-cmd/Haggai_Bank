@@ -197,64 +197,63 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <div className="absolute bottom-[250px] right-8 z-20 hidden w-[320px] text-white lg:block">
+      <div className="absolute bottom-[280px] right-8 z-20 hidden w-[320px] text-white lg:block">
         <Link
           to="/products/remita-electronic-collection-solution"
           className="block w-full bg-red-700 py-4 text-center text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg shadow-red-900/30 transition duration-300 hover:bg-red-800"
         >
           Remittance Processing
         </Link>
-      </div> */}
+      </div>
 
-      {heroSlides.map((slide, index) => (
-        <div
-          key={`advisory-${slide.label}-${index}`}
-          className="absolute bottom-8 right-8 z-20 hidden w-[320px] border border-white/15 bg-black/30 p-6 text-white opacity-0 backdrop-blur-xl lg:block"
-          style={{
-            animation: "heroTextCycle 32s infinite",
-            animationDelay: `${index * 8}s`,
-          }}
-        >
+      <div className="absolute bottom-8 right-8 z-20 hidden w-[320px] border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
+        <p className="mb-8 text-xl font-black leading-tight text-center">
+          Internet Banking
+        </p>
 
-          <div className="mt-4 flex border-b border-white/10 pb-2">
-            <button
-              onClick={() => setActiveTab("personal")}
-              className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "personal"
-                ? "border-red-600 text-white"
-                : "border-transparent text-white/45 hover:text-white/70"
-                }`}
-            >
-              Personal
-            </button>
-            <button
-              onClick={() => setActiveTab("corporate")}
-              className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "corporate"
-                ? "border-red-600 text-white"
-                : "border-transparent text-white/45 hover:text-white/70"
-                }`}
-            >
-              Corporate
-            </button>
-          </div>
-
-          <p className="mt-4 text-xl font-black leading-tight min-h-[56px]">
-            {slide.advisoryTitle}
-          </p>
-
-          <a
-            href={
-              activeTab === "personal"
-                ? "https://ibank.haggaibank.com/login"
-                : "https://corpbanking.haggaibank.com"
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 block w-full bg-red-700 py-3.5 text-center text-xs font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-red-800 shadow-md shadow-red-900/10"
+        <div className="mt-4 flex border-b border-white/10 pb-2">
+          <button
+            onClick={() => setActiveTab("personal")}
+            className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "personal"
+              ? "border-red-600 text-white"
+              : "border-transparent text-white/45 hover:text-white/70"
+              }`}
           >
-            Login
-          </a>
+            Personal
+          </button>
+          <button
+            onClick={() => setActiveTab("corporate")}
+            className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "corporate"
+              ? "border-red-600 text-white"
+              : "border-transparent text-white/45 hover:text-white/70"
+              }`}
+          >
+            Corporate
+          </button>
         </div>
-      ))}
+
+        <a
+          href={
+            activeTab === "personal"
+              ? "https://ibank.haggaibank.com/login"
+              : "https://corpbanking.haggaibank.com"
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 block w-full bg-red-700 py-3.5 text-center text-xs font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-red-800 shadow-md shadow-red-900/10"
+        >
+          Login
+        </a>
+
+        <div className="mt-4 flex items-center justify-center hover:text-red-500">
+          <Link
+            to="/about/privacy-policy"
+            className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/60 transition hover:text-white underline underline-offset-4"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+      </div>
 
       <div className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 lg:flex">
         {heroSlides.map((slide, index) => (
