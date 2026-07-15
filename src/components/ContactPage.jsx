@@ -28,6 +28,7 @@ const departments = [
 ];
 
 const ContactPage = () => {
+  const [submitted, setSubmitted] = React.useState(false);
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -77,6 +78,8 @@ ${formData.message}
     window.location.href = `mailto:info@haggaibank.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
+
+    setSubmitted(true);
   };
 
   return (
@@ -139,76 +142,109 @@ ${formData.message}
             <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-red-700/5 blur-xl" />
 
             <div className="relative">
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
-                Send a message
-              </p>
-
-              <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
-                Tell us how we can help.
-              </h2>
-
-              <div className="mt-10 grid gap-6">
-                <div>
-                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
-                    Your Name
-                  </label>
-                  <input
-                    required
-                    value={formData.name}
-                    onChange={(e) => handleChange("name", e.target.value)}
-                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
-                  />
+              {submitted ? (
+                <div className="py-12 text-center space-y-6 animate-[fadeIn_500ms_ease_both]">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 text-red-700">
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-3xl font-black tracking-[-0.04em]">
+                    Message Drafted!
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed max-w-md mx-auto text-base">
+                    We have opened your email client with your message details drafted. Please send the draft to finalize.
+                  </p>
+                  <p className="text-sm text-slate-400">
+                    If your email client didn't open, you can mail us directly at{" "}
+                    <a href="mailto:info@haggaibank.com" className="text-red-700 underline font-semibold">
+                      info@haggaibank.com
+                    </a>
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({ name: "", email: "", subject: "", message: "" });
+                    }}
+                    className="mt-6 px-6 py-3 border border-slate-200 text-xs font-black uppercase tracking-[0.2em] text-slate-700 hover:bg-slate-50 transition duration-300"
+                  >
+                    Send Another Message
+                  </button>
                 </div>
+              ) : (
+                <>
+                  <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+                    Send a message
+                  </p>
 
-                <div>
-                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
-                    Your E-mail
-                  </label>
-                  <input
-                    required
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
-                  />
-                </div>
+                  <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+                    Tell us how we can help.
+                  </h2>
 
-                <div>
-                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
-                    Your Subject
-                  </label>
-                  <input
-                    required
-                    value={formData.subject}
-                    onChange={(e) => handleChange("subject", e.target.value)}
-                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
-                  />
-                </div>
+                  <div className="mt-10 grid gap-6">
+                    <div>
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                        Your Name
+                      </label>
+                      <input
+                        required
+                        value={formData.name}
+                        onChange={(e) => handleChange("name", e.target.value)}
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                      />
+                    </div>
 
-                <div>
-                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
-                    Your Message
-                  </label>
-                  <textarea
-                    required
-                    rows={6}
-                    value={formData.message}
-                    onChange={(e) => handleChange("message", e.target.value)}
-                    className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
-                  />
-                </div>
+                    <div>
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                        Your E-mail
+                      </label>
+                      <input
+                        required
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                      />
+                    </div>
 
-                <button
-                  type="submit"
-                  className="group relative mt-2 inline-flex w-fit overflow-hidden bg-red-700 px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-red-800"
-                >
-                  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition duration-700 group-hover:translate-x-full" />
-                  <span className="relative inline-flex items-center gap-3">
-                    Send Message
-                    <Send size={18} />
-                  </span>
-                </button>
-              </div>
+                    <div>
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                        Your Subject
+                      </label>
+                      <input
+                        required
+                        value={formData.subject}
+                        onChange={(e) => handleChange("subject", e.target.value)}
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                        Your Message
+                      </label>
+                      <textarea
+                        required
+                        rows={6}
+                        value={formData.message}
+                        onChange={(e) => handleChange("message", e.target.value)}
+                        className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="group relative mt-2 inline-flex w-fit overflow-hidden bg-red-700 px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-red-800"
+                    >
+                      <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition duration-700 group-hover:translate-x-full" />
+                      <span className="relative inline-flex items-center gap-3">
+                        Send Message
+                        <Send size={18} />
+                      </span>
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           </form>
 
