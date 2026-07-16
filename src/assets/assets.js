@@ -30,6 +30,7 @@ import menu_icon_dark from './menu_icon_dark.svg'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
 import haggai_logo from './haggai.svg'
+import ndpr_audit_compliant from './ndpr_audit_compliant.jpg'
 
 
 export const company_logos = [
@@ -68,6 +69,7 @@ const assets = {
   sun_icon,
   moon_icon,
   haggai_logo,
+  ndpr_audit_compliant,
 }
 
 export default assets

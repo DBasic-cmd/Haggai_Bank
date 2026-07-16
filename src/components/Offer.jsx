@@ -14,12 +14,22 @@ const Offer = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-          <button className="bg-white border border-gray-100 rounded-full text-gray-700 px-6 py-2 font-semibold  transition-colors duration-200">
+          <a
+            href="https://ibank.haggaibank.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white border border-gray-100 rounded-full text-gray-700 px-6 py-2 font-semibold transition-colors duration-200 text-center"
+          >
             Personal Internet Banking
-          </button>
-          <button className="text-gray-700 rounded-full bg-white dark:border-0 border border-gray-100 px-6 py-2 font-semibold transition-colors duration-200">
+          </a>
+          <a
+            href="https://corpbanking.haggaibank.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 rounded-full bg-white dark:border-0 border border-gray-100 px-6 py-2 font-semibold transition-colors duration-200 text-center"
+          >
             Corporate Internet Banking
-          </button>
+          </a>
         </div>
         <div className="text-center justify-center">
           <button className="text-gray-700 rounded-full bg-white dark:border-0 border border-gray-100 px-6 py-2 font-semibold transition-colors duration-200">
@@ -27,14 +37,17 @@ const Offer = () => {
           </button>
         </div>
 
-        
+
 
         <div className="flex items-center justify-center pt-7">
+
           <a
-            href="#create-account"
+            href="https://online.haggaisecure.com/haggaionline/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-red-700 text-sm rounded-lg  px-4 py-2   hover:text-white hover:bg-red-800 text-white transition-colors hidden md:inline-flex items-center gap-2"
           >
-            Access Internet Banking
+            Old Internet Banking
             {/* <img src={assets.arrow_icon} alt="" /> */}
           </a>
         </div>
