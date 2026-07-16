@@ -518,13 +518,15 @@ const Navbar = ({ theme, setTheme }) => {
                   Old Internet Banking
                 </a>
 
-                <Link
-                  to="/open-account"
+                <a
+                  href="https://ibank.haggaibank.com/signup"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={closeMenus}
                   className="rounded-full bg-red-700 px-5 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition duration-300 hover:bg-red-800"
                 >
                   Open Account
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -539,12 +541,14 @@ const Navbar = ({ theme, setTheme }) => {
               Old Internet Banking
             </a>
 
-            <Link
-              to="/open-account"
+            <a
+              href="https://ibank.haggaibank.com/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden rounded-full bg-red-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition duration-300 hover:-translate-y-0.5 hover:bg-red-800 md:inline-flex"
             >
               Open Account
-            </Link>
+            </a>
 
             <button
               type="button"
