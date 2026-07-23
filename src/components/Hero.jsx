@@ -197,7 +197,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-[280px] right-8 z-20 hidden w-[320px] text-white lg:block">
+      <div className="absolute top-32 right-8 z-20 hidden w-[320px] text-white lg:block">
         <Link
           to="/products/remita-electronic-collection-solution"
           className="block w-full bg-red-700 py-4 text-center text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg shadow-red-900/30 transition duration-300 hover:bg-red-800"
@@ -206,7 +206,7 @@ const Hero = () => {
         </Link>
       </div>
 
-      <div className="absolute bottom-8 right-8 z-20 hidden w-[320px] border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
+      <div className="absolute top-55 right-8 z-20 hidden w-[320px] border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
         <p className="mb-8 text-xl font-black leading-tight text-center">
           Internet Banking
         </p>
