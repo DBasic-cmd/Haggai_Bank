@@ -3,7 +3,7 @@ import React from "react";
 const channels = [
   {
     label: "Independent Reporting Channel",
-    email: "whistleblowing.Haggai@planetcapital.com",
+    email: "whistleblowing.haggai@planetcapitalltd.com",
   },
   {
     label: "Haggai Mortgage Bank Channel",
