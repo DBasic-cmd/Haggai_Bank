@@ -104,7 +104,7 @@ He holds an MBA from Hult International Business School and has also completed e
   },
   {
     name: "Mr. Tayo Awopegba",
-    role: "Head Financial Services",
+    role: "Head, Financial Services",
     image:
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/tayo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL3RheW8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMzA0NSwiZXhwIjoyMDk3NDgzMDQ1fQ.QCwobki98-dou2Wa4ANPXGr8ypR5qEP4PPSi_LRnOGo",
     slug: "tayo-awopegba",
@@ -145,7 +145,7 @@ He is married with Children.`,
   },
   {
     name: "Mr. Michael Adewole",
-    role: "Head Corporate Services",
+    role: "Head, Corporate Services",
     image:
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/michael.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL21pY2hhZWwucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMzMwMCwiZXhwIjoyMDk3NDgzMzAwfQ.x5XbU9_r0OO-mbBj111Pbq-HfsEwDHeDv8cepnvjEHI",
     slug: "michael-adewole",

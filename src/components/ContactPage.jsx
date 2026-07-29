@@ -57,26 +57,28 @@ const ContactPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const subject = formData.subject || "General Enquiry From Website";
+    const subject = formData.subject || "General Enquiry";
+    const emailSubject = `Website Enquiry: ${subject}`;
 
-    const body = `
-Contact Form Message
+    const body = [
+      "Hello Haggai Bank Team,",
+      "",
+      "A website visitor has sent the following enquiry.",
+      "",
+      "Sender Details",
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      "",
+      "Enquiry Details",
+      `Subject: ${subject}`,
+      "Message:",
+      formData.message,
+      "",
+      "Please respond to the sender using the email address provided above.",
+    ].join("\n");
 
-Name:
-${formData.name}
-
-Email:
-${formData.email}
-
-Subject:
-${formData.subject}
-
-Message:
-${formData.message}
-`;
-
-    window.location.href = `mailto:info@haggaibank.com?subject=${encodeURIComponent(
-      subject
+    window.location.href = `mailto:pointeagle007@gmail.com?subject=${encodeURIComponent(
+      emailSubject
     )}&body=${encodeURIComponent(body)}`;
 
     setSubmitted(true);
@@ -157,8 +159,8 @@ ${formData.message}
                   </p>
                   <p className="text-sm text-slate-400">
                     If your email client didn't open, you can mail us directly at{" "}
-                    <a href="mailto:info@haggaibank.com" className="text-red-700 underline font-semibold">
-                      info@haggaibank.com
+                    <a href="mailto:pointeagle007@gmail.com" className="text-red-700 underline font-semibold">
+                      pointeagle007@gmail.com
                     </a>
                   </p>
                   <button
@@ -188,6 +190,7 @@ ${formData.message}
                       </label>
                       <input
                         required
+                        name="name"
                         value={formData.name}
                         onChange={(e) => handleChange("name", e.target.value)}
                         className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -201,6 +204,7 @@ ${formData.message}
                       <input
                         required
                         type="email"
+                        name="email"
                         value={formData.email}
                         onChange={(e) => handleChange("email", e.target.value)}
                         className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -213,6 +217,7 @@ ${formData.message}
                       </label>
                       <input
                         required
+                        name="subject"
                         value={formData.subject}
                         onChange={(e) => handleChange("subject", e.target.value)}
                         className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -226,6 +231,7 @@ ${formData.message}
                       <textarea
                         required
                         rows={6}
+                        name="message"
                         value={formData.message}
                         onChange={(e) => handleChange("message", e.target.value)}
                         className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -320,7 +326,7 @@ ${formData.message}
                   </div>
 
                   <p className="mt-5 leading-8 text-white/70">
-                    info@haggaibank.com
+                    pointeagle007@gmail.com
                   </p>
                 </div>
               </div>
