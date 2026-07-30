@@ -39,7 +39,7 @@ const updates = [
 
 const Banner = () => {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-[#111111]">
+    <section className="fixed bottom-0 left-0 right-0 z-50 overflow-hidden border-y border-white/10 bg-[#111111]">
       <div className="absolute inset-0 bg-gradient-to-r from-red-700/10 via-transparent to-red-700/10" />
 
       <div className="relative flex items-center overflow-hidden">
