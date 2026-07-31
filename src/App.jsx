@@ -11,6 +11,7 @@ import Appointment from "./components/Appointment";
 import History from "./components/History";
 import Footer from "./components/Footer";
 import WhatsAppBubble from "./components/WhatsAppBubble";
+import CookieConsent from "./components/CookieConsent";
 
 import BoardOfDirectors from "./components/BoardOfDirectors";
 import PlaceholderPage from "./components/PlaceholderPage";
@@ -120,6 +121,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <CookieConsent />
     </div>
   );
 };

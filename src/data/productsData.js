@@ -238,14 +238,91 @@ export const productGroups = [
       title: "Retail Products",
       slug: "retail-products",
       products: [
-        { name: "Fixed Deposit", slug: "fixed-deposit", shortName: "FD", content: "" },
+        {
+          name: "Fixed Deposit",
+          slug: "fixed-deposit",
+          shortName: "FD",
+          content: `FIXED DEPOSIT
+  
+Don’t keep your money; invest it!
+We operate investment accounts for our esteemed clients, where we offer the best of competitive interest rates. This product is open to churches, individual and corporate clients who intend to accumulate their funds for future use. Here is a low-down of our accepted fixed deposit call term:
+
+Call/Term deposits of:
+· 30 days deposits
+· 60 days deposits
+· 90 days deposits
+· 180 days deposits and above
+
+With option to obtain the interest at backend or rollover the principal at maturity.
+
+Features and benefits:
+· Good returns on investment
+· Minimum amount for deposit N50,000.00
+· Competitive Interest rate.`,
+        },
         {
           name: "Personal Current/Corporate Account",
           slug: "personal-current-corporate-account",
           shortName: "Current",
-          content: "",
+          content: `PERSONAL CURRENT/CORPORATE ACCOUNT
+  
+You first, always!
+Take advantage of the stellar benefits of owning a current account with Haggai. All our current account holders are always at our best interests.
+
+Features & Benefits:
+· Normal CAM(Customer Account Maintenance) charge applicable on account
+· Allows cheque and dividend warrant lodgements
+· Cheque books are provided for account holders
+· Customers are also qualified for mortgage loans
+· Personalized banking services available
+· Third party withdrawals allowed
+· No minimum daily balance.
+· Customers get free e-statements on their accounts.
+· Keep an eye on your balances wherever you are with SMS/mobile alerts
+
+Joint Account:
+If you are looking to manage your money with another account holder, this is ideal for you. It can be ideal if you need to make collective payments. Each person can make withdrawals or write cheques, depending on the mandate agreed on the account.
+
+How do I open and manage my account?:
+· You can open and manage your account in any of our branches
+· Minimum deposit required to open the account is =N=10,000 for individuals
+
+Can I withdraw money?:
+Yes. No notice is required to withdraw money in any of our branches.`,
         },
-        { name: "Savings Account", slug: "savings-account", shortName: "Savings", content: "" },
+        {
+          name: "Savings Account",
+          slug: "savings-account",
+          shortName: "Savings",
+          content: `SAVINGS ACCOUNT
+  
+Saving Makes Dreams Happen
+The Haggai Savings account was curated to helping you achieve your financial goals. You can save from wherever you are, and enjoy competitive interest rates.
+
+Features & Benefits:
+· Interest yielding account
+· Allows standing order requests
+· Third party withdrawals not permitted
+· Free financial advisory for account holders
+· ATM Card provided
+· Customers can also qualify for mortgage facilities
+
+Joint Account:
+If you are looking to manage your money with another account holder, this is ideal for you. It can be ideal if you need to make collective payments. Each person can make withdrawals or write cheques, depending on the mandate agreed on the account.
+
+How do I open and manage my account?:
+· You can open and manage your account in any of our branches
+· Minimum deposit required to open the account is =N=10,000 for individuals
+
+Can I withdraw money?:
+Yes. No notice is required to withdraw money in any of our branches.
+
+Can my savings account be a mortgage?:
+Savings account doesn't qualify as a mortgage.
+
+Interest?:
+If interest is payable on the account, it will be calculated each day and paid monthly. Monthly Interest would not be applied after a third withdrawal in a month.`,
+        },
         { name: "RCCG Remitance", slug: "rccg-remitance", shortName: "RCCG", content: "" },
       ],
     },

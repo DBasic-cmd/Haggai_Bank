@@ -30,7 +30,7 @@ Mrs. Owode holds a bachelor’s degree in economics from the prestigious Univers
 
 · Fellow, Chattered Institute of Bankers of Nigeria (FCIBN).
 · Fellow, National Institute of Credit Administration (FICA).
-· Senior Associate, Association of Enterprise Risk Management Professionals.
+· Fellow, Association of Enterprise Risk Management Professionals.
 · Associate Member, Institute of Chattered Economics of Nigeria. 
 · Member, Statutory Audit Committee - Nigerian Mortgage Refinance Company (NMRC).
 · Associate Member, Chattered Institute of Directors (IOD). 

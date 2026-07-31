@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Feedback = () => {
   const features = [
@@ -27,23 +27,82 @@ const Feedback = () => {
   const testimonials = [
     {
       content:
-        "With Haggai Plot Advance, I was able to secure land earlier than planned. It felt like a big step forward, and the process was smooth from start to finish.",
+        "With Haggai Plot Advance, I was able to secure my land at Redemption City earlier than planned. The flexible repayment terms made the process smooth from start to finish.",
       name: "Adebayo Johnson",
-      role: "Plot Owner",
+      role: "HAPA Client",
     },
     {
       content:
-        "Haggai House Completion helped me finish my home construction without financial stress. Their flexible payment options made all the difference.",
+        "Haggai House Completion helped me finish my home construction without financial stress. Their milestone-based funding made all the difference.",
       name: "Funmi Adeyemi",
-      role: "Homeowner",
+      role: "HAHCOM Client",
     },
     {
       content:
-        "The Haggai team guided me through my first home purchase with patience and expertise. I couldn't have done it without their support.",
+        "Buying my first house in Lagos seemed impossible until I used Haggai House Purchase. Their competitive mortgage rates and expert guidance made it a reality.",
       name: "Chukwuemeka Nwosu",
-      role: "First-time Buyer",
+      role: "HAHP Client",
+    },
+    {
+      content:
+        "We renovated our family estate using the HAREL plan. The team provided fast approval and excellent advisory, allowing us to upgrade the property value quickly.",
+      name: "Victoria Harrison",
+      role: "HAREL Client",
+    },
+    {
+      content:
+        "HARENT saved us from the stress of upfront annual rent. We paid quarterly while keeping our business cash flow stable. Highly recommended for young professionals!",
+      name: "Olamide Benson",
+      role: "HARENT Client",
+    },
+    {
+      content:
+        "Our church cooperative successfully acquired ten plots of land through the HAGPA scheme. Haggai's group package is perfect for organizations seeking joint property growth.",
+      name: "Pastor David Oyedepo",
+      role: "HAGPA Coordinator",
+    },
+    {
+      content:
+        "HAMCOF provided the structured capital we needed for our multi-flat residential project. Their inspectors verified milestones promptly, releasing funds without delays.",
+      name: "Engr. Yusuf Bello",
+      role: "Developer / HAMCOF Client",
+    },
+    {
+      content:
+        "Owning a home near the holy ground has been a lifelong dream. The Haggai Camp Home loan package made it affordable and spiritually rewarding for our family.",
+      name: "Pastor (Mrs.) Grace Adebayo",
+      role: "Camp Homeowner",
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const autoplayRef = useRef();
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const startAutoplay = () => {
+    autoplayRef.current = setInterval(handleNext, 6000);
+  };
+
+  const resetAutoplay = () => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+    }
+    startAutoplay();
+  };
+
+  useEffect(() => {
+    startAutoplay();
+    return () => {
+      if (autoplayRef.current) clearInterval(autoplayRef.current);
+    };
+  }, []);
 
   return (
     <div className="w-full py-24 px-4 sm:px-8 lg:px-24 xl:px-40 bg-white dark:bg-[#05070d] overflow-hidden">
@@ -125,62 +184,133 @@ const Feedback = () => {
           </p>
         </div>
 
-        {/* TESTIMONIALS */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className={`md:col-span-4 relative group ${
-                i === 1 ? "md:translate-y-14" : ""
-              }`}
+        {/* TESTIMONIALS CAROUSEL (3-COLUMN FORMAT) */}
+        <div className="relative w-full">
+          {/* Arrow Buttons (Desktop) */}
+          <div className="absolute top-1/2 -left-12 lg:-left-20 -translate-y-1/2 z-20 hidden md:block">
+            <button
+              onClick={() => {
+                handlePrev();
+                resetAutoplay();
+              }}
+              className="p-4 rounded-full border border-gray-200 dark:border-gray-800 text-gray-400 hover:text-red-600 hover:border-red-600 transition-all duration-300 bg-white/80 dark:bg-slate-950/80 backdrop-blur shadow-lg active:scale-95"
+              aria-label="Previous testimonials"
             >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          </div>
 
-              {/* outer structure */}
-              <div className="absolute inset-0 border border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-red-600/40" />
+          <div className="absolute top-1/2 -right-12 lg:-right-20 -translate-y-1/2 z-20 hidden md:block">
+            <button
+              onClick={() => {
+                handleNext();
+                resetAutoplay();
+              }}
+              className="p-4 rounded-full border border-gray-200 dark:border-gray-800 text-gray-400 hover:text-red-600 hover:border-red-600 transition-all duration-300 bg-white/80 dark:bg-slate-950/80 backdrop-blur shadow-lg active:scale-95"
+              aria-label="Next testimonials"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
 
-              {/* top geometry */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 border border-gray-300 dark:border-gray-700 transition-all duration-700 group-hover:border-red-600 group-hover:rotate-6" />
+          {/* Grid showing 3 cards at a time on desktop, 1 on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:pb-16">
+            {[0, 1, 2].map((offset) => {
+              const itemIndex = (currentIndex + offset) % testimonials.length;
+              const t = testimonials[itemIndex];
+              return (
+                <div
+                  key={`${itemIndex}-${offset}`}
+                  className={`relative group transition-all duration-500 ${
+                    offset === 1 ? "md:translate-y-14" : ""
+                  } ${offset > 0 ? "hidden md:block" : ""}`}
+                >
+                  {/* outer structure */}
+                  <div className="absolute inset-0 border border-gray-200 dark:border-gray-800 transition-all duration-500 group-hover:border-red-600/40" />
 
-              {/* bottom geometry */}
-              <div className="absolute bottom-0 right-0 w-14 h-14 border-r border-b border-red-600/50 transition-all duration-700 group-hover:w-24 group-hover:h-24" />
+                  {/* top geometry */}
+                  <div className="absolute -top-4 -left-4 w-20 h-20 border border-gray-300 dark:border-gray-700 transition-all duration-700 group-hover:border-red-600 group-hover:rotate-6" />
 
-              {/* hover wash */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-red-600/[0.03] to-transparent" />
+                  {/* bottom geometry */}
+                  <div className="absolute bottom-0 right-0 w-14 h-14 border-r border-b border-red-600/50 transition-all duration-700 group-hover:w-24 group-hover:h-24" />
 
-              {/* content */}
-              <div className="relative z-10 p-8 lg:p-10 min-h-[320px] flex flex-col justify-between">
+                  {/* hover wash */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-red-600/[0.03] to-transparent" />
 
-                <div>
+                  {/* content */}
+                  <div className="relative z-10 p-8 lg:p-10 min-h-[340px] flex flex-col justify-between">
+                    <div>
+                      <div className="text-6xl leading-none text-red-600/20 mb-6 select-none">
+                        “
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed text-sm lg:text-base">
+                        {t.content}
+                      </p>
+                    </div>
 
-                  <div className="text-6xl leading-none text-red-600/20 mb-6">
-                    “
+                    <div className="pt-10">
+                      <div className="w-12 h-[1px] bg-red-600 mb-5" />
+                      <h4 className="text-gray-900 dark:text-white font-medium tracking-wide">
+                        {t.name}
+                      </h4>
+                      <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mt-2">
+                        {t.role}
+                      </p>
+                    </div>
                   </div>
-
-                  <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed">
-                    {t.content}
-                  </p>
-
                 </div>
+              );
+            })}
+          </div>
 
-                <div className="pt-10">
+          {/* Bottom Controls / Dots (Mobile Navigation + indicators) */}
+          <div className="mt-8 flex items-center justify-center gap-6">
+            <button
+              onClick={() => {
+                handlePrev();
+                resetAutoplay();
+              }}
+              className="md:hidden p-3 rounded-full border border-gray-200 dark:border-gray-800 text-gray-400 active:text-red-600 transition"
+              aria-label="Previous"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
 
-                  <div className="w-12 h-[1px] bg-red-600 mb-5" />
-
-                  <h4 className="text-gray-900 dark:text-white font-medium tracking-wide">
-                    {t.name}
-                  </h4>
-
-                  <p className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mt-2">
-                    {t.role}
-                  </p>
-
-                </div>
-
-              </div>
+            <div className="flex gap-2">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setCurrentIndex(idx);
+                    resetAutoplay();
+                  }}
+                  className={`h-1.5 transition-all duration-300 rounded-full ${
+                    currentIndex === idx ? "w-8 bg-red-600" : "w-1.5 bg-gray-300 dark:bg-gray-700"
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
             </div>
-          ))}
 
+            <button
+              onClick={() => {
+                handleNext();
+                resetAutoplay();
+              }}
+              className="md:hidden p-3 rounded-full border border-gray-200 dark:border-gray-800 text-gray-400 active:text-red-600 transition"
+              aria-label="Next"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
 
       </div>

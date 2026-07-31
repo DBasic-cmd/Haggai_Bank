@@ -21,7 +21,7 @@ const aboutLinks = [
     label: "Subject Access Request Form",
     href: "/about/subject-access-request-form",
   },
-  { label: "Career", href: "/about/career" },
+  { label: "Careers", href: "/about/career" },
   { label: "RSA", href: "/about/rsa" },
 ];
 
@@ -98,9 +98,8 @@ const Navbar = ({ theme, setTheme }) => {
           )}
 
           <div
-            className={`fixed bottom-0 top-0 z-50 flex h-dvh w-[min(92vw,420px)] flex-col overflow-y-auto bg-[#080808] px-8 pb-16 pt-24 text-white shadow-2xl transition-all duration-500 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:static lg:z-auto lg:h-auto lg:w-auto lg:flex-row lg:items-center lg:overflow-visible lg:bg-transparent lg:p-0 lg:shadow-none ${
-              sidebarOpen ? "right-0" : "-right-full"
-            }`}
+            className={`fixed bottom-0 top-0 z-50 flex h-dvh w-[min(92vw,420px)] flex-col overflow-y-auto bg-[#080808] px-8 pb-16 pt-24 text-white shadow-2xl transition-all duration-500 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:static lg:z-auto lg:h-auto lg:w-auto lg:flex-row lg:items-center lg:overflow-visible lg:bg-transparent lg:p-0 lg:shadow-none ${sidebarOpen ? "right-0" : "-right-full"
+              }`}
           >
             <button
               type="button"
@@ -133,20 +132,18 @@ const Navbar = ({ theme, setTheme }) => {
                 >
                   About Us
                   <span
-                    className={`text-red-400 transition duration-300 ${
-                      aboutOpen || mobileAboutOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-red-400 transition duration-300 ${aboutOpen || mobileAboutOpen ? "rotate-180" : ""
+                      }`}
                   >
                     ↓
                   </span>
                 </button>
 
                 <div
-                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[820px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${
-                    aboutOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
-                  }`}
+                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[820px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${aboutOpen
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
 
@@ -209,9 +206,8 @@ const Navbar = ({ theme, setTheme }) => {
                 </div>
 
                 <div
-                  className={`mt-5 grid gap-3 border-l border-white/10 pl-4 lg:hidden ${
-                    mobileAboutOpen ? "block" : "hidden"
-                  }`}
+                  className={`mt-5 grid gap-3 border-l border-white/10 pl-4 lg:hidden ${mobileAboutOpen ? "block" : "hidden"
+                    }`}
                 >
                   <button
                     type="button"
@@ -227,9 +223,8 @@ const Navbar = ({ theme, setTheme }) => {
                   </button>
 
                   <div
-                    className={`grid gap-3 border-l border-red-700/40 pl-4 ${
-                      mobileLeadershipOpen ? "block" : "hidden"
-                    }`}
+                    className={`grid gap-3 border-l border-red-700/40 pl-4 ${mobileLeadershipOpen ? "block" : "hidden"
+                      }`}
                   >
                     {leadershipLinks.map((link) => (
                       <Link
@@ -269,20 +264,18 @@ const Navbar = ({ theme, setTheme }) => {
                 >
                   Products
                   <span
-                    className={`text-red-400 transition duration-300 ${
-                      productsOpen || mobileProductsOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-red-400 transition duration-300 ${productsOpen || mobileProductsOpen ? "rotate-180" : ""
+                      }`}
                   >
                     ↓
                   </span>
                 </button>
 
                 <div
-                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[1100px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${
-                    productsOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
-                  }`}
+                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[1100px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${productsOpen
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
 
@@ -329,9 +322,8 @@ const Navbar = ({ theme, setTheme }) => {
                 </div>
 
                 <div
-                  className={`mt-5 grid gap-5 border-l border-white/10 pl-4 lg:hidden ${
-                    mobileProductsOpen ? "block" : "hidden"
-                  }`}
+                  className={`mt-5 grid gap-5 border-l border-white/10 pl-4 lg:hidden ${mobileProductsOpen ? "block" : "hidden"
+                    }`}
                 >
                   {productGroups.map((group) => (
                     <div key={group.slug}>
@@ -369,20 +361,18 @@ const Navbar = ({ theme, setTheme }) => {
                 >
                   Resources
                   <span
-                    className={`text-red-400 transition duration-300 ${
-                      resourcesOpen || mobileResourcesOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-red-400 transition duration-300 ${resourcesOpen || mobileResourcesOpen ? "rotate-180" : ""
+                      }`}
                   >
                     ↓
                   </span>
                 </button>
 
                 <div
-                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[720px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${
-                    resourcesOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
-                  }`}
+                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-[720px] lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${resourcesOpen
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
 
@@ -418,9 +408,8 @@ const Navbar = ({ theme, setTheme }) => {
                 </div>
 
                 <div
-                  className={`mt-5 grid gap-3 border-l border-white/10 pl-4 lg:hidden ${
-                    mobileResourcesOpen ? "block" : "hidden"
-                  }`}
+                  className={`mt-5 grid gap-3 border-l border-white/10 pl-4 lg:hidden ${mobileResourcesOpen ? "block" : "hidden"
+                    }`}
                 >
                   {resourceLinks.map((link) => (
                     <Link
@@ -448,20 +437,18 @@ const Navbar = ({ theme, setTheme }) => {
                 >
                   Contact
                   <span
-                    className={`text-red-400 transition duration-300 ${
-                      contactOpen || mobileContactOpen ? "rotate-180" : ""
-                    }`}
+                    className={`text-red-400 transition duration-300 ${contactOpen || mobileContactOpen ? "rotate-180" : ""
+                      }`}
                   >
                     ↓
                   </span>
                 </button>
 
                 <div
-                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-72 lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${
-                    contactOpen
-                      ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
-                      : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
-                  }`}
+                  className={`hidden lg:absolute lg:left-1/2 lg:top-full lg:block lg:w-72 lg:-translate-x-1/2 lg:pt-7 lg:transition-all lg:duration-300 ${contactOpen
+                    ? "lg:pointer-events-auto lg:translate-y-0 lg:opacity-100"
+                    : "lg:pointer-events-none lg:-translate-y-2 lg:opacity-0"
+                    }`}
                 >
                   <div className="absolute left-0 right-0 top-0 h-8" />
 
@@ -480,9 +467,8 @@ const Navbar = ({ theme, setTheme }) => {
                 </div>
 
                 <div
-                  className={`mt-5 grid gap-3 border-l border-white/10 pl-4 lg:hidden ${
-                    mobileContactOpen ? "block" : "hidden"
-                  }`}
+                  className={`mt-5 grid gap-3 border-l border-white/10 pl-4 lg:hidden ${mobileContactOpen ? "block" : "hidden"
+                    }`}
                 >
                   {contactLinks.map((link) => (
                     <Link
@@ -522,13 +508,15 @@ const Navbar = ({ theme, setTheme }) => {
               })}
 
               <div className="mt-4 grid gap-3 border-t border-white/10 pt-6 lg:hidden">
-                <Link
-                  to="/products/internet-banking-and-mobile-application"
+                <a
+                  href="https://online.haggaisecure.com/haggaionline/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={closeMenus}
                   className="rounded-full border border-white/30 px-5 py-3 text-center text-sm font-semibold text-white transition duration-300 hover:border-red-500 hover:bg-red-700"
                 >
-                  Internet Banking
-                </Link>
+                  Old Internet Banking
+                </a>
 
                 <Link
                   to="/open-account"
@@ -542,12 +530,14 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link
-              to="/products/internet-banking-and-mobile-application"
+            <a
+              href="https://online.haggaisecure.com/haggaionline/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:border-red-500 hover:bg-red-700 md:inline-flex"
             >
-              Internet Banking
-            </Link>
+              Old Internet Banking
+            </a>
 
             <Link
               to="/open-account"
