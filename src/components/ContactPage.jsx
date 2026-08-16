@@ -54,35 +54,35 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (event) => {
+  async function handleFormSubmit(event) {
     event.preventDefault();
 
-    const subject = formData.subject || "General Enquiry";
-    const emailSubject = `Website Enquiry: ${subject}`;
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      category: formData.subject,
+      message: formData.message,
+    };
 
-    const body = [
-      "Hello Haggai Bank Team,",
-      "",
-      "A website visitor has sent the following enquiry.",
-      "",
-      "Sender Details",
-      `Name: ${formData.name}`,
-      `Email: ${formData.email}`,
-      "",
-      "Enquiry Details",
-      `Subject: ${subject}`,
-      "Message:",
-      formData.message,
-      "",
-      "Please respond to the sender using the email address provided above.",
-    ].join("\n");
+    try {
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
-    window.location.href = `mailto:pointeagle007@gmail.com?subject=${encodeURIComponent(
-      emailSubject
-    )}&body=${encodeURIComponent(body)}`;
+      const result = await res.json();
 
-    setSubmitted(true);
-  };
+      if (res.ok) {
+        alert(`Feedback submitted successfully! Your reference: ${result.ticketId}`);
+        setSubmitted(true);
+      } else {
+        alert(`Submission failed: ${result.error?.message || result.message}`);
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+    }
+  }
 
   return (
     <main
@@ -137,7 +137,7 @@ const ContactPage = () => {
       <section className="relative z-10 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.95fr]">
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleFormSubmit}
             className="relative overflow-hidden bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]"
           >
             <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
