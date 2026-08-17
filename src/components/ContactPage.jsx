@@ -71,13 +71,18 @@ const ContactPage = () => {
         body: JSON.stringify(payload),
       });
 
-      const result = await res.json();
+      let result = {};
+      try {
+        result = await res.json();
+      } catch (err) {
+        // Fallback for non-JSON responses (like HTML 404 pages)
+      }
 
       if (res.ok) {
         alert(`Feedback submitted successfully! Your reference: ${result.ticketId}`);
         setSubmitted(true);
       } else {
-        alert(`Submission failed: ${result.error?.message || result.message}`);
+        alert(`Submission failed: ${result.error?.message || result.message || 'Server error (status ' + res.status + ')'}`);
       }
     } catch (err) {
       console.error('Error submitting form:', err);
@@ -159,8 +164,8 @@ const ContactPage = () => {
                   </p>
                   <p className="text-sm text-slate-400">
                     If your email client didn't open, you can mail us directly at{" "}
-                    <a href="mailto:pointeagle007@gmail.com" className="text-red-700 underline font-semibold">
-                      pointeagle007@gmail.com
+                    <a href="mailto:[EMAIL_ADDRESS]" className="text-red-700 underline font-semibold">
+                      info@haggaibank.com
                     </a>
                   </p>
                   <button
@@ -326,7 +331,7 @@ const ContactPage = () => {
                   </div>
 
                   <p className="mt-5 leading-8 text-white/70">
-                    pointeagle007@gmail.com
+                    info@haggaibank.com
                   </p>
                 </div>
               </div>

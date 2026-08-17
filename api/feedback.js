@@ -1,8 +1,6 @@
 // api/feedback.js
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export default async function handler(req, res) {
     // Only allow POST requests
     if (req.method !== 'POST') {
@@ -15,6 +13,12 @@ export default async function handler(req, res) {
     if (!name || !email || !message) {
         return res.status(400).json({ message: 'Missing required fields' });
     }
+
+    if (!process.env.RESEND_API_KEY) {
+        return res.status(500).json({ success: false, error: "Missing RESEND_API_KEY environment variable locally or in your Vercel project configuration." });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const ticketId = `TICK-${Date.now().toString().slice(-6)}`;
 

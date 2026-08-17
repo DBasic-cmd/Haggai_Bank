@@ -51,26 +51,31 @@ async function handleFormSubmit(event) {
   };
 
   try {
-    const res = await fetch('/api/feedback', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
-    const result = await res.json();
+      let result = {};
+      try {
+        result = await res.json();
+      } catch (err) {
+        // Fallback for non-JSON responses (like HTML 404 pages)
+      }
 
-    if (res.ok) {
-      alert(`Feedback submitted successfully! Your reference: ${result.ticketId}`);
-      // Reset form fields
-      document.getElementById('customerName').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('complaintTitle').value = '';
-      document.getElementById('accountNumber').value = '';
-      document.getElementById('phone').value = '';
-      document.getElementById('complaintDetails').value = '';
-    } else {
-      alert(`Submission failed: ${result.error?.message || result.message}`);
-    }
+      if (res.ok) {
+        alert(`Feedback submitted successfully! Your reference: ${result.ticketId}`);
+        // Reset form fields
+        document.getElementById('customerName').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('complaintTitle').value = '';
+        document.getElementById('accountNumber').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('complaintDetails').value = '';
+      } else {
+        alert(`Submission failed: ${result.error?.message || result.message || 'Server error (status ' + res.status + ')'}`);
+      }
   } catch (err) {
     console.error('Error submitting form:', err);
   }
