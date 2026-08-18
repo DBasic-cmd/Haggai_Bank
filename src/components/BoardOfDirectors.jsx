@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import blankProfilePicture from "../assets/blank-profile-picture.svg";
 
 export const boardOfDirectors = [
   {
     name: "Mr. Benjamin Akabueze",
     role: "Chairman",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400",
+    image: blankProfilePicture,
     slug: "benjamin-akabueze",
     hasProfile: true,
     text: `
@@ -20,9 +21,50 @@ Mr. Akabueze currently leads a business and financial advisory firm specializing
 Mr. Akabueze holds a Bachelor of Science (B.Sc.) degree in Accounting from University of Lagos and is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), the Chartered Institute of Bankers of Nigeria (CIBN), and the Institute of Credit Administration (ICA). He has strengthened his executive leadership capabilities through the Advanced Management Programme at Lagos Business School, as well as executive education at the Harvard Kennedy School of Government, USA.`
   },
   {
+    name: "Mrs. Kofoworola Owode",
+    role: "MD/CEO",
+    image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.05.52.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDUuNTIuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0OTAsImV4cCI6MjA5NzQ3NzQ5MH0.IiKg7F3hnl7DNtkso420f-clKgEd7xtiR40Omcx2ZL0",
+    slug: "kofoworola-owode",
+    hasProfile: true,
+    text: `
+
+
+
+Mrs. Kofoworola Owode, Managing Director/Chief Executive Officer of Haggai Mortgage Bank Limited, has over three decades of managerial, strategic business development, and leadership experience in mortgage banking and financial services. 
+
+She was appointed as the MD/CEO in 2022, and has proven track record in driving revenue growth, optimizing operational performance, and leading high-performing teams across corporate and mortgage banking environments. 
+
+Adept at navigating regulatory landscapes, strengthening risk management frameworks and executing large-scale transformation initiatives aligned with organizational goals, she has supported many intending individuals, religious and corporate home/structure owners, to achieve their heart desires through strategic and reasonable offers. 
+
+She has several achievements to her credit, as enumerated below: 
+
+· Directed multi-functional teams across credit, sales, risk, and operations to streamline processes and enhance customer experience.
+· Spearheaded digital transformation initiatives that reduced operational costs and improved service delivery efficiency at Haggai Mortgage Bank Limited.
+· Built and maintained relationships with key corporate clients, institutional investors, and regulatory bodies.
+· Led negotiations on major corporate and project financing deals.
+
+Mrs. Owode holds a bachelor’s degree in economics from the prestigious University of Lagos, Akoka.  She is a member of several professional bodies, just to mention a few:
+
+· Fellow, Chattered Institute of Bankers of Nigeria (FCIBN).
+· Fellow, National Institute of Credit Administration (FICA).
+· Fellow, Association of Enterprise Risk Management Professionals.
+· Associate Member, Institute of Chattered Economics of Nigeria. 
+· Member, Statutory Audit Committee - Nigerian Mortgage Refinance Company (NMRC).
+· Associate Member, Chattered Institute of Directors (IOD). 
+· Member, Complaints & Compliance Committee (MBAN).
+
+Mrs. Owode is known as an audacious and strategic thinker, strong communicator, data-driven decision-maker, collaborative leader, resilient and committed to ethical banking and sustainable growth.
+
+Beyond the boardroom, she is an ordained Assistant Pastor in the Redeemed Christian Church of God (RCCG ); a passionate coach and mentor on several platforms especially youth mentorship, community development and decent housing advocacy.
+
+She has attended several trainings and development programs locally and overseas and also provides advisories at different levels. 
+
+Mrs Owode is married with children.`
+  },
+  {
     name: "Mr. Oluwatunji Adepetun",
     role: "Independent Non-Executive Director",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400",
+    image: blankProfilePicture,
     slug: "oluwatunji-adepetun",
     hasProfile: true,
     text: `
@@ -39,7 +81,7 @@ He holds a Bachelor’s degree in accounting from the University of Ife and a Ma
   {
     name: "Mrs. Eyono Fatayi-Williams",
     role: "Independent Non-Executive Director",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400",
+    image: blankProfilePicture,
     slug: "eyono-fatayi-williams",
     hasProfile: true,
     text: `
@@ -52,7 +94,7 @@ She holds a Bachelor's degree in Computer Science from the University of Lagos a
   {
     name: "Mrs. Oluyinka Morgan",
     role: "Independent Non-Executive Director",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400",
+    image: blankProfilePicture,
     slug: "oluyinka-morgan",
     hasProfile: true,
     text: `
@@ -69,7 +111,7 @@ She holds a Bachelor's degree in Chemistry from the University of Lagos. Mrs. Mo
   {
     name: "Mr. Olusegun Olujobi",
     role: "Non-Executive Director",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400",
+    image: blankProfilePicture,
     slug: "olusegun-olujobi",
     hasProfile: true,
     text: `
@@ -86,7 +128,7 @@ He holds a Bachelor’s degree in Mechanical Engineering from the University of 
   {
     name: "Mr. Adetokunbo Akinsola",
     role: "Non-Executive Director",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400",
+    image: blankProfilePicture,
     slug: "adetokunbo-akinsola",
     hasProfile: true,
     text: `
