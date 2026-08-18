@@ -14,11 +14,12 @@ import WhatsAppBubble from "./components/WhatsAppBubble";
 import CookieConsent from "./components/CookieConsent";
 
 import BoardOfDirectors from "./components/BoardOfDirectors";
+import BoardOfDirectorsProfile from "./components/BoardOfDirectorsProfile";
 import PlaceholderPage from "./components/PlaceholderPage";
 import OurStory from "./components/OurStory";
 import InvestorRelations from "./components/InvestorRelations";
 import CompanySecretariat from "./components/CompanySecretariat";
-import PrivacyPolicy from "./components/PrivacyPolicy";
+import LegalPrivacy from "./components/LegalPrivacy";
 import TermsOfUse from "./components/TermsOfUse";
 import CustomerComplaintForm from "./components/CustomerComplaintForm";
 import SubjectAccessRequestForm from "./components/SubjectAccessRequestForm";
@@ -79,12 +80,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about/board-of-directors" element={<BoardOfDirectors />} />
+        <Route
+          path="/about/board-of-directors/:slug"
+          element={<BoardOfDirectorsProfile />}
+        />
         <Route path="/about/management-staff" element={<ManagementStaff />} />
         <Route path="/about/our-story" element={<OurStory />} />
         <Route path="/about/investor-relations" element={<InvestorRelations />} />
         <Route path="/about/whistle-blower" element={<WhistleBlower />} />
         <Route path="/about/company-secretariat" element={<CompanySecretariat />} />
-        <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/about/privacy-policy" element={<LegalPrivacy />} />
         <Route path="/about/terms-of-use" element={<TermsOfUse />} />
         <Route path="/products/:slug" element={<ProductPage />} />
         <Route path="/contact" element={<ContactPage />} />

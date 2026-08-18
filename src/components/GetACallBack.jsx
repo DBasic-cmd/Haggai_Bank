@@ -17,29 +17,39 @@ const GetACallBack = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const subject = `Call Back Request - ${formData.fullName}`;
+    const payload = {
+      name: formData.fullName,
+      email: formData.emailAddress,
+      category: "Call Back Request",
+      message: `Request for a call back.\nPhone Number: ${formData.phoneNumber}`,
+    };
 
-    const body = `
-GET A CALL BACK REQUEST
+    try {
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
-Full Name:
-${formData.fullName}
+      let result = {};
+      try {
+        result = await res.json();
+      } catch (err) {
+        // Fallback for non-JSON responses (like HTML 404 pages)
+      }
 
-Phone Number:
-${formData.phoneNumber}
-
-Email Address:
-${formData.emailAddress}
-`;
-
-    window.location.href = `mailto:info@haggaibank.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    setSubmitted(true);
+      if (res.ok) {
+        alert(`Callback request submitted successfully! Reference: ${result.ticketId}`);
+        setSubmitted(true);
+      } else {
+        alert(`Submission failed: ${result.error?.message || result.message || 'Server error (status ' + res.status + ')'}`);
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+    }
   };
 
   return (

@@ -128,7 +128,7 @@ Session cookies expire when you leave the site or close your browser, while pers
   },
 ];
 
-const PrivacyPolicy = () => {
+const LegalPrivacy = () => {
   return (
     <main className="min-h-screen bg-[#f8f4ed] text-slate-950">
       <section className="relative overflow-hidden px-5 pb-24 pt-40 sm:px-10 lg:px-16 xl:px-24">
@@ -293,4 +293,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default LegalPrivacy;

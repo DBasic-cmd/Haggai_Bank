@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { allProducts, productGroups } from "../data/productsData";
+import RccgRemittanceForm from "./RccgRemittanceForm";
 
 const ProductPage = () => {
   const { slug } = useParams();
@@ -195,6 +196,8 @@ const ProductPage = () => {
                     </div>
                   </article>
                 ))
+              ) : product.slug === "rccg-remitance" ? (
+                <RccgRemittanceForm />
               ) : (
                 <div className="bg-white/90 p-8 shadow-xl shadow-slate-900/5 border border-slate-100 backdrop-blur sm:p-10 relative overflow-hidden animate-[slideFromRight_900ms_ease_both]">
                   <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
