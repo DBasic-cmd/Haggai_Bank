@@ -42,7 +42,7 @@ She has several achievements to her credit, as enumerated below:
 · Built and maintained relationships with key corporate clients, institutional investors, and regulatory bodies.
 · Led negotiations on major corporate and project financing deals.
 
-Mrs. Owode holds a bachelor’s degree in economics from the prestigious University of Lagos, Akoka.  She is a member of several professional bodies, just to mention a few:
+Mrs. Owode holds a bachelor’s degree in economics from the prestigious University of Lagos, Akoka. She is a member of several professional bodies, just to mention a few:
 
 · Fellow, Chattered Institute of Bankers of Nigeria (FCIBN).
 · Fellow, National Institute of Credit Administration (FICA).
@@ -181,11 +181,11 @@ const BoardOfDirectors = () => {
               }
               className="group block"
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-lg bg-slate-100 shadow-md">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-slate-200 shadow-md">
                 <img
-                  src={member.image}
+                  src={member.image || blankProfilePicture}
                   alt={member.name}
-                  className="h-full w-full object-contain object-center p-2 transition duration-500 group-hover:scale-[1.02]"
+                  className="absolute inset-0 h-full w-full object-cover object-[center_22%] transition-transform duration-500 ease-out group-hover:scale-[1.025]"
                 />
               </div>
 
