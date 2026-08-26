@@ -54,33 +54,40 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (event) => {
+  async function handleFormSubmit(event) {
     event.preventDefault();
 
-    const subject = formData.subject || "General Enquiry From Website";
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      category: formData.subject,
+      message: formData.message,
+    };
 
-    const body = `
-Contact Form Message
+    try {
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
-Name:
-${formData.name}
+      let result = {};
+      try {
+        result = await res.json();
+      } catch (err) {
+        // Fallback for non-JSON responses (like HTML 404 pages)
+      }
 
-Email:
-${formData.email}
-
-Subject:
-${formData.subject}
-
-Message:
-${formData.message}
-`;
-
-    window.location.href = `mailto:info@haggaibank.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    setSubmitted(true);
-  };
+      if (res.ok) {
+        alert(`Feedback submitted successfully! Your reference: ${result.ticketId}`);
+        setSubmitted(true);
+      } else {
+        alert(`Submission failed: ${result.error?.message || result.message || 'Server error (status ' + res.status + ')'}`);
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+    }
+  }
 
   return (
     <main
@@ -135,7 +142,7 @@ ${formData.message}
       <section className="relative z-10 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.95fr]">
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleFormSubmit}
             className="relative overflow-hidden bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]"
           >
             <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
@@ -157,7 +164,7 @@ ${formData.message}
                   </p>
                   <p className="text-sm text-slate-400">
                     If your email client didn't open, you can mail us directly at{" "}
-                    <a href="mailto:info@haggaibank.com" className="text-red-700 underline font-semibold">
+                    <a href="mailto:[EMAIL_ADDRESS]" className="text-red-700 underline font-semibold">
                       info@haggaibank.com
                     </a>
                   </p>
@@ -188,6 +195,7 @@ ${formData.message}
                       </label>
                       <input
                         required
+                        name="name"
                         value={formData.name}
                         onChange={(e) => handleChange("name", e.target.value)}
                         className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -201,6 +209,7 @@ ${formData.message}
                       <input
                         required
                         type="email"
+                        name="email"
                         value={formData.email}
                         onChange={(e) => handleChange("email", e.target.value)}
                         className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -213,6 +222,7 @@ ${formData.message}
                       </label>
                       <input
                         required
+                        name="subject"
                         value={formData.subject}
                         onChange={(e) => handleChange("subject", e.target.value)}
                         className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
@@ -226,6 +236,7 @@ ${formData.message}
                       <textarea
                         required
                         rows={6}
+                        name="message"
                         value={formData.message}
                         onChange={(e) => handleChange("message", e.target.value)}
                         className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"

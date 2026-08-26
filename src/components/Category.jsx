@@ -15,7 +15,7 @@ const Category = () => {
       description:
         "Get financial support to acquire land now and take the first step toward owning your dream property.",
       image:
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=90",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=90",
     },
     {
       name: "Haggai House Completion",
@@ -42,7 +42,8 @@ const Category = () => {
       description:
         "Renovate and modernize your home with our renovation financing solutions.",
       image:
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=90",
+        
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=90",
     },
     {
       name: "Haggai Rent",

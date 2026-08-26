@@ -33,6 +33,55 @@ const fields = [
   },
 ];
 
+async function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const customerName = document.getElementById('customerName')?.value || '';
+  const email = document.getElementById('email')?.value || '';
+  const complaintTitle = document.getElementById('complaintTitle')?.value || '';
+  const accountNumber = document.getElementById('accountNumber')?.value || '';
+  const phone = document.getElementById('phone')?.value || '';
+  const complaintDetails = document.getElementById('complaintDetails')?.value || '';
+
+  const payload = {
+    name: customerName,
+    email: email,
+    category: complaintTitle || 'Customer Complaint',
+    message: `Account Number: ${accountNumber}\nPhone: ${phone}\n\nComplaint Details:\n${complaintDetails}`,
+  };
+
+  try {
+      const res = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      let result = {};
+      try {
+        result = await res.json();
+      } catch (err) {
+        // Fallback for non-JSON responses (like HTML 404 pages)
+      }
+
+      if (res.ok) {
+        alert(`Feedback submitted successfully! Your reference: ${result.ticketId}`);
+        // Reset form fields
+        document.getElementById('customerName').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('complaintTitle').value = '';
+        document.getElementById('accountNumber').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('complaintDetails').value = '';
+      } else {
+        alert(`Submission failed: ${result.error?.message || result.message || 'Server error (status ' + res.status + ')'}`);
+      }
+  } catch (err) {
+    console.error('Error submitting form:', err);
+  }
+}
+
+
 const CustomerComplaintForm = () => {
   return (
     <main className="relative min-h-screen text-slate-950">
@@ -119,18 +168,15 @@ const CustomerComplaintForm = () => {
               </aside>
 
               <form
-                action="mailto:info@haggaibank.com"
-                method="POST"
-                encType="text/plain"
+                onSubmit={handleFormSubmit}
                 className="bg-white p-8 sm:p-10 lg:p-12"
               >
                 <div className="grid gap-7 sm:grid-cols-2">
                   {fields.map((field, index) => (
                     <div
                       key={field.id}
-                      className={`group relative ${
-                        field.id === "complaintTitle" ? "sm:col-span-2" : ""
-                      } animate-[fieldIn_800ms_cubic-bezier(.16,1,.3,1)_both]`}
+                      className={`group relative ${field.id === "complaintTitle" ? "sm:col-span-2" : ""
+                        } animate-[fieldIn_800ms_cubic-bezier(.16,1,.3,1)_both]`}
                       style={{ animationDelay: `${index * 90}ms` }}
                     >
                       <label
@@ -184,7 +230,7 @@ const CustomerComplaintForm = () => {
                     className="group relative overflow-hidden bg-red-700 px-9 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition duration-500 hover:-translate-y-1 hover:bg-red-800"
                   >
                     <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition duration-700 group-hover:translate-x-full" />
-                    <span className="relative">Submit</span>
+                    <span className="relative" >Submit</span>
                   </button>
                 </div>
               </form>
