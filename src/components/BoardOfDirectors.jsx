@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import blankProfilePicture from "../assets/blank-profile-picture.svg";
 
 export const boardOfDirectors = [
   {
     name: "Mr. Benjamin Akabueze",
     role: "Chairman",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Akabuezes%20photo.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFrYWJ1ZXplcyBwaG90by5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzQ2MTUzLCJleHAiOjIxMDMxMDYxNTN9.75NtRQ1BHxrJK1mphyC4NjGt7y5UXrj5jf_zelppAfc",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Akabuezes%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFrYWJ1ZXplcyBwaG90by5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzY0MTk2LCJleHAiOjIxMDMxMjQxOTZ9.lfA809Lzl9Sd50zEC5DayowkpILahho65vY0jx8qYL8",
     slug: "benjamin-akabueze",
     hasProfile: true,
+    imagePosition: "center 18%",
     text: `
 Mr. Benjamin Akabueze is a distinguished business leader and accomplished financial expert with over four decades of professional experience spanning accounting, banking, financial services, public financial management, and strategic consulting.
 
@@ -19,8 +19,10 @@ In recognition of his outstanding leadership and contributions to economic devel
 
 Mr. Akabueze currently leads a business and financial advisory firm specializing in Public Financial Management (PFM), business strategy, corporate advisory, and institutional development. He also serves as Chairman and Board member of several corporate organizations, where he provides strategic oversight, governance leadership, and advisory support.
 
-Mr. Akabueze holds a Bachelor of Science (B.Sc.) degree in Accounting from University of Lagos and is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), the Chartered Institute of Bankers of Nigeria (CIBN), and the Institute of Credit Administration (ICA). He has strengthened his executive leadership capabilities through the Advanced Management Programme at Lagos Business School, as well as executive education at the Harvard Kennedy School of Government, USA.`,
+Mr. Akabueze holds a Bachelor of Science (B.Sc.) degree in Accounting from University of Lagos and is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), the Chartered Institute of Bankers of Nigeria (CIBN), and the Institute of Credit Administration (ICA). He has strengthened his executive leadership capabilities through the Advanced Management Programme at Lagos Business School, as well as executive education at the Harvard Kennedy School of Government, USA.
+`,
   },
+
   {
     name: "Mrs. Kofoworola Owode",
     role: "MD/CEO",
@@ -28,14 +30,15 @@ Mr. Akabueze holds a Bachelor of Science (B.Sc.) degree in Accounting from Unive
       "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.05.52.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDUuNTIuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0OTAsImV4cCI6MjA5NzQ3NzQ5MH0.IiKg7F3hnl7DNtkso420f-clKgEd7xtiR40Omcx2ZL0",
     slug: "kofoworola-owode",
     hasProfile: true,
+    imagePosition: "center 18%",
     text: `
-Mrs. Kofoworola Owode, Managing Director/Chief Executive Officer of Haggai Mortgage Bank Limited, has over three decades of managerial, strategic business development, and leadership experience in mortgage banking and financial services. 
+Mrs. Kofoworola Owode, Managing Director/Chief Executive Officer of Haggai Mortgage Bank Limited, has over three decades of managerial, strategic business development, and leadership experience in mortgage banking and financial services.
 
-She was appointed as the MD/CEO in 2022, and has proven track record in driving revenue growth, optimizing operational performance, and leading high-performing teams across corporate and mortgage banking environments. 
+She was appointed as the MD/CEO in 2022, and has proven track record in driving revenue growth, optimizing operational performance, and leading high-performing teams across corporate and mortgage banking environments.
 
-Adept at navigating regulatory landscapes, strengthening risk management frameworks and executing large-scale transformation initiatives aligned with organizational goals, she has supported many intending individuals, religious and corporate home/structure owners, to achieve their heart desires through strategic and reasonable offers. 
+Adept at navigating regulatory landscapes, strengthening risk management frameworks and executing large-scale transformation initiatives aligned with organizational goals, she has supported many intending individuals, religious and corporate home/structure owners, to achieve their heart desires through strategic and reasonable offers.
 
-She has several achievements to her credit, as enumerated below: 
+She has several achievements to her credit, as enumerated below:
 
 · Directed multi-functional teams across credit, sales, risk, and operations to streamline processes and enhance customer experience.
 · Spearheaded digital transformation initiatives that reduced operational costs and improved service delivery efficiency at Haggai Mortgage Bank Limited.
@@ -47,26 +50,29 @@ Mrs. Owode holds a bachelor’s degree in economics from the prestigious Univers
 · Fellow, Chattered Institute of Bankers of Nigeria (FCIBN).
 · Fellow, National Institute of Credit Administration (FICA).
 · Fellow, Association of Enterprise Risk Management Professionals.
-· Associate Member, Institute of Chattered Economics of Nigeria. 
+· Associate Member, Institute of Chattered Economics of Nigeria.
 · Member, Statutory Audit Committee - Nigerian Mortgage Refinance Company (NMRC).
-· Associate Member, Chattered Institute of Directors (IOD). 
+· Associate Member, Chattered Institute of Directors (IOD).
 · Member, Complaints & Compliance Committee (MBAN).
 
 Mrs. Owode is known as an audacious and strategic thinker, strong communicator, data-driven decision-maker, collaborative leader, resilient and committed to ethical banking and sustainable growth.
 
-Beyond the boardroom, she is an ordained Assistant Pastor in the Redeemed Christian Church of God (RCCG ); a passionate coach and mentor on several platforms especially youth mentorship, community development and decent housing advocacy.
+Beyond the boardroom, she is an ordained Assistant Pastor in the Redeemed Christian Church of God (RCCG); a passionate coach and mentor on several platforms especially youth mentorship, community development and decent housing advocacy.
 
-She has attended several trainings and development programs locally and overseas and also provides advisories at different levels. 
+She has attended several trainings and development programs locally and overseas and also provides advisories at different levels.
 
-Mrs Owode is married with children.`,
+Mrs Owode is married with children.
+`,
   },
+
   {
     name: "Mr. Oluwatunji Adepetun",
     role: "Independent Non-Executive Director",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Adepetuns%20photo.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFkZXBldHVucyBwaG90by5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzQ2MTEwLCJleHAiOjIxMDMxMDYxMTB9.KGrltviMeIfV7MBkFA8dR6Oq6y_CoAX3Fe3kd13RO-I",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Adepetuns%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFkZXBldHVucyBwaG90by5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzY0MTI3LCJleHAiOjIxMDMxMjQxMjd9.-4W8HWnA9GVYQo9zXYOv0DUOr6uqGuPVaBeABtb_Xz8",
     slug: "oluwatunji-adepetun",
     hasProfile: true,
+    imagePosition: "center 20%",
     text: `
 Mr. Oluwatunji Adepetun is a seasoned banker, business executive, and management consultant with over 24 years’ experience in corporate, commercial, and retail banking, treasury marketing, business development, financial advisory, and strategic leadership. He has built a distinguished career delivering business growth, driving strategic initiatives, and providing executive leadership across the financial services industry.
 
@@ -76,29 +82,35 @@ He is the Co-Founder of Rockbridge Alliance Partners, a financial and business a
 
 Mr. Adepetun possesses expertise in structuring and financing transactions across real estate, infrastructure, hospitality, oil and gas, manufacturing, and healthcare sectors. He currently serves as a Board Member of Mediplan Healthcare Ltd and Mediplan Holdings Limited.
 
-He holds a Bachelor’s degree in accounting from the University of Ife and a Master’s degree in Business Administration from University of Lagos. He is a member of the Institute of Directors and has attended several executive programmes in credit management, leadership, strategic marketing, and business development.`,
+He holds a Bachelor’s degree in accounting from the University of Ife and a Master’s degree in Business Administration from University of Lagos. He is a member of the Institute of Directors and has attended several executive programmes in credit management, leadership, strategic marketing, and business development.
+`,
   },
+
   {
     name: "Mrs. Eyono Fatayi-Williams",
     role: "Independent Non-Executive Director",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mrs.%20Eyonos%20photo.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXJzLiBFeW9ub3MgcGhvdG8uanBnIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4Nzc0NjIxMSwiZXhwIjoyMTAzMTA2MjExfQ.gaqyW6-eg_tFBuT2rqRzekBntgTyJt9HC-S91ORfOSg",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mrs.%20Eyonos%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXJzLiBFeW9ub3MgcGhvdG8uSlBHIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4Nzc2NDI2MiwiZXhwIjoyMTAzMTI0MjYyfQ.kHTAkwd1bctWE-ezI-tEDE5BMTjXOZKVutgr_Hw6XHU",
     slug: "eyono-fatayi-williams",
     hasProfile: true,
+    imagePosition: "center 18%",
     text: `
 Mrs. Eyono Fatayi-Williams is an accomplished business executive and corporate governance professional with over 35 years of experience spanning the oil and gas, banking, security printing, manufacturing, and information technology sectors. She retired as General Manager, External Relations and Sustainable Development at Nigeria LNG Limited (NLNG), where she provided strategic leadership in stakeholder engagement, corporate communications, sustainability, government relations, and community development. While at NLNG, she also held senior leadership positions in Information Technology, Commercial Sales Administration, and Human Resources.
 
 Mrs. Fatayi-Williams currently serves as Vice Chair of JDR Energy. She has extensive board and governance experience, having served on the Boards of several corporate and not-for-profit organizations. She is a Director of the Women in Energy Network (WIEN) and has served on key governance and advisory committees, including the Local Content Committee and Marketing and Shipping Advisory Committees of Nigeria LNG. She also served as Secretary/Member of the Federal Government's Decade of Gas Implementation Roadmap Committee and has chaired and participated in several strategic industry and community development initiatives.
 
-She holds a Bachelor's degree in Computer Science from the University of Lagos and a master’s degree in Corporate Governance from Leeds Metropolitan University, United Kingdom. She has completed executive programmes at INSEAD Business School, Cranfield University, the Financial Times Non-Executive Directors Programme. She is a member of several professional bodies, including the Institute of Directors (IoD), the Nigerian Gas Association (NGA), the Nigerian Institute of Public Relations (NIPR), the Chartered Institute of Personnel Management (CIPM), among others. She is also a John Maxwell Certified Coach, Mentor and Speaker.`,
+She holds a Bachelor's degree in Computer Science from the University of Lagos and a master’s degree in Corporate Governance from Leeds Metropolitan University, United Kingdom. She has completed executive programmes at INSEAD Business School, Cranfield University, the Financial Times Non-Executive Directors Programme. She is a member of several professional bodies, including the Institute of Directors (IoD), the Nigerian Gas Association (NGA), the Nigerian Institute of Public Relations (NIPR), the Chartered Institute of Personnel Management (CIPM), among others. She is also a John Maxwell Certified Coach, Mentor and Speaker.
+`,
   },
+
   {
     name: "Mrs. Oluyinka Morgan",
     role: "Independent Non-Executive Director",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mrs.%20Morgans%20photo.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXJzLiBNb3JnYW5zIHBob3RvLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc3NDYyMjgsImV4cCI6MjEwMzEwNjIyOH0.WQHDbpTETGnhwlAutnOehECWOG7z0yHQO2GAlVaU_j8",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mrs.%20Morgans%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXJzLiBNb3JnYW5zIHBob3RvLkpQRyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc3NjQyNzYsImV4cCI6MjEwMzEyNDI3Nn0.PhcJqUQM71vbNZDUbM497v7YkYDStS2BOykdWNgtRe0",
     slug: "oluyinka-morgan",
     hasProfile: true,
+    imagePosition: "center 18%",
     text: `
 Mrs. Oluyinka Morgan is a seasoned business executive and accomplished board professional with over 39 years of experience spanning auditing, banking, financial services, real estate, consulting and entrepreneurship.
 
@@ -108,15 +120,18 @@ Beyond her executive banking career, Mrs. Morgan has founded and managed busines
 
 Mrs. Morgan served as Chair of the 2023 WIMBOARD Programme, an initiative of Women in Management, Business and Public Service (WIMBIZ) dedicated to increasing female representation on corporate boards through executive education, mentorship, and governance development. She currently serves on the Board of Union Bank Plc as an Independent Non-Executive Director and on the boards of several organizations, where she provides strategic guidance, governance oversight and leadership.
 
-She holds a Bachelor's degree in Chemistry from the University of Lagos. Mrs. Morgan is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), an Honorary Senior Member of the Chartered Institute of Bankers of Nigeria (CIBN), an Associate of the Chartered Pension Institute of Nigeria (CPIN), a Member of the Institute of Directors (IoD) and other professional bodies.`,
+She holds a Bachelor's degree in Chemistry from the University of Lagos. Mrs. Morgan is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN), an Honorary Senior Member of the Chartered Institute of Bankers of Nigeria (CIBN), an Associate of the Chartered Pension Institute of Nigeria (CPIN), a Member of the Institute of Directors (IoD) and other professional bodies.
+`,
   },
+
   {
     name: "Mr. Olusegun Olujobi",
     role: "Non-Executive Director",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Olujobis%20photo.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIE9sdWpvYmlzIHBob3RvLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc3NDYxOTIsImV4cCI6MjEwMzEwNjE5Mn0.zB-exvijRW338Ql2D4C1UAmxrg_2wD9CuiiS17wUAcE",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Olujobis%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIE9sdWpvYmlzIHBob3RvLkpQRyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc3NjQyNDMsImV4cCI6MjEwMzEyNDI0M30.D7-Dng7_cvSq_rVnBVjUbkQhyGoz5f8RNn9fzoHkFp0",
     slug: "olusegun-olujobi",
     hasProfile: true,
+    imagePosition: "center 20%",
     text: `
 Mr. Olusegun Olujobi is an accomplished business executive and seasoned board director with more than 35 years of experience in management consulting and oil and gas investment. He has developed extensive expertise in business strategy, organizational transformation, investment advisory and enterprise growth across diverse industries.
 
@@ -126,15 +141,18 @@ He had a distinguished career at Accenture, where he rose to the position of Man
 
 Mr. Olujobi currently serves on the Boards of several companies, including Vertex Energy Limited, Odua Investment Company Limited, BITA E&P Limited, and Carmi Agro Foods Limited. He has previously served on the boards of organizations including First Hydrocarbon Nigeria Limited, Falcon Petroleum Limited, Linetrale Gas Limited, and Skye CAPIC Select Limited.
 
-He holds a Bachelor’s degree in Mechanical Engineering from the University of Lagos and has completed the Senior Management Programme at Lagos Business School. He is a Fellow of the Aspen Leadership Initiative West Africa and is actively involved in leadership development, youth empowerment, education reform, and faith-based initiatives.`,
+He holds a Bachelor’s degree in Mechanical Engineering from the University of Lagos and has completed the Senior Management Programme at Lagos Business School. He is a Fellow of the Aspen Leadership Initiative West Africa and is actively involved in leadership development, youth empowerment, education reform, and faith-based initiatives.
+`,
   },
+
   {
     name: "Mr. Adetokunbo Akinsola",
     role: "Non-Executive Director",
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Akinsolas%20photo.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFraW5zb2xhcyBwaG90by5qcGciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzQ2MTczLCJleHAiOjIxMDMxMDYxNzN9.9mNH5vU8xypRocO3Idd9h3jUJm0_SUWvG2hyJXQdMQk",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Akinsolas%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFraW5zb2xhcyBwaG90by5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzY0MjE0LCJleHAiOjIxMDMxMjQyMTR9.C4lONE2l1siA-RPDHZADRqkSQQiTIfDrlGwmSSdcf40",
     slug: "adetokunbo-akinsola",
     hasProfile: true,
+    imagePosition: "center 18%",
     text: `
 Mr. Adetokunbo Akinsola is an accomplished engineer and business leader with nearly four decades of expertise spanning engineering, project management, credit risk management and enterprise development.
 
@@ -144,7 +162,8 @@ During the course of his career at the Bank of Industry, he led the credit appra
 
 Since retirement, he has continued to provide advisory and training services in credit analysis and appraisal, and the Credit Rating Model and has supported the enhancement of the Bank of Industry's credit rating framework as an Associate of International Consultant GBRW.
 
-He holds a Bachelor of Science degree in Civil Engineering and a masters’ degree in Business Administration from the University of Lagos. He is also a registered engineer with the Council for the Regulation of Engineering in Nigeria (COREN) as well as a member of the Nigerian Society of Engineers (MNSE).`,
+He holds a Bachelor of Science degree in Civil Engineering and a masters’ degree in Business Administration from the University of Lagos. He is also a registered engineer with the Council for the Regulation of Engineering in Nigeria (COREN) as well as a member of the Nigerian Society of Engineers (MNSE).
+`,
   },
 ];
 
@@ -181,11 +200,15 @@ const BoardOfDirectors = () => {
               }
               className="group block"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-slate-200 shadow-md">
+              <div className="relative aspect-[0.95/1] w-full overflow-hidden rounded-lg bg-slate-100 shadow-md">
                 <img
-                  src={member.image || blankProfilePicture}
+                  src={member.image}
                   alt={member.name}
-                  className="absolute inset-0 h-full w-full object-cover object-[center_22%] transition-transform duration-500 ease-out group-hover:scale-[1.025]"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={{
+                    objectPosition:
+                      member.imagePosition || "center center",
+                  }}
                 />
               </div>
 
