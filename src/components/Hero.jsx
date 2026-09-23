@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const heroSlides = [
   {
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=90",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/HAGGAI%20BANK%20IMG%20.png?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0hBR0dBSSBCQU5LIElNRyAucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc5MDE1NDQyNywiZXhwIjoyMTA1NTE0NDI3fQ.dwIYoVcU7wCIL3oenq7PiF8Oqbc9OH9-qVohPQxcvx4",
     label: "Family Home Ownership",
     kicker: "Family Home Ownership",
     title: "Move Into More Than a House.",
