@@ -2,6 +2,10 @@ import React from "react";
 
 const abridgedAccounts = [
   {
+    title: "Abridged Account 2025",
+    href: "/investor-relations/Haggai Mortgage Bank abridged account for AFS 2025 NEW FULL BOARD.pdf",
+  },
+  {
     title: "Abridged Account 2024",
     href: "/investor-relations/AbrigedFS_2024.pdf",
   },
@@ -45,6 +49,10 @@ const abridgedAccounts = [
 
 const financialStatements = [
   {
+    title: "HMB 2025 Financial Statements",
+    href: "/investor-relations/HAGGAI MORTGAGE BANK LIMITED - 2025 AFS FINAL IN PDF.pdf",
+  },
+  {
     title: "HMB 2024 Financial Statements",
     href: "/investor-relations/AFS 2024 - HAGGAI MORTGAGE BANK LIMITED.pdf",
   },
@@ -77,9 +85,8 @@ const ReportLink = ({ item, index }) => {
     <a
       href={isDisabled ? undefined : item.href}
       aria-disabled={isDisabled}
-      className={`group relative flex items-center justify-between border-b border-slate-200 py-5 transition duration-300 ${
-        isDisabled ? "cursor-not-allowed opacity-45" : "hover:border-red-700"
-      }`}
+      className={`group relative flex items-center justify-between border-b border-slate-200 py-5 transition duration-300 ${isDisabled ? "cursor-not-allowed opacity-45" : "hover:border-red-700"
+        }`}
     >
       <div>
         <p className="text-xs font-black uppercase tracking-[0.28em] text-slate-400">
@@ -87,20 +94,18 @@ const ReportLink = ({ item, index }) => {
         </p>
 
         <h3
-          className={`mt-2 text-lg font-black tracking-[-0.03em] text-slate-950 transition duration-300 ${
-            !isDisabled ? "group-hover:text-red-700" : ""
-          }`}
+          className={`mt-2 text-lg font-black tracking-[-0.03em] text-slate-950 transition duration-300 ${!isDisabled ? "group-hover:text-red-700" : ""
+            }`}
         >
           {item.title}
         </h3>
       </div>
 
       <span
-        className={`flex h-10 w-10 shrink-0 items-center justify-center border border-slate-300 text-lg transition duration-300 ${
-          !isDisabled
+        className={`flex h-10 w-10 shrink-0 items-center justify-center border border-slate-300 text-lg transition duration-300 ${!isDisabled
             ? "group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white"
             : ""
-        }`}
+          }`}
       >
         →
       </span>
