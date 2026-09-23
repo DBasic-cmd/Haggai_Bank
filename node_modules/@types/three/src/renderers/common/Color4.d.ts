@@ -6,50 +6,48 @@ import { Color, ColorRepresentation } from "../../math/Color.js";
  * one object.
  *
  * @private
- * @augments Color
  */
 declare class Color4 extends Color {
     /**
-     * Constructs a new four-component color.
-     * You can pass a single THREE.Color, hex or
-     * string argument to this constructor.
+     * The alpha value.
      */
-    constructor(color?: ColorRepresentation);
+    a: number;
+
     /**
      * Constructs a new four-component color.
+     * You can also pass a single THREE.Color, hex or
+     * string argument to this constructor.
      *
-     * @param {number} [r=1] - The red value.
-     * @param {number} [g=1] - The green value.
-     * @param {number} [b=1] - The blue value.
-     * @param {number} [a=1] - The alpha value.
+     * @param r - The red value.
+     * @param g - The green value.
+     * @param b - The blue value.
+     * @param a - The alpha value.
      */
-    constructor(r: number, g: number, b: number, a?: number);
-    a: number;
+    constructor(r?: ColorRepresentation, g?: number, b?: number, a?: number);
+
     /**
      * Overwrites the default to honor alpha.
      * You can also pass a single THREE.Color, hex or
      * string argument to this method.
-     *
-     * @param {number|string|Color} r - The red value.
-     * @param {number} [g] - The green value.
-     * @param {number} [b] - The blue value.
-     * @param {number} [a=1] - The alpha value.
-     * @return {Color4} A reference to this object.
      */
     set(...args: [color: ColorRepresentation] | [r: number, g: number, b: number, a?: number]): this;
+
     /**
      * Overwrites the default to honor alpha.
      *
-     * @param {Color4} color - The color to copy.
-     * @return {Color4} A reference to this object.
+     * @param color - The color to copy.
+     * @return A reference to this object.
      */
     copy(color: Color4): this;
+
     /**
      * Overwrites the default to honor alpha.
      *
-     * @return {Color4} The cloned color.
+     * @return The cloned color.
      */
     clone(): this;
+
+    [Symbol.iterator](): Generator<number, void>;
 }
 
 export default Color4;

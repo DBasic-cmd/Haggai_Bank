@@ -22,6 +22,13 @@ declare class ClippingContext {
      */
     constructor(parentContext?: ClippingContext | null);
     /**
+     * The id of the clipping context.
+     *
+     * @type {number}
+     * @readonly
+     */
+    readonly id: number;
+    /**
      * The clipping context's version.
      *
      * @type {number}
@@ -48,6 +55,12 @@ declare class ClippingContext {
      * @default false
      */
     shadowPass: boolean;
+    /**
+     * The view matrix.
+     *
+     * @type {Matrix4}
+     */
+    viewMatrix: Matrix4;
     /**
      * The view normal matrix.
      *
@@ -79,7 +92,6 @@ declare class ClippingContext {
      * @readonly
      */
     readonly parentVersion: number | null;
-    viewMatrix?: Matrix4;
     /**
      * Projects the given source clipping planes and writes the result into the
      * destination array.
