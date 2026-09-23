@@ -144,6 +144,25 @@ Mr. Johnson is passionate about leveraging technology to drive financial innovat
 He is married with Children.`,
   },
   {
+    name: "Mr. Oyetunde Hezekiah Oyewusi",
+    role: "Head, Internal Control, Compliance & Risk Management",
+    image:
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/oyetunde.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL295ZXR1bmRlLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTAxNTI5OTEsImV4cCI6MjEwNTUxMjk5MX0.Z-u2poc3_S2SLtd4Awl_28mMtS9fw2uRqOoa3NkBCLs",
+    slug: "oyetunde-hezekiah-oyewusi",
+    hasProfile: true,
+    text: `
+Oyetunde Hezekiah Oyewusi is a seasoned banking, internal control, compliance, risk management, audit, and financial management professional with over 20 years of progressive experience across the banking, mortgage, microfinance, investment, and manufacturing sectors.
+
+He currently serves as Head, Internal Control, Compliance & Risk Management at Haggai Mortgage Bank Limited, where he is responsible for strengthening the Bank’s internal control framework, regulatory compliance, enterprise risk management, operational resilience, and governance structures.
+
+Over the course of his career, he has held key positions with SunTrust Bank Nigeria Limited, Aztec Microfinance Bank Limited, Ecobank Nigeria Limited, Fidelity Bank Plc, Access Bank Plc, Profund Securities Limited, Kuramo Industries Limited, and Integrated Trust & Investment Limited. His experience covers internal audit, regulatory compliance, AML/CFT, risk management, credit administration, financial control, fraud investigation, branch operations, corporate governance, and business performance management.
+
+He holds a Master’s degree in Banking and Finance, a B.Sc. in Accounting (Forensic Option), and an HND in Accounting. He is an Associate Chartered Accountant (ACA), Institute of Chartered Accountants of Nigeria (ICAN), and member from the Compliance Institute of Nigeria.
+
+Oyetunde is a focused, analytical, results-oriented and integrity-driven professional, with strong leadership, communication, managerial and problem-solving abilities. He is particularly passionate about strengthening institutional governance, improving operational efficiency, managing risk, ensuring regulatory compliance, and building effective internal control systems that support sustainable organizational performance.
+`,
+  },
+  {
     name: "Mr. Michael Adewole",
     role: "Head, Corporate Services",
     image:
@@ -248,25 +267,7 @@ At Haggai Bank Limited, where he currently serves, he has demonstrated strong ex
 Ojo graduated from Kwara State Polytechnic with a Higher National Diploma (HND) in Business Administration in 1997. He is also a Stock Market Agent (SMA, 2006), a Certified Information Systems Auditor (CISA, 2011), an Associate of the Chartered Institute of Stockbrokers (ACIS, 2019), and a Member of the Chartered Institute of Loan and Risk Management (MCILRM, 2006).`,
   },
 
-  {
-    name: "Mr. Oyetunde Hezekiah Oyewusi",
-    role: "Head, Internal Control, Compliance & Risk Management",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/oyetunde.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL295ZXR1bmRlLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTAxNTI5OTEsImV4cCI6MjEwNTUxMjk5MX0.Z-u2poc3_S2SLtd4Awl_28mMtS9fw2uRqOoa3NkBCLs",
-    slug: "oyetunde-hezekiah-oyewusi",
-    hasProfile: true,
-    text: `
-Oyetunde Hezekiah Oyewusi is a seasoned banking, internal control, compliance, risk management, audit, and financial management professional with over 20 years of progressive experience across the banking, mortgage, microfinance, investment, and manufacturing sectors.
 
-He currently serves as Head, Internal Control, Compliance & Risk Management at Haggai Mortgage Bank Limited, where he is responsible for strengthening the Bank’s internal control framework, regulatory compliance, enterprise risk management, operational resilience, and governance structures.
-
-Over the course of his career, he has held key positions with SunTrust Bank Nigeria Limited, Aztec Microfinance Bank Limited, Ecobank Nigeria Limited, Fidelity Bank Plc, Access Bank Plc, Profund Securities Limited, Kuramo Industries Limited, and Integrated Trust & Investment Limited. His experience covers internal audit, regulatory compliance, AML/CFT, risk management, credit administration, financial control, fraud investigation, branch operations, corporate governance, and business performance management.
-
-He holds a Master’s degree in Banking and Finance, a B.Sc. in Accounting (Forensic Option), and an HND in Accounting. He is an Associate Chartered Accountant (ACA), Institute of Chartered Accountants of Nigeria (ICAN), and member from the Compliance Institute of Nigeria.
-
-Oyetunde is a focused, analytical, results-oriented and integrity-driven professional, with strong leadership, communication, managerial and problem-solving abilities. He is particularly passionate about strengthening institutional governance, improving operational efficiency, managing risk, ensuring regulatory compliance, and building effective internal control systems that support sustainable organizational performance.
-`,
-  },
 ];
 
 const ManagementStaff = () => {
