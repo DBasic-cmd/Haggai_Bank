@@ -47,7 +47,7 @@ export class GLTFLoader extends Loader<GLTF> {
 
     constructor(manager?: LoadingManager);
 
-    setDRACOLoader(dracoLoader: DRACOLoader): this;
+    setDRACOLoader(dracoLoader: DRACOLoader | null): this;
     setKTX2Loader(ktx2Loader: KTX2Loader | null): this;
     setMeshoptDecoder(meshoptDecoder: typeof MeshoptDecoder | null): this;
 
@@ -64,13 +64,14 @@ export class GLTFLoader extends Loader<GLTF> {
     parseAsync(data: ArrayBuffer | string, path: string): Promise<GLTF>;
 }
 
-export type GLTFReferenceType = "materials" | "nodes" | "textures" | "meshes";
+export type GLTFReferenceType = "materials" | "nodes" | "textures" | "meshes" | "primitives";
 
 export interface GLTFReference {
     materials?: number;
     nodes?: number;
     textures?: number;
     meshes?: number;
+    primitives?: number;
 }
 
 export class GLTFParser {
