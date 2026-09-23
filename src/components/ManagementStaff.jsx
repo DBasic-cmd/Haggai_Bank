@@ -194,7 +194,7 @@ Mr. Ojo remains committed to delivering value-driven financial solutions, promot
     image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.06.24.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDYuMjQuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0NjIsImV4cCI6MjA5NzQ3NzQ2Mn0.DwF9zx4d3yF8L46bIZlv6T_07sp1DVd_Sd6QEZe2CBw",
     slug: "sehinde-aderibigbe",
     hasProfile: true,
-    text : `Olasehinde Aderibigbe – Branch Head, Redemption City Branch.
+    text: `Olasehinde Aderibigbe – Branch Head, Redemption City Branch.
 
 Olasehinde Aderibigbe is an experienced banking professional with over 20 years in Nigeria’s financial services sector driving profitability, strategic deposit mobilization, and high-value risk asset creation. He specializes in managing large liability portfolios, optimizing liquidity, and leading cross-functional teams to deliver strong deposit growth and strict regulatory compliance.
 Throughout his career at Haggai Mortgage Bank Limited, he has advanced through key leadership roles across Risk Management, Branch Operations, Treasury, Business Development and Product & Assets Management.
@@ -247,6 +247,26 @@ At Haggai Bank Limited, where he currently serves, he has demonstrated strong ex
 
 Ojo graduated from Kwara State Polytechnic with a Higher National Diploma (HND) in Business Administration in 1997. He is also a Stock Market Agent (SMA, 2006), a Certified Information Systems Auditor (CISA, 2011), an Associate of the Chartered Institute of Stockbrokers (ACIS, 2019), and a Member of the Chartered Institute of Loan and Risk Management (MCILRM, 2006).`,
   },
+
+  {
+    name: "Mr. Oyetunde Hezekiah Oyewusi",
+    role: "Head, Internal Control, Compliance & Risk Management",
+    image:
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/oyetunde.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL295ZXR1bmRlLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTAxNTI5OTEsImV4cCI6MjEwNTUxMjk5MX0.Z-u2poc3_S2SLtd4Awl_28mMtS9fw2uRqOoa3NkBCLs",
+    slug: "oyetunde-hezekiah-oyewusi",
+    hasProfile: true,
+    text: `
+Oyetunde Hezekiah Oyewusi is a seasoned banking, internal control, compliance, risk management, audit, and financial management professional with over 20 years of progressive experience across the banking, mortgage, microfinance, investment, and manufacturing sectors.
+
+He currently serves as Head, Internal Control, Compliance & Risk Management at Haggai Mortgage Bank Limited, where he is responsible for strengthening the Bank’s internal control framework, regulatory compliance, enterprise risk management, operational resilience, and governance structures.
+
+Over the course of his career, he has held key positions with SunTrust Bank Nigeria Limited, Aztec Microfinance Bank Limited, Ecobank Nigeria Limited, Fidelity Bank Plc, Access Bank Plc, Profund Securities Limited, Kuramo Industries Limited, and Integrated Trust & Investment Limited. His experience covers internal audit, regulatory compliance, AML/CFT, risk management, credit administration, financial control, fraud investigation, branch operations, corporate governance, and business performance management.
+
+He holds a Master’s degree in Banking and Finance, a B.Sc. in Accounting (Forensic Option), and an HND in Accounting. He is an Associate Chartered Accountant (ACA), Institute of Chartered Accountants of Nigeria (ICAN), and member from the Compliance Institute of Nigeria.
+
+Oyetunde is a focused, analytical, results-oriented and integrity-driven professional, with strong leadership, communication, managerial and problem-solving abilities. He is particularly passionate about strengthening institutional governance, improving operational efficiency, managing risk, ensuring regulatory compliance, and building effective internal control systems that support sustainable organizational performance.
+`,
+  },
 ];
 
 const ManagementStaff = () => {
@@ -259,7 +279,7 @@ const ManagementStaff = () => {
           </p>
 
           <h1 className="mt-5 text-5xl font-semibold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-            Management 
+            Management
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#8e8e8e]">
