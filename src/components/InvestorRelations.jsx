@@ -103,8 +103,8 @@ const ReportLink = ({ item, index }) => {
 
       <span
         className={`flex h-10 w-10 shrink-0 items-center justify-center border border-slate-300 text-lg transition duration-300 ${!isDisabled
-            ? "group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white"
-            : ""
+          ? "group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white"
+          : ""
           }`}
       >
         →
@@ -152,7 +152,7 @@ const InvestorRelations = () => {
               </div>
 
               <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
-                2024 — 2013
+                2025 — 2013
               </p>
             </div>
 
@@ -176,7 +176,7 @@ const InvestorRelations = () => {
               </div>
 
               <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
-                2024 — 2019
+                2025 — 2019
               </p>
             </div>
 
