@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const heroSlides = [
   {
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=90",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7463.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDYzLmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyNzk5LCJleHAiOjIxMDYxMjI3OTl9.oB-tqJFVpYzCw3F8Pc_mwIWUpsz7gN8A69ZP6dckp_I",
     label: "Family Home Ownership",
     kicker: "Family Home Ownership",
     title: "Move Into More Than a House.",
@@ -14,7 +14,7 @@ const heroSlides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2400&q=90",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7464.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY0LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODI0LCJleHAiOjIxMDYxMjI4MjR9.fwOpD35kgrcwtC-65Xr9NBswiPvJpt7Z3fsQ20msA-k",
     label: "Modern Residential Living",
     kicker: "Modern Residential Living",
     title: "Build the Future You Want to Live In.",
@@ -24,7 +24,7 @@ const heroSlides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=2400&q=90",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7465.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY1LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODQxLCJleHAiOjIxMDYxMjI4NDF9.Nz7XmkW05xTGI8U0cxvb9BeHksercEhHObzX6crdrxQ",
     label: "Premium Mortgage Living",
     kicker: "Premium Mortgage Living",
     title: "Own Property With Greater Confidence.",
@@ -34,7 +34,7 @@ const heroSlides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2400&q=90",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7466.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY2LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODY1LCJleHAiOjIxMDYxMjI4NjV9.lqeRmMGp779CYRTV6HG7wYL-TeK_1T3XP0fanNO51-I",
     label: "Secure Home Investment",
     kicker: "Secure Home Investment",
     title: "Secure Land Today. Build Tomorrow.",
