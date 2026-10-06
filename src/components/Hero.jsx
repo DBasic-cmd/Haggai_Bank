@@ -16,7 +16,7 @@ const heroSlides = [
   },
   {
     image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7464.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY0LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODI0LCJleHAiOjIxMDYxMjI4MjR9.fwOpD35kgrcwtC-65Xr9NBswiPvJpt7Z3fsQ20msA-k",
+      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7463.png?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDYzLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTEzMDQyMTYsImV4cCI6MjEwNjY2NDIxNn0.rLrhhsz6QVDm3QHd_-O4PeVq-OIpo7-sr4KdVBEBh44",
     label: "Modern Residential Living",
     kicker: "Modern Residential Living",
     title: "Build the Future You Want to Live In.",
