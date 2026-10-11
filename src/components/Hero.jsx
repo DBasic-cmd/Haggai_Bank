@@ -199,7 +199,7 @@ const Hero = () => {
 
       <div className="absolute top-32 right-8 z-20 hidden w-[320px] text-white lg:block">
         <Link
-          to="/products/remita-electronic-collection-solution"
+          to="/products/rccg-remitance"
           className="block w-full bg-red-700 py-4 text-center text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg shadow-red-900/30 transition duration-300 hover:bg-red-800"
         >
           Remittance Processing

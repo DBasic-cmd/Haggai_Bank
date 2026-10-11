@@ -1,5 +1,15 @@
 import React from "react";
-import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  CheckCircle2,
+  Upload,
+  FileText,
+  Image as ImageIcon,
+  Trash2,
+  AlertCircle,
+  Loader2,
+} from "lucide-react";
 
 const initialFormData = {
   accountName: "",
@@ -11,11 +21,60 @@ const initialFormData = {
   acknowledged: false,
 };
 
+const ALLOWED_EXTENSIONS = [".jpg", ".jpeg", ".png", ".pneg", ".pdf"];
+const ALLOWED_MIME_TYPES = [
+  "image/jpeg",
+  "image/png",
+  "image/jpg",
+  "application/pdf",
+];
+const MAX_TOTAL_BYTES = 2 * 1024 * 1024; // 2MB
+
+const formatBytes = (bytes) => {
+  if (!bytes || bytes === 0) return "0 KB";
+  const k = 1024;
+  const sizes = ["Bytes", "KB", "MB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+};
+
+const fileToBase64 = (file) => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      // Extract pure base64 string after the data URL header
+      const base64Content = reader.result.split(",")[1];
+      resolve({
+        filename: file.name,
+        type: file.type,
+        size: file.size,
+        content: base64Content,
+      });
+    };
+    reader.onerror = (error) => reject(error);
+  });
+};
+
 const DormantAccountForm = () => {
   const [formData, setFormData] = React.useState(initialFormData);
+  const [files, setFiles] = React.useState([]);
+  const [fileError, setFileError] = React.useState("");
+  const [isDragging, setIsDragging] = React.useState(false);
   const [page, setPage] = React.useState(1);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitError, setSubmitError] = React.useState("");
   const [submitted, setSubmitted] = React.useState(false);
+  const [ticketId, setTicketId] = React.useState("");
   const [mouse, setMouse] = React.useState({ x: 50, y: 50 });
+  const fileInputRef = React.useRef(null);
+
+  const totalFilesBytes = files.reduce((acc, f) => acc + f.size, 0);
+  const totalFilesMB = (totalFilesBytes / (1024 * 1024)).toFixed(2);
+  const usagePercentage = Math.min(
+    100,
+    Math.round((totalFilesBytes / MAX_TOTAL_BYTES) * 100)
+  );
 
   const requiredFields = [
     formData.accountName,
@@ -24,6 +83,7 @@ const DormantAccountForm = () => {
     formData.phoneNumber,
     formData.emailAddress,
     formData.address,
+    files.length > 0,
     formData.acknowledged,
   ];
 
@@ -54,50 +114,174 @@ const DormantAccountForm = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSubmit = (event) => {
+  const validateAndAddFiles = (newFilesList) => {
+    const incoming = Array.from(newFilesList);
+    if (incoming.length === 0) return;
+
+    let updated = [...files];
+    let error = "";
+
+    for (const file of incoming) {
+      const ext = "." + file.name.split(".").pop().toLowerCase();
+      const isValid =
+        ALLOWED_MIME_TYPES.includes(file.type) ||
+        ALLOWED_EXTENSIONS.includes(ext);
+
+      if (!isValid) {
+        error = `"${file.name}" is not supported. Please upload JPEG, PNG, or PDF files.`;
+        break;
+      }
+
+      // Skip duplicate files
+      if (updated.some((f) => f.name === file.name && f.size === file.size)) {
+        continue;
+      }
+
+      updated.push(file);
+    }
+
+    const newTotal = updated.reduce((acc, f) => acc + f.size, 0);
+    if (newTotal > MAX_TOTAL_BYTES) {
+      setFileError(
+        `Total file size (${(newTotal / (1024 * 1024)).toFixed(
+          2
+        )} MB) exceeds the 2MB limit. Please remove some files or compress them.`
+      );
+      return;
+    }
+
+    if (error) {
+      setFileError(error);
+      return;
+    }
+
+    setFileError("");
+    setFiles(updated);
+  };
+
+  const handleFileInputChange = (e) => {
+    validateAndAddFiles(e.target.files);
+    e.target.value = "";
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setIsDragging(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      validateAndAddFiles(e.dataTransfer.files);
+    }
+  };
+
+  const handleRemoveFile = (indexToRemove) => {
+    const updated = files.filter((_, i) => i !== indexToRemove);
+    setFiles(updated);
+    const newTotal = updated.reduce((acc, f) => acc + f.size, 0);
+    if (newTotal <= MAX_TOTAL_BYTES) {
+      setFileError("");
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setSubmitError("");
 
-    const subject = `Dormant Account Reactivation Request - ${formData.accountNumber}`;
+    const totalSize = files.reduce((acc, f) => acc + f.size, 0);
+    if (totalSize > MAX_TOTAL_BYTES) {
+      setFileError(
+        "Total file size exceeds the 2MB limit. Please remove or compress files before submitting."
+      );
+      return;
+    }
 
-    const body = `
+    if (!formData.acknowledged) {
+      setSubmitError("Please confirm your acknowledgment before submitting.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Convert all files to base64 for Resend
+      const base64Attachments = await Promise.all(files.map(fileToBase64));
+
+      const payload = {
+        name: formData.accountName,
+        email: formData.emailAddress,
+        category: "Dormant Account Reactivation",
+        subject: `Dormant Account Reactivation Request - ${formData.accountNumber}`,
+        message: `
 Dormant Account Reactivation Request
+====================================
+Account Name: ${formData.accountName}
+Account Number: ${formData.accountNumber}
+BVN: ${formData.bvn}
+Phone Number: ${formData.phoneNumber}
+Email Address: ${formData.emailAddress}
+Residential Address: ${formData.address}
 
-Account Name:
-${formData.accountName}
+Attached Documents (${files.length}):
+${
+  files.length > 0
+    ? files
+        .map(
+          (f, i) =>
+            `${i + 1}. ${f.name} (${formatBytes(f.size)})`
+        )
+        .join("\n")
+    : "No documents attached"
+}
+Total Attachment Size: ${formatBytes(totalSize)}
 
-Account Number:
-${formData.accountNumber}
+Applicant has acknowledged the reactivation requirement.
+        `.trim(),
+        attachments: base64Attachments,
+      };
 
-BVN:
-${formData.bvn}
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-Phone Number:
-${formData.phoneNumber}
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (e) {
+        // Fallback for non-JSON response
+      }
 
-Email Address:
-${formData.emailAddress}
-
-Address:
-${formData.address}
-
-Applicant has acknowledged the additional document requirement.
-
-Additional documents should be sent with Account Number in the email subject to:
-CustomerServiceOfficers@haggaibank.com
-alwayson@haggaibank.com
-`;
-
-    window.location.href = `mailto:info@haggaibank.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    setSubmitted(true);
+      if (res.ok && data.success) {
+        setTicketId(data.ticketId || `TICK-${Date.now().toString().slice(-6)}`);
+        setSubmitted(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        setSubmitError(
+          data.error?.message ||
+            data.message ||
+            data.error ||
+            (res.status === 404
+              ? "API endpoint not reachable. Please check your connection."
+              : `Server error (${res.status}). Please try again later.`)
+        );
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setSubmitError(
+        "A network error occurred while submitting your request. Please check your connection and try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
     setFormData(initialFormData);
+    setFiles([]);
+    setFileError("");
+    setSubmitError("");
     setPage(1);
     setSubmitted(false);
+    setTicketId("");
   };
 
   return (
@@ -143,8 +327,8 @@ alwayson@haggaibank.com
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
-              When you submit this form, it will not automatically collect your
-              details like name and email address unless you provide it yourself.
+              Submit your account details and upload your verification documents to
+              reactivate your dormant Haggai Bank account.
             </p>
           </div>
         </div>
@@ -179,7 +363,7 @@ alwayson@haggaibank.com
                 </div>
               </div>
 
-              <div className="mt-10 space-y-4">
+              <div className="mt-10 space-y-3">
                 {[
                   ["Account Name", formData.accountName],
                   ["Account Number", formData.accountNumber],
@@ -187,18 +371,19 @@ alwayson@haggaibank.com
                   ["Phone Number", formData.phoneNumber],
                   ["Email Address", formData.emailAddress],
                   ["Address", formData.address],
+                  ["Documents (Max 2MB)", files.length > 0],
                   ["Document Notice", formData.acknowledged],
                 ].map(([item, complete], index) => (
                   <div
                     key={item}
-                    className={`flex items-center gap-4 border p-4 transition ${
+                    className={`flex items-center gap-4 border p-3.5 transition ${
                       complete
                         ? "border-red-700/40 bg-red-700/20"
                         : "border-white/10 bg-white/5"
                     }`}
                   >
                     <span
-                      className={`flex h-9 w-9 items-center justify-center text-xs font-black ${
+                      className={`flex h-8 w-8 items-center justify-center text-xs font-black ${
                         complete ? "bg-red-700 text-white" : "bg-white/10"
                       }`}
                     >
@@ -221,13 +406,13 @@ alwayson@haggaibank.com
             {!submitted ? (
               <form onSubmit={page === 1 ? handleNext : handleSubmit}>
                 <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
-                  Dormant Account
+                  Dormant Account Reactivation
                 </p>
 
                 <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
                   {page === 1
                     ? "Provide your account details."
-                    : "Please Note!!"}
+                    : "Upload Required Documents"}
                 </h2>
 
                 {page === 1 ? (
@@ -290,69 +475,176 @@ alwayson@haggaibank.com
                     <div className="space-y-6 text-lg leading-8 text-slate-600">
                       <p>
                         To ensure a smooth and swift reactivation process,
-                        please remember that the next step involves submitting
-                        the following additional documents:
+                        please upload the following verification documents
+                        (Utility Bill, Valid ID Card, and/or Letter of Authorization).
                       </p>
 
-                      <div className="border border-slate-200 bg-[#f8f4ed] p-6">
-                        <h3 className="text-2xl font-black tracking-[-0.04em] text-slate-950">
-                          A recent Utility Bill:
-                        </h3>
-                        <p className="mt-3">
-                          This will help us verify your current residential
-                          address. Ensure the utility bill is under your name
-                          and the address matches with the one provided in the
-                          reactivation form.
-                        </p>
+                      <div className="grid gap-4 sm:grid-cols-3">
+                        <div className="border border-slate-200 bg-[#f8f4ed] p-4">
+                          <h3 className="text-base font-black tracking-tight text-slate-950">
+                            1. Utility Bill
+                          </h3>
+                          <p className="mt-1 text-xs text-slate-600 leading-5">
+                            Recent bill matching your residential address.
+                          </p>
+                        </div>
+
+                        <div className="border border-slate-200 bg-[#f8f4ed] p-4">
+                          <h3 className="text-base font-black tracking-tight text-slate-950">
+                            2. Valid ID Card
+                          </h3>
+                          <p className="mt-1 text-xs text-slate-600 leading-5">
+                            Govt ID (Passport, Driver's License, NIN, etc.).
+                          </p>
+                        </div>
+
+                        <div className="border border-slate-200 bg-[#f8f4ed] p-4">
+                          <h3 className="text-base font-black tracking-tight text-slate-950">
+                            3. Authorization
+                          </h3>
+                          <p className="mt-1 text-xs text-slate-600 leading-5">
+                            Signed request letter on letterhead if corporate.
+                          </p>
+                        </div>
                       </div>
 
-                      <div className="border border-slate-200 bg-[#f8f4ed] p-6">
-                        <h3 className="text-2xl font-black tracking-[-0.04em] text-slate-950">
-                          Valid ID Card:
-                        </h3>
-                        <p className="mt-3">
-                          A scanned copy of any government-issued ID card (e.g.,
-                          driver's license, passport) is required. Please ensure
-                          that the ID is currently valid and the details match
-                          with the information provided on the form.
-                        </p>
+                      {/* File Upload Dropzone */}
+                      <div className="mt-8">
+                        <div className="flex items-center justify-between mb-2">
+                          <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                            Attach Documents (JPEG, PNG, PDF • Max 2MB Total)
+                          </label>
+                          {files.length > 0 && (
+                            <span
+                              className={`text-xs font-bold ${
+                                totalFilesBytes > MAX_TOTAL_BYTES
+                                  ? "text-red-700"
+                                  : "text-slate-600"
+                              }`}
+                            >
+                              {totalFilesMB} MB / 2.00 MB ({files.length} file
+                              {files.length === 1 ? "" : "s"})
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Drop area */}
+                        <div
+                          onDragOver={(e) => {
+                            e.preventDefault();
+                            setIsDragging(true);
+                          }}
+                          onDragLeave={() => setIsDragging(false)}
+                          onDrop={handleDrop}
+                          onClick={() => fileInputRef.current?.click()}
+                          className={`relative cursor-pointer border-2 border-dashed p-8 text-center transition ${
+                            isDragging
+                              ? "border-red-700 bg-red-50/50"
+                              : "border-slate-300 bg-[#f8f4ed] hover:border-red-700 hover:bg-white"
+                          }`}
+                        >
+                          <input
+                            ref={fileInputRef}
+                            type="file"
+                            multiple
+                            accept=".jpeg,.jpg,.png,.pneg,.pdf,image/jpeg,image/png,application/pdf"
+                            onChange={handleFileInputChange}
+                            className="hidden"
+                          />
+
+                          <Upload className="mx-auto h-10 w-10 text-red-700/80 mb-3" />
+                          <p className="text-base font-bold text-slate-900">
+                            Click to browse or drag & drop files here
+                          </p>
+                          <p className="text-xs text-slate-500 mt-1">
+                            Accepted formats:{" "}
+                            <span className="font-semibold text-slate-700">
+                              JPEG, PNG, PNEG, PDF
+                            </span>{" "}
+                            • Total size limit:{" "}
+                            <span className="font-semibold text-slate-700">
+                              2 MB
+                            </span>
+                          </p>
+                        </div>
+
+                        {/* Size progress bar */}
+                        {files.length > 0 && (
+                          <div className="mt-3">
+                            <div className="h-2 w-full overflow-hidden bg-slate-200">
+                              <div
+                                className={`h-full transition-all duration-300 ${
+                                  totalFilesBytes > MAX_TOTAL_BYTES
+                                    ? "bg-red-600"
+                                    : usagePercentage > 85
+                                    ? "bg-amber-500"
+                                    : "bg-green-600"
+                                }`}
+                                style={{ width: `${usagePercentage}%` }}
+                              />
+                            </div>
+                          </div>
+                        )}
+
+                        {/* File error message */}
+                        {fileError && (
+                          <div className="mt-3 flex items-center gap-2 border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                            <AlertCircle className="h-4 w-4 shrink-0" />
+                            <span>{fileError}</span>
+                          </div>
+                        )}
+
+                        {/* Selected files list */}
+                        {files.length > 0 && (
+                          <div className="mt-4 space-y-2">
+                            <p className="text-xs font-black uppercase tracking-wider text-slate-500">
+                              Selected Documents ({files.length}):
+                            </p>
+                            <div className="grid gap-2 sm:grid-cols-2">
+                              {files.map((file, idx) => {
+                                const isPdf =
+                                  file.name.toLowerCase().endsWith(".pdf") ||
+                                  file.type === "application/pdf";
+                                return (
+                                  <div
+                                    key={`${file.name}-${idx}`}
+                                    className="flex items-center justify-between border border-slate-200 bg-white p-3 shadow-sm"
+                                  >
+                                    <div className="flex items-center gap-3 overflow-hidden">
+                                      {isPdf ? (
+                                        <FileText className="h-5 w-5 shrink-0 text-red-700" />
+                                      ) : (
+                                        <ImageIcon className="h-5 w-5 shrink-0 text-blue-600" />
+                                      )}
+                                      <div className="overflow-hidden">
+                                        <p
+                                          className="truncate text-xs font-bold text-slate-900"
+                                          title={file.name}
+                                        >
+                                          {file.name}
+                                        </p>
+                                        <p className="text-[11px] text-slate-500">
+                                          {formatBytes(file.size)}
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <button
+                                      type="button"
+                                      onClick={() => handleRemoveFile(idx)}
+                                      className="p-1 text-slate-400 hover:text-red-700 transition"
+                                      title="Remove file"
+                                    >
+                                      <Trash2 className="h-4 w-4" />
+                                    </button>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
                       </div>
 
-                      <div className="border border-slate-200 bg-[#f8f4ed] p-6">
-                        <h3 className="text-2xl font-black tracking-[-0.04em] text-slate-950">
-                          Letter of Authorization:
-                        </h3>
-                        <p className="mt-3">
-                          This should be written on your organization's official
-                          letterhead. The letter should clearly state your
-                          intention to reactivate your account with us and
-                          authorize any necessary actions on your behalf.
-                        </p>
-                      </div>
-
-                      <p>
-                        Please send these documents with your Account Number in
-                        the email subject to{" "}
-                        <span className="font-bold text-red-700">
-                          CustomerServiceOfficers@haggaibank.com
-                        </span>{" "}
-                        &{" "}
-                        <span className="font-bold text-red-700">
-                          alwayson@haggaibank.com
-                        </span>{" "}
-                        at your earliest convenience.
-                      </p>
-
-                      <p>
-                        Once we have received and verified these documents,
-                      </p>
-
-                      <p>
-                        We will proceed with the reactivation process as soon as
-                        we get these documents.
-                      </p>
-
-                      <label className="flex cursor-pointer items-start gap-4 border border-red-700/20 bg-red-700/5 p-5">
+                      <label className="flex cursor-pointer items-start gap-4 border border-red-700/20 bg-red-700/5 p-5 mt-6">
                         <input
                           required
                           type="checkbox"
@@ -364,17 +656,26 @@ alwayson@haggaibank.com
                         />
 
                         <span className="text-base font-semibold leading-7 text-slate-700">
-                          I understand that I must send the additional documents
-                          with my Account Number in the email subject.
+                          I confirm that all provided information and attached
+                          documents are accurate and authentic for the purpose of
+                          reactivating my dormant account.
                         </span>
                       </label>
                     </div>
 
+                    {submitError && (
+                      <div className="mt-4 flex items-center gap-2 border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                        <AlertCircle className="h-5 w-5 shrink-0" />
+                        <span>{submitError}</span>
+                      </div>
+                    )}
+
                     <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                       <button
                         type="button"
+                        disabled={isSubmitting}
                         onClick={() => setPage(1)}
-                        className="inline-flex items-center justify-center gap-3 border border-slate-300 bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white"
+                        className="inline-flex items-center justify-center gap-3 border border-slate-300 bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white disabled:opacity-50"
                       >
                         <ArrowLeft size={18} />
                         Back
@@ -382,10 +683,20 @@ alwayson@haggaibank.com
 
                       <button
                         type="submit"
-                        className="group relative overflow-hidden bg-red-700 px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-red-800"
+                        disabled={isSubmitting}
+                        className="group relative flex-1 overflow-hidden bg-red-700 px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-red-800 disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:bg-red-700 flex items-center justify-center gap-3"
                       >
                         <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition duration-700 group-hover:translate-x-full" />
-                        <span className="relative">Submit</span>
+                        {isSubmitting ? (
+                          <span className="relative inline-flex items-center gap-2">
+                            <Loader2 className="h-5 w-5 animate-spin" />
+                            Submitting Request...
+                          </span>
+                        ) : (
+                          <span className="relative">
+                            Submit Reactivation Request
+                          </span>
+                        )}
                       </button>
                     </div>
                   </div>
@@ -396,12 +707,40 @@ alwayson@haggaibank.com
                 <CheckCircle2 className="mx-auto text-red-700" size={64} />
 
                 <h2 className="mx-auto mt-7 max-w-3xl text-5xl font-black leading-tight tracking-[-0.055em]">
-                  Dormant account request prepared.
+                  Reactivation Request Submitted!
                 </h2>
 
-                <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                  Your email client should open with the completed request
-                  addressed to info@haggaibank.com.
+                {ticketId && (
+                  <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-800">
+                    Reference ID:{" "}
+                    <span className="text-red-700 font-mono bg-red-50 px-3 py-1 border border-red-200">
+                      {ticketId}
+                    </span>
+                  </p>
+                )}
+
+                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+                  Your dormant account reactivation request along with your
+                  uploaded verification documents ({files.length} document
+                  {files.length === 1 ? "" : "s"}) have been sent to Haggai Bank
+                  Customer Service (
+                  <strong className="text-slate-800">
+                    alwayson@haggaibank.com
+                  </strong>
+                  ).
+                </p>
+
+                <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-500">
+                  Our team will review your submitted documents and reach out to
+                  you via{" "}
+                  <strong className="text-slate-700">
+                    {formData.emailAddress}
+                  </strong>{" "}
+                  or{" "}
+                  <strong className="text-slate-700">
+                    {formData.phoneNumber}
+                  </strong>
+                  .
                 </p>
 
                 <button
