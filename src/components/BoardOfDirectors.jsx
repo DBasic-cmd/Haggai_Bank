@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -5,8 +6,7 @@ export const boardOfDirectors = [
   {
     name: "Mr. Benjamin Akabueze",
     role: "Chairman",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Akabuezes%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFrYWJ1ZXplcyBwaG90by5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzY0MTk2LCJleHAiOjIxMDMxMjQxOTZ9.lfA809Lzl9Sd50zEC5DayowkpILahho65vY0jx8qYL8",
+    image: "/images/board-of-directors/akabueze-benjamin.JPG",
     slug: "benjamin-akabueze",
     hasProfile: true,
     imagePosition: "center 18%",
@@ -26,8 +26,7 @@ Mr. Akabueze holds a Bachelor of Science (B.Sc.) degree in Accounting from Unive
   {
     name: "Mrs. Kofoworola Owode",
     role: "MD/CEO",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.05.52.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDUuNTIuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0OTAsImV4cCI6MjA5NzQ3NzQ5MH0.IiKg7F3hnl7DNtkso420f-clKgEd7xtiR40Omcx2ZL0",
+    image: "/images/management/kofoworola-owode.jpeg",
     slug: "kofoworola-owode",
     hasProfile: true,
     imagePosition: "center 18%",
@@ -68,8 +67,7 @@ Mrs Owode is married with children.
   {
     name: "Mr. Oluwatunji Adepetun",
     role: "Independent Non-Executive Director",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Adepetuns%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFkZXBldHVucyBwaG90by5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzY0MTI3LCJleHAiOjIxMDMxMjQxMjd9.-4W8HWnA9GVYQo9zXYOv0DUOr6uqGuPVaBeABtb_Xz8",
+    image: "/images/board-of-directors/adepetun-oluwatunji.JPG",
     slug: "oluwatunji-adepetun",
     hasProfile: true,
     imagePosition: "center 20%",
@@ -89,8 +87,7 @@ He holds a Bachelor’s degree in accounting from the University of Ife and a Ma
   {
     name: "Mrs. Eyono Fatayi-Williams",
     role: "Independent Non-Executive Director",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mrs.%20Eyonos%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXJzLiBFeW9ub3MgcGhvdG8uSlBHIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4Nzc2NDI2MiwiZXhwIjoyMTAzMTI0MjYyfQ.kHTAkwd1bctWE-ezI-tEDE5BMTjXOZKVutgr_Hw6XHU",
+    image: "/images/board-of-directors/eyono-fatayi-williams.JPG",
     slug: "eyono-fatayi-williams",
     hasProfile: true,
     imagePosition: "center 18%",
@@ -106,8 +103,7 @@ She holds a Bachelor's degree in Computer Science from the University of Lagos a
   {
     name: "Mrs. Oluyinka Morgan",
     role: "Independent Non-Executive Director",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mrs.%20Morgans%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXJzLiBNb3JnYW5zIHBob3RvLkpQRyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc3NjQyNzYsImV4cCI6MjEwMzEyNDI3Nn0.PhcJqUQM71vbNZDUbM497v7YkYDStS2BOykdWNgtRe0",
+    image: "/images/board-of-directors/oluyinka-morgan.JPG",
     slug: "oluyinka-morgan",
     hasProfile: true,
     imagePosition: "center 18%",
@@ -127,8 +123,7 @@ She holds a Bachelor's degree in Chemistry from the University of Lagos. Mrs. Mo
   {
     name: "Mr. Olusegun Olujobi",
     role: "Non-Executive Director",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Olujobis%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIE9sdWpvYmlzIHBob3RvLkpQRyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODc3NjQyNDMsImV4cCI6MjEwMzEyNDI0M30.D7-Dng7_cvSq_rVnBVjUbkQhyGoz5f8RNn9fzoHkFp0",
+    image: "/images/board-of-directors/olujobi-olusegun.JPG",
     slug: "olusegun-olujobi",
     hasProfile: true,
     imagePosition: "center 20%",
@@ -148,8 +143,7 @@ He holds a Bachelor’s degree in Mechanical Engineering from the University of 
   {
     name: "Mr. Adetokunbo Akinsola",
     role: "Non-Executive Director",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/BODPICS/Mr.%20Akinsolas%20photo.JPG?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0JPRFBJQ1MvTXIuIEFraW5zb2xhcyBwaG90by5KUEciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzg3NzY0MjE0LCJleHAiOjIxMDMxMjQyMTR9.C4lONE2l1siA-RPDHZADRqkSQQiTIfDrlGwmSSdcf40",
+    image: "/images/board-of-directors/akinsola-adetokunbo.JPG",
     slug: "adetokunbo-akinsola",
     hasProfile: true,
     imagePosition: "center 18%",
