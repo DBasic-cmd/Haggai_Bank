@@ -1,54 +1,51 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
-import assets from "../assets/assets";
 
 export const managementStaff = [
   {
     name: "Mrs. Kofoworola Owode",
     role: "MD/CEO",
-    image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.05.52.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDUuNTIuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0OTAsImV4cCI6MjA5NzQ3NzQ5MH0.IiKg7F3hnl7DNtkso420f-clKgEd7xtiR40Omcx2ZL0",
+    image: "/images/management/kofoworola-owode.jpeg",
     slug: "kofoworola-owode",
     hasProfile: true,
     text: `
 
+Mrs. Kofoworola Owode, Managing Director/Chief Executive Officer of Haggai Mortgage Bank Limited, has over three decades of managerial, strategic business development, and leadership experience in mortgage banking and financial services.
 
+She was appointed as the MD/CEO in 2022, and has proven track record in driving revenue growth, optimizing operational performance, and leading high-performing teams across corporate and mortgage banking environments.
 
-Mrs. Kofoworola Owode, Managing Director/Chief Executive Officer of Haggai Mortgage Bank Limited, has over three decades of managerial, strategic business development, and leadership experience in mortgage banking and financial services. 
+Adept at navigating regulatory landscapes, strengthening risk management frameworks and executing large-scale transformation initiatives aligned with organizational goals, she has supported many intending individuals, religious and corporate home/structure owners, to achieve their heart desires through strategic and reasonable offers.
 
-She was appointed as the MD/CEO in 2022, and has proven track record in driving revenue growth, optimizing operational performance, and leading high-performing teams across corporate and mortgage banking environments. 
-
-Adept at navigating regulatory landscapes, strengthening risk management frameworks and executing large-scale transformation initiatives aligned with organizational goals, she has supported many intending individuals, religious and corporate home/structure owners, to achieve their heart desires through strategic and reasonable offers. 
-
-She has several achievements to her credit, as enumerated below: 
+She has several achievements to her credit, as enumerated below:
 
 · Directed multi-functional teams across credit, sales, risk, and operations to streamline processes and enhance customer experience.
 · Spearheaded digital transformation initiatives that reduced operational costs and improved service delivery efficiency at Haggai Mortgage Bank Limited.
 · Built and maintained relationships with key corporate clients, institutional investors, and regulatory bodies.
 · Led negotiations on major corporate and project financing deals.
 
-Mrs. Owode holds a bachelor’s degree in economics from the prestigious University of Lagos, Akoka.  She is a member of several professional bodies, just to mention a few:
+Mrs. Owode holds a bachelor’s degree in economics from the prestigious University of Lagos, Akoka. She is a member of several professional bodies, just to mention a few:
 
 · Fellow, Chattered Institute of Bankers of Nigeria (FCIBN).
 · Fellow, National Institute of Credit Administration (FICA).
 · Fellow, Association of Enterprise Risk Management Professionals.
-· Associate Member, Institute of Chattered Economics of Nigeria. 
+· Associate Member, Institute of Chattered Economics of Nigeria.
 · Member, Statutory Audit Committee - Nigerian Mortgage Refinance Company (NMRC).
-· Associate Member, Chattered Institute of Directors (IOD). 
+· Associate Member, Chattered Institute of Directors (IOD).
 · Member, Complaints & Compliance Committee (MBAN).
 
 Mrs. Owode is known as an audacious and strategic thinker, strong communicator, data-driven decision-maker, collaborative leader, resilient and committed to ethical banking and sustainable growth.
 
 Beyond the boardroom, she is an ordained Assistant Pastor in the Redeemed Christian Church of God (RCCG ); a passionate coach and mentor on several platforms especially youth mentorship, community development and decent housing advocacy.
 
-She has attended several trainings and development programs locally and overseas and also provides advisories at different levels. 
+She has attended several trainings and development programs locally and overseas and also provides advisories at different levels.
 
 Mrs Owode is married with children.`,
   },
   {
     name: "Mr. Eugene Awadje",
     role: "Head, Banking Business",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Eugene.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0V1Z2VuZS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTE3NjIxLCJleHAiOjIwOTc0Nzc2MjF9.cBwml-LfZ7bkyH-tLiSOIaWdh1tVUEjVTH7_Ah-nbF0",
+    image: "/images/management/eugene-awadje.png",
     slug: "eugene-awadje",
     hasProfile: true,
     text: `
@@ -84,8 +81,7 @@ Widely respected for his strategic thinking, disciplined leadership style, and d
   {
     name: "Mr. Monday Kadiri",
     role: "Head, IT & E-Banking",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/kadiri.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL2thZGlyaS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTIzMTUzLCJleHAiOjIwOTc0ODMxNTN9.utcB3HxC9Uyk3IYHTTHcEJUlsnakmdCOWzTbRZuHpPo",
+    image: "/images/management/kadiri-monday.png",
     slug: "monday-kadiri",
     hasProfile: true,
     text: `
@@ -105,12 +101,10 @@ He holds an MBA from Hult International Business School and has also completed e
   {
     name: "Mr. Tayo Awopegba",
     role: "Head, Financial Services",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/tayo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL3RheW8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMzA0NSwiZXhwIjoyMDk3NDgzMDQ1fQ.QCwobki98-dou2Wa4ANPXGr8ypR5qEP4PPSi_LRnOGo",
+    image: "/images/management/tayo-awopegba.png",
     slug: "tayo-awopegba",
     hasProfile: true,
     text: `
-
 
 Oluwatayo Kunle Awopegba is an accomplished finance executive with over 20 years of experience in financial management, regulatory compliance, and strategic leadership within Nigeria’s banking and financial services sector.
 
@@ -125,8 +119,7 @@ Oluwatayo is recognized for his strong analytical capabilities, leadership acume
   {
     name: "Mr. Johnson Ajani",
     role: "Head, Electronic Banking",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Johnson.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0pvaG5zb24ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMjgyNiwiZXhwIjoyMDk3NDgyODI2fQ.qwLtWroL1h4j2l_aZtXKESZ7ACJTsZU687fYgtbuuDU",
+    image: "/images/management/ajani-johnson.png",
     slug: "johnson-ajani",
     hasProfile: true,
     text: `
@@ -146,8 +139,7 @@ He is married with Children.`,
   {
     name: "Mr. Oyetunde Hezekiah Oyewusi",
     role: "Head, Internal Control, Compliance & Risk Management",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/oyetunde.jpg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL295ZXR1bmRlLmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTAxNTI5OTEsImV4cCI6MjEwNTUxMjk5MX0.Z-u2poc3_S2SLtd4Awl_28mMtS9fw2uRqOoa3NkBCLs",
+    image: "/images/management/oyetunde-hezekiah.jpg",
     slug: "oyetunde-hezekiah-oyewusi",
     hasProfile: true,
     text: `
@@ -165,17 +157,16 @@ Oyetunde is a focused, analytical, results-oriented and integrity-driven profess
   {
     name: "Mr. Michael Adewole",
     role: "Head, Corporate Services",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/michael.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL21pY2hhZWwucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMzMwMCwiZXhwIjoyMDk3NDgzMzAwfQ.x5XbU9_r0OO-mbBj111Pbq-HfsEwDHeDv8cepnvjEHI",
+    image: "/images/management/michael-adewole.png",
     slug: "michael-adewole",
     hasProfile: true,
     text: `
 
-A seasoned professional manager and thought leader with over two decades’ experience, in general human resource management practice and administrative functions, this cut across various sectors such as manufacturing, logistics, information technology and financial services. 
+A seasoned professional manager and thought leader with over two decades’ experience, in general human resource management practice and administrative functions, this cut across various sectors such as manufacturing, logistics, information technology and financial services.
 
 Highly passionate and well rounded, result oriented HR practitioner with all-embracing experience in business strategy and leading all areas of Human Resources that encompasses but is not limited to talent acquisition, compensation management, employment law, employee relations, performance management, talent management, succession planning, leadership coaching, employee engagement, industrial relations, policy and procedures, learning and development.
 
-He is an astute and highly resourceful professional; he served as a career and business mentor on various mentoring platforms. A graduate of the prestigious University of Ilorin with a B.Sc. (1992) Agric. Economics. He also holds a master’s degree in psychology from the University of Lagos and a second master’s degree in industrial and Labour Relations from Lagos State University. 
+He is an astute and highly resourceful professional; he served as a career and business mentor on various mentoring platforms. A graduate of the prestigious University of Ilorin with a B.Sc. (1992) Agric. Economics. He also holds a master’s degree in psychology from the University of Lagos and a second master’s degree in industrial and Labour Relations from Lagos State University.
 
 He is a member of several professional bodies; Adewole is a Fellow of the Chartered Institute of Personnel Management (FCIPM) and fellow of Nigerian Institute of Management (F.N.I.M), an associate member of Nigerian Institute of Training and Development (NITAD) and he is also a senior member of Portfolio Management Institute of Nigeria.
 
@@ -186,12 +177,10 @@ He is married with children.`,
   {
     name: "Mr. Ojo Gbadebo Olumakinwa",
     role: "Head, Product and Asset Management",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/gbadebo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL2diYWRlYm8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjEyMjMxNSwiZXhwIjoyMDk3NDgyMzE1fQ.ciucpeS0TLJZD_HQ4KUy6oc1XWocTMArWFAsrk9aZOc",
+    image: "/images/management/gbadebo-olumakinwa.png",
     slug: "gbadebo-ojo",
     hasProfile: true,
     text: `
-
 
 Mr. Ojo Gbadebo Olumakinwa is a seasoned banking and financial services professional with over 20 years of progressive experience spanning insurance, mortgage banking, credit administration, treasury management, operations, business development, and strategic leadership. He currently serves as Head, Products & Asset Management at Haggai Mortgage Bank Limited, where he provides strategic oversight for product development, business development, credit management and operational performance across the Bank.
 
@@ -210,29 +199,28 @@ Mr. Ojo remains committed to delivering value-driven financial solutions, promot
   {
     name: "Mr. Sehinde Aderibigbe",
     role: "Branch Head",
-    image: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/WhatsApp%20Image%202026-06-19%20at%2017.06.24.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL1doYXRzQXBwIEltYWdlIDIwMjYtMDYtMTkgYXQgMTcuMDYuMjQuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIxMTc0NjIsImV4cCI6MjA5NzQ3NzQ2Mn0.DwF9zx4d3yF8L46bIZlv6T_07sp1DVd_Sd6QEZe2CBw",
+    image: "/images/management/sehinde-aderibigbe.jpeg",
     slug: "sehinde-aderibigbe",
     hasProfile: true,
     text: `Olasehinde Aderibigbe – Branch Head, Redemption City Branch.
 
 Olasehinde Aderibigbe is an experienced banking professional with over 20 years in Nigeria’s financial services sector driving profitability, strategic deposit mobilization, and high-value risk asset creation. He specializes in managing large liability portfolios, optimizing liquidity, and leading cross-functional teams to deliver strong deposit growth and strict regulatory compliance.
 Throughout his career at Haggai Mortgage Bank Limited, he has advanced through key leadership roles across Risk Management, Branch Operations, Treasury, Business Development and Product & Assets Management.
- 
+
 He holds a Chartered Banker MBA (CBMBA) from Bangor University, UK, and a Higher National Diploma (HND) in Business Administration from The Federal Polytechnic, Offa.
 A recognized industry expert, he is a Fellow of the Chartered Institute of Bankers of Nigeria (FCIB) and a Chartered Member of the Chartered Banker Institute, UK (MCBI).
 Prior to his career in mortgage banking, he gained valuable operational experience as an Import and Personnel Officer at Honda Manufacturing (Nig.) Limited.
- 
+
 Known for building deep, lasting relationships with institutional, corporate, and retail clients, Olasehinde focuses on optimizing primary transactional account relationships (CASA), expanding mortgage uptake and driving sustainable growth.
 At the Redemption City Branch, he leads with a commitment to deepen customer engagement, operational excellence, and the highest standards of integrity.
- 
+
 Connect with him for inquiries regarding mortgages, project financing, and institutional banking solutions at our Redemption City Branch.
- `
+ `,
   },
   {
     name: "Mrs. Morenike Owatemi",
     role: "Head, Treasury",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/Morenike%20(1).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL01vcmVuaWtlICgxKS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTIyNzI0LCJleHAiOjIwOTc0ODI3MjR9.BTM_KL3aA2XEiA6vx-Z6-Ci4adxsfHPQ32xC1j_KzV4",
+    image: "/images/management/morenike-owatemi.png",
     slug: "morenike-owatemi",
     hasProfile: true,
     text: `
@@ -252,8 +240,7 @@ She is recognized for her dedication, professionalism, integrity, and strong wor
   {
     name: "Mr. Ojo L. Hassan",
     role: "Head, Risk Management and Control",
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/lamidi.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL2xhbWlkaS5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTIyNjE2LCJleHAiOjIwOTc0ODI2MTZ9.YfwsY_diTfN11gOI0UImzgxZopUuNPZbZZHGz1ZbskQ",
+    image: "/images/management/lamidi-ojo.png",
     slug: "ojo-l-hassan",
     hasProfile: true,
     text: `
@@ -266,8 +253,6 @@ At Haggai Bank Limited, where he currently serves, he has demonstrated strong ex
 
 Ojo graduated from Kwara State Polytechnic with a Higher National Diploma (HND) in Business Administration in 1997. He is also a Stock Market Agent (SMA, 2006), a Certified Information Systems Auditor (CISA, 2011), an Associate of the Chartered Institute of Stockbrokers (ACIS, 2019), and a Member of the Chartered Institute of Loan and Risk Management (MCILRM, 2006).`,
   },
-
-
 ];
 
 const ManagementStaff = () => {

@@ -46,7 +46,7 @@ const contactLinks = [
 ];
 
 const navLinks = [
-  { label: "Projects", href: "/#projects" },
+  { label: "Projects", href: "https://haggai-homes-marketplace.vercel.app/" },
   { label: "Haggai History", href: "/history" },
 ];
 
