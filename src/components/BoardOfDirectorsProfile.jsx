@@ -9,9 +9,9 @@ const BoardOfDirectorsProfile = () => {
 
   if (!member || !member.hasProfile) {
     return (
-      <main className="min-h-screen bg-[#f8f4ed] px-5 pb-24 pt-40 text-[#14171d] sm:px-10 lg:px-16 xl:px-24">
+      <main className="min-h-screen bg-[#f8f4ed] px-5 pb-24 pt-40 text-[#14171d] transition-colors duration-300 dark:bg-[#05070d] dark:text-white sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
             Director Profile
           </p>
 
@@ -19,7 +19,7 @@ const BoardOfDirectorsProfile = () => {
             Profile Coming Soon
           </h1>
 
-          <p className="mt-6 text-lg leading-8 text-[#8e8e8e]">
+          <p className="mt-6 text-lg leading-8 text-[#8e8e8e] dark:text-white/60">
             This profile is currently being updated.
           </p>
 
@@ -40,17 +40,17 @@ const BoardOfDirectorsProfile = () => {
     .filter(Boolean);
 
   return (
-    <main className="min-h-screen bg-[#f8f4ed] px-5 pb-24 pt-40 text-[#14171d] sm:px-10 lg:px-16 xl:px-24">
+    <main className="min-h-screen bg-[#f8f4ed] px-5 pb-24 pt-40 text-[#14171d] transition-colors duration-300 dark:bg-[#05070d] dark:text-white sm:px-10 lg:px-16 xl:px-24">
       <article className="mx-auto max-w-5xl">
         <Link
           to="/about/board-of-directors"
-          className="text-sm font-bold uppercase tracking-[0.25em] text-red-700 transition hover:text-red-800"
+          className="text-sm font-bold uppercase tracking-[0.25em] text-red-700 dark:text-red-400 transition hover:text-red-800 dark:hover:text-red-300"
         >
           ← Back to Board
         </Link>
 
-        <div className="mt-10 border-b border-slate-200 pb-10">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+        <div className="mt-10 border-b border-slate-200 pb-10 dark:border-white/10">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
             Director Profile
           </p>
 
@@ -58,13 +58,13 @@ const BoardOfDirectorsProfile = () => {
             {member.name}
           </h1>
 
-          <p className="mt-5 text-xl leading-8 text-[#8e8e8e]">
+          <p className="mt-5 text-xl leading-8 text-[#8e8e8e] dark:text-white/60">
             {member.role}
           </p>
         </div>
 
-        <div className="mt-12 text-lg leading-9 text-[#555]">
-          <div className="mb-8 overflow-hidden rounded-2xl bg-slate-100 shadow-xl sm:float-left sm:mb-6 sm:mr-10 sm:w-[320px] lg:w-[380px]">
+        <div className="mt-12 text-lg leading-9 text-[#555] dark:text-white/75">
+          <div className="mb-8 overflow-hidden rounded-2xl bg-slate-100 shadow-xl dark:bg-white/5 dark:shadow-black/40 sm:float-left sm:mb-6 sm:mr-10 sm:w-[320px] lg:w-[380px]">
             <img
               src={member.image}
               alt={member.name}
@@ -81,7 +81,7 @@ const BoardOfDirectorsProfile = () => {
             return isHeading ? (
               <h2
                 key={index}
-                className="mb-4 mt-8 text-normal tracking-[-0.03em] text-[#14171d]"
+                className="mb-4 mt-8 text-normal tracking-[-0.03em] text-[#14171d] dark:text-white"
               >
                 {paragraph}
               </h2>

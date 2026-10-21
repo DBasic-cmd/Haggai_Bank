@@ -9,9 +9,9 @@ const ManagementStaffProfile = () => {
 
   if (!member || !member.hasProfile) {
     return (
-      <main className="min-h-screen bg-white px-5 pb-24 pt-40 text-[#14171d] dark:bg-[#05070d] dark:text-white sm:px-10 lg:px-16 xl:px-24">
+      <main className="min-h-screen bg-white px-5 pb-24 pt-40 text-[#14171d] transition-colors duration-300 dark:bg-[#05070d] dark:text-white sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
             Management Profile
           </p>
 
@@ -40,17 +40,17 @@ const ManagementStaffProfile = () => {
     .filter(Boolean);
 
   return (
-    <main className="min-h-screen bg-white px-5 pb-24 pt-40 text-[#14171d] dark:bg-[#05070d] dark:text-white sm:px-10 lg:px-16 xl:px-24">
+    <main className="min-h-screen bg-white px-5 pb-24 pt-40 text-[#14171d] transition-colors duration-300 dark:bg-[#05070d] dark:text-white sm:px-10 lg:px-16 xl:px-24">
       <article className="mx-auto max-w-5xl">
         <Link
           to="/about/management-staff"
-          className="text-sm font-bold uppercase tracking-[0.25em] text-red-700 transition hover:text-red-800"
+          className="text-sm font-bold uppercase tracking-[0.25em] text-red-700 dark:text-red-400 transition hover:text-red-800 dark:hover:text-red-300"
         >
           ← Back to Management
         </Link>
 
         <div className="mt-10 border-b border-slate-200 pb-10 dark:border-white/10">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
             Management Profile
           </p>
 

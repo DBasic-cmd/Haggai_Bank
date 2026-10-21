@@ -85,16 +85,16 @@ const ReportLink = ({ item, index }) => {
     <a
       href={isDisabled ? undefined : item.href}
       aria-disabled={isDisabled}
-      className={`group relative flex items-center justify-between border-b border-slate-200 py-5 transition duration-300 ${isDisabled ? "cursor-not-allowed opacity-45" : "hover:border-red-700"
+      className={`group relative flex items-center justify-between border-b border-slate-200 dark:border-white/10 py-5 transition duration-300 ${isDisabled ? "cursor-not-allowed opacity-45" : "hover:border-red-700 dark:hover:border-red-500"
         }`}
     >
       <div>
-        <p className="text-xs font-black uppercase tracking-[0.28em] text-slate-400">
+        <p className="text-xs font-black uppercase tracking-[0.28em] text-slate-400 dark:text-white/40">
           {String(index + 1).padStart(2, "0")}
         </p>
 
         <h3
-          className={`mt-2 text-lg font-black tracking-[-0.03em] text-slate-950 transition duration-300 ${!isDisabled ? "group-hover:text-red-700" : ""
+          className={`mt-2 text-lg font-black tracking-[-0.03em] text-slate-950 dark:text-white transition duration-300 ${!isDisabled ? "group-hover:text-red-700 dark:group-hover:text-red-400" : ""
             }`}
         >
           {item.title}
@@ -102,8 +102,8 @@ const ReportLink = ({ item, index }) => {
       </div>
 
       <span
-        className={`flex h-10 w-10 shrink-0 items-center justify-center border border-slate-300 text-lg transition duration-300 ${!isDisabled
-          ? "group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white"
+        className={`flex h-10 w-10 shrink-0 items-center justify-center border border-slate-300 dark:border-white/15 dark:text-white text-lg transition duration-300 ${!isDisabled
+          ? "group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white dark:group-hover:border-red-600 dark:group-hover:bg-red-600"
           : ""
           }`}
       >
@@ -115,7 +115,7 @@ const ReportLink = ({ item, index }) => {
 
 const InvestorRelations = () => {
   return (
-    <main className="min-h-screen bg-[#f7f3ef] text-slate-950">
+    <main className="min-h-screen bg-[#f7f3ef] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <section className="relative overflow-hidden bg-[#070707] px-5 pb-24 pt-40 text-white sm:px-10 lg:px-16 xl:px-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(185,28,28,0.35),transparent_30%),radial-gradient(circle_at_85%_10%,rgba(255,255,255,0.1),transparent_28%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-size-[90px_90px]" />
@@ -140,9 +140,9 @@ const InvestorRelations = () => {
       <section className="mx-auto max-w-7xl px-5 py-24 sm:px-10 lg:px-16 xl:px-6">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
           <section>
-            <div className="mb-8 flex items-end justify-between gap-6 border-b border-slate-300 pb-5">
+            <div className="mb-8 flex items-end justify-between gap-6 border-b border-slate-300 dark:border-white/10 pb-5">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                   Abridged Accounts
                 </p>
 
@@ -151,7 +151,7 @@ const InvestorRelations = () => {
                 </h2>
               </div>
 
-              <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
+              <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 dark:text-white/40 sm:block">
                 2025 — 2013
               </p>
             </div>
@@ -164,9 +164,9 @@ const InvestorRelations = () => {
           </section>
 
           <section>
-            <div className="mb-8 flex items-end justify-between gap-6 border-b border-slate-300 pb-5">
+            <div className="mb-8 flex items-end justify-between gap-6 border-b border-slate-300 dark:border-white/10 pb-5">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                   Financial Statements
                 </p>
 
@@ -175,7 +175,7 @@ const InvestorRelations = () => {
                 </h2>
               </div>
 
-              <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 sm:block">
+              <p className="hidden text-sm font-bold uppercase tracking-[0.22em] text-slate-400 dark:text-white/40 sm:block">
                 2025 — 2019
               </p>
             </div>

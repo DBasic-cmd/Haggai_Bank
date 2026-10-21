@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const DataConsent = () => {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-white text-slate-950">
+    <main className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <div
         className="fixed inset-0 bg-cover bg-center"
         style={{
@@ -12,23 +12,23 @@ const DataConsent = () => {
         }}
       />
 
-      <div className="fixed inset-0 bg-white/82 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 bg-white/82 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       <section className="relative z-10 px-5 pb-28 pt-40 sm:px-10 lg:px-16 xl:px-24">
-        <div className="mx-auto max-w-5xl bg-white px-6 py-12 shadow-[0_40px_120px_rgba(0,0,0,0.22)] sm:px-10 lg:px-14">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+        <div className="mx-auto max-w-5xl border border-transparent bg-white px-6 py-12 shadow-[0_40px_120px_rgba(0,0,0,0.22)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/50 sm:px-10 lg:px-14">
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
             Account Opening
           </p>
 
-          <h1 className="mt-5 text-5xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
+          <h1 className="mt-5 text-5xl font-semibold leading-tight tracking-[-0.045em] text-slate-950 dark:text-white sm:text-6xl">
             DATA CONSENT DECLARATION
           </h1>
 
-          <p className="mt-4 text-2xl text-slate-400">
+          <p className="mt-4 text-2xl text-slate-400 dark:text-white/40">
             Haggai Mortgage Bank
           </p>
 
-          <div className="mt-12 space-y-10 text-[18px] leading-9 text-slate-600">
+          <div className="mt-12 space-y-10 text-[18px] leading-9 text-slate-600 dark:text-white/70">
             <p>
               By proceeding with this account opening process, you confirm that
               you voluntarily give your consent to Haggai Mortgage Bank to
@@ -38,7 +38,7 @@ const DataConsent = () => {
             </p>
 
             <section>
-              <h2 className="text-2xl font-semibold text-slate-950">
+              <h2 className="text-2xl font-semibold text-slate-950 dark:text-white">
                 1. Consent to Use Personal Information
               </h2>
 
@@ -70,7 +70,7 @@ const DataConsent = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-slate-950">
+              <h2 className="text-2xl font-semibold text-slate-950 dark:text-white">
                 2. BVN Consent via NIBSS
               </h2>
 
@@ -100,7 +100,7 @@ const DataConsent = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-slate-950">
+              <h2 className="text-2xl font-semibold text-slate-950 dark:text-white">
                 3. Consent to Data Verification & Sharing
               </h2>
 
@@ -130,7 +130,7 @@ const DataConsent = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-slate-950">
+              <h2 className="text-2xl font-semibold text-slate-950 dark:text-white">
                 4. Consent Duration & Withdrawal
               </h2>
 
@@ -149,7 +149,7 @@ const DataConsent = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-slate-950">
+              <h2 className="text-2xl font-semibold text-slate-950 dark:text-white">
                 5. Consent Confirmation
               </h2>
 
@@ -174,10 +174,10 @@ const DataConsent = () => {
             </section>
           </div>
 
-          <div className="mt-14 flex flex-col gap-4 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-14 flex flex-col gap-4 border-t border-slate-200 pt-8 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
             <Link
               to="/open-account"
-              className="text-sm font-black uppercase tracking-[0.22em] text-slate-500 transition hover:text-red-700"
+              className="text-sm font-black uppercase tracking-[0.22em] text-slate-500 transition hover:text-red-700 dark:text-white/50 dark:hover:text-red-400"
             >
               ← Back to Open Account
             </Link>

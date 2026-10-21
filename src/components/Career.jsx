@@ -115,7 +115,7 @@ const fields = [
 
 const Career = () => {
   return (
-    <main className="relative min-h-screen text-slate-950">
+    <main className="relative min-h-screen bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -124,7 +124,7 @@ const Career = () => {
         }}
       />
 
-      <div className="fixed inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/55" />
+      <div className="fixed inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/55 dark:from-black/85 dark:via-black/60 dark:to-black/80" />
 
       <section className="relative z-10 px-5 pb-20 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
@@ -148,17 +148,17 @@ const Career = () => {
 
       <section className="relative z-20 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.25)] backdrop-blur-xl animate-[introReveal_950ms_cubic-bezier(.16,1,.3,1)_both] sm:p-10 lg:p-12">
+          <div className="border border-transparent bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.25)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] animate-[introReveal_950ms_cubic-bezier(.16,1,.3,1)_both] sm:p-10 lg:p-12">
             <div className="max-w-5xl">
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
                 Life at Haggai
               </p>
 
-              <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
+              <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl">
                 A place for ambitious people to build meaningful careers.
               </h2>
 
-              <div className="mt-8 space-y-6 text-base leading-8 text-slate-600">
+              <div className="mt-8 space-y-6 text-base leading-8 text-slate-600 dark:text-white/60">
                 <p>
                   We are built on a strong tradition of innovation,
                   professionalism, efficiency, courtesy, and exceptional service
@@ -182,12 +182,12 @@ const Career = () => {
                 </p>
               </div>
 
-              <div className="mt-10 border-t border-slate-200 pt-7">
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400">
+              <div className="mt-10 border-t border-slate-200 pt-7 dark:border-white/10">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-white/40">
                   Human Resources
                 </p>
 
-                <p className="mt-3 text-xl font-black text-red-700">
+                <p className="mt-3 text-xl font-black text-red-700 dark:text-red-400">
                   humanresources@haggaibank.com
                 </p>
               </div>
@@ -202,7 +202,7 @@ const Career = () => {
             {culture.map((item, index) => (
               <div
                 key={item.title}
-                className="group relative overflow-hidden bg-white/90 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-700 hover:-translate-y-3 hover:bg-white"
+                className="group relative overflow-hidden border border-transparent bg-white/90 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-700 hover:-translate-y-3 hover:bg-white dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.08]"
                 style={{
                   animation: `cultureIn 850ms cubic-bezier(.16,1,.3,1) both`,
                   animationDelay: `${index * 120}ms`,
@@ -211,15 +211,15 @@ const Career = () => {
                 <div className="absolute left-0 top-0 h-full w-1 bg-red-700 transition duration-500 group-hover:w-2" />
                 <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-red-700/5 transition duration-700 group-hover:scale-150 group-hover:bg-red-700/10" />
 
-                <p className="relative text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                <p className="relative text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                   {String(index + 1).padStart(2, "0")}
                 </p>
 
-                <h3 className="relative mt-5 text-2xl font-black tracking-[-0.04em]">
+                <h3 className="relative mt-5 text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                   {item.title}
                 </h3>
 
-                <p className="relative mt-5 text-base leading-7 text-slate-600">
+                <p className="relative mt-5 text-base leading-7 text-slate-600 dark:text-white/60">
                   {item.text}
                 </p>
               </div>
@@ -230,14 +230,14 @@ const Career = () => {
 
       <section className="relative z-20 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:p-10">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <div className="mb-12 border border-transparent bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.18)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] sm:p-10">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
               Careers
             </p>
-            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
+            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl">
               Available Positions
             </h2>
-            <p className="mt-4 text-base text-slate-600">
+            <p className="mt-4 text-base text-slate-600 dark:text-white/60">
               Explore current opportunities to join our team at Haggai Mortgage Bank.
             </p>
 
@@ -245,40 +245,40 @@ const Career = () => {
               {openPositions.map((position) => (
                 <div
                   key={position.title}
-                  className="group relative flex flex-col justify-between bg-[#f8f4ed] p-7 shadow-lg transition duration-500 hover:-translate-y-2 hover:shadow-red-700/5 hover:border-red-700/30 border border-slate-200/60"
+                  className="group relative flex flex-col justify-between border border-slate-200/60 bg-[#f8f4ed] p-7 shadow-lg transition duration-500 hover:-translate-y-2 hover:border-red-700/30 hover:shadow-red-700/5 dark:border-white/10 dark:bg-white/5 dark:hover:border-red-500/50"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
-                      <span className="inline-block bg-red-100 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-red-800 rounded-full">
+                      <span className="inline-block rounded-full bg-red-100 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-red-800 dark:bg-red-950/60 dark:text-red-300">
                         {position.type}
                       </span>
-                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.1em]">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400 dark:text-white/40">
                         {position.location}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 text-lg font-black tracking-[-0.04em] text-slate-900 group-hover:text-red-700 transition duration-300">
+                    <h3 className="mt-6 text-lg font-black tracking-[-0.04em] text-slate-900 transition duration-300 group-hover:text-red-700 dark:text-white dark:group-hover:text-red-400">
                       {position.title}
                     </h3>
 
-                    <p className="mt-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em]">
+                    <p className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 dark:text-white/40">
                       {position.department}
                     </p>
 
-                    <p className="mt-4 text-sm leading-6 text-slate-600">
+                    <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-white/60">
                       {position.description}
                     </p>
                   </div>
 
-                  <div className="mt-8 border-t border-slate-200/60 pt-5">
+                  <div className="mt-8 border-t border-slate-200/60 pt-5 dark:border-white/10">
                     <button
                       type="button"
                       onClick={() => {
                         document.getElementById("career-application-form")?.scrollIntoView({ behavior: "smooth" });
                       }}
-                      className="inline-flex items-center text-xs font-bold uppercase tracking-[0.15em] text-red-700 transition duration-300 hover:text-red-900"
+                      className="inline-flex items-center text-xs font-bold uppercase tracking-[0.15em] text-red-700 transition duration-300 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
                     >
-                      Apply Now <span className="ml-2 group-hover:translate-x-1 transition duration-300">→</span>
+                      Apply Now <span className="ml-2 transition duration-300 group-hover:translate-x-1">→</span>
                     </button>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ const Career = () => {
 
       <section className="relative z-20 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div id="career-application-form" className="mx-auto max-w-6xl">
-          <div className="overflow-hidden bg-white shadow-[0_40px_120px_rgba(0,0,0,0.38)] animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="overflow-hidden border border-transparent bg-white shadow-[0_40px_120px_rgba(0,0,0,0.38)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/50 animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="grid lg:grid-cols-[0.78fr_1.22fr]">
               <aside className="relative overflow-hidden bg-[#111111] p-8 text-white sm:p-10 lg:p-12">
                 <div
@@ -345,7 +345,7 @@ const Career = () => {
                 action="mailto:humanresources@haggaibank.com"
                 method="POST"
                 encType="multipart/form-data"
-                className="bg-white p-8 sm:p-10 lg:p-12"
+                className="bg-white p-8 dark:bg-[#0c0f17] sm:p-10 lg:p-12"
               >
                 <div className="grid gap-7 sm:grid-cols-2">
                   {fields.map((field, index) => (
@@ -358,7 +358,7 @@ const Career = () => {
                     >
                       <label
                         htmlFor={field.id}
-                        className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                        className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                       >
                         {field.label} *
                       </label>
@@ -376,7 +376,7 @@ const Career = () => {
                             ? "2015"
                             : ""
                         }
-                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
                   ))}
@@ -387,22 +387,22 @@ const Career = () => {
                   >
                     <label
                       htmlFor="attachment"
-                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                     >
                       Attachment *
                     </label>
 
                     <label
                       htmlFor="attachment"
-                      className="mt-4 flex cursor-pointer flex-col items-center justify-center border-2 border-dashed border-slate-300 bg-[#f8f4ed] px-6 py-10 text-center transition duration-300 hover:border-red-700 hover:bg-white hover:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                      className="mt-4 flex cursor-pointer flex-col items-center justify-center border-2 border-dashed border-slate-300 bg-[#f8f4ed] px-6 py-10 text-center transition duration-300 hover:border-red-700 hover:bg-white hover:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/15 dark:bg-white/5 dark:hover:border-red-500 dark:hover:bg-white/10"
                     >
-                      <span className="text-3xl font-black text-red-700">
+                      <span className="text-3xl font-black text-red-700 dark:text-red-400">
                         ↑
                       </span>
-                      <span className="mt-3 text-base font-black text-slate-950">
+                      <span className="mt-3 text-base font-black text-slate-950 dark:text-white">
                         Upload your CV or supporting document
                       </span>
-                      <span className="mt-2 text-sm text-slate-500">
+                      <span className="mt-2 text-sm text-slate-500 dark:text-white/50">
                         PDF, DOC, or DOCX recommended
                       </span>
                     </label>
@@ -422,7 +422,7 @@ const Career = () => {
                   >
                     <label
                       htmlFor="message"
-                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                     >
                       Your Message
                     </label>
@@ -432,13 +432,13 @@ const Career = () => {
                       name="Your Message"
                       rows="7"
                       placeholder="Tell us about yourself, your interests, and how you hope to contribute to Haggai Mortgage Bank."
-                      className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                      className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                     />
                   </div>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-5 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="max-w-md text-sm leading-7 text-slate-500">
+                <div className="mt-10 flex flex-col gap-5 border-t border-slate-200 pt-8 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="max-w-md text-sm leading-7 text-slate-500 dark:text-white/50">
                     We will contact you when there is an opening that aligns
                     with your profile.
                   </p>

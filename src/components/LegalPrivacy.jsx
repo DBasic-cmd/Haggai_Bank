@@ -130,7 +130,7 @@ Session cookies expire when you leave the site or close your browser, while pers
 
 const LegalPrivacy = () => {
   return (
-    <main className="min-h-screen bg-[#f8f4ed] text-slate-950">
+    <main className="min-h-screen bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <section className="relative overflow-hidden px-5 pb-24 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -140,7 +140,7 @@ const LegalPrivacy = () => {
           }}
         />
 
-        <div className="absolute inset-0 bg-[#f8f4ed]/90" />
+        <div className="absolute inset-0 bg-[#f8f4ed]/90 dark:bg-[#05070d]/90" />
 
         <div className="absolute right-0 top-0 hidden h-full w-[44%] overflow-hidden lg:block">
           <div
@@ -161,7 +161,7 @@ const LegalPrivacy = () => {
           />
         </div>
 
-        <div className="absolute left-[7%] top-[22%] hidden h-44 w-44 overflow-hidden border-[10px] border-[#f8f4ed] shadow-2xl lg:block">
+        <div className="absolute left-[7%] top-[22%] hidden h-44 w-44 overflow-hidden border-[10px] border-[#f8f4ed] dark:border-[#05070d] shadow-2xl lg:block">
           <div
             className="h-full w-full bg-cover bg-center"
             style={{
@@ -172,7 +172,7 @@ const LegalPrivacy = () => {
           />
         </div>
 
-        <div className="absolute bottom-[10%] left-[36%] hidden h-56 w-40 overflow-hidden border-[10px] border-[#f8f4ed] shadow-2xl lg:block">
+        <div className="absolute bottom-[10%] left-[36%] hidden h-56 w-40 overflow-hidden border-[10px] border-[#f8f4ed] dark:border-[#05070d] shadow-2xl lg:block">
           <div
             className="h-full w-full bg-cover bg-center"
             style={{
@@ -185,7 +185,7 @@ const LegalPrivacy = () => {
 
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-xs font-black uppercase tracking-[0.4em] text-red-700">
+            <p className="text-xs font-black uppercase tracking-[0.4em] text-red-700 dark:text-red-400">
               Privacy Policy
             </p>
 
@@ -193,7 +193,7 @@ const LegalPrivacy = () => {
               Your privacy, protected with care.
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-white/60">
               This policy explains how Haggai Mortgage Bank collects, uses,
               protects, stores, and shares personal data in line with applicable
               data protection requirements.
@@ -207,7 +207,7 @@ const LegalPrivacy = () => {
           {sections.map((section, index) => (
             <article
               key={section.title}
-              className={`group relative overflow-hidden bg-white/90 p-8 shadow-xl shadow-slate-900/5 backdrop-blur transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10 sm:p-10 ${
+              className={`group relative overflow-hidden bg-white/90 p-8 shadow-xl shadow-slate-900/5 backdrop-blur dark:bg-white/[0.04] dark:border dark:border-white/10 dark:shadow-black/20 transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/10 sm:p-10 ${
                 index % 2 === 0
                   ? "animate-[slideFromLeft_900ms_ease_both]"
                   : "animate-[slideFromRight_900ms_ease_both]"
@@ -220,16 +220,16 @@ const LegalPrivacy = () => {
 
               <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
                 <div className="max-w-3xl">
-                  <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                  <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                     {String(index + 1).padStart(2, "0")}
                   </p>
 
-                  <h2 className="mt-4 text-3xl font-black leading-tight tracking-[-0.04em]">
+                  <h2 className="mt-4 text-3xl font-black leading-tight tracking-[-0.04em] text-slate-950 dark:text-white">
                     {section.title}
                   </h2>
 
                   {section.body && (
-                    <p className="mt-6 whitespace-pre-line text-base leading-8 text-slate-600">
+                    <p className="mt-6 whitespace-pre-line text-base leading-8 text-slate-600 dark:text-white/70">
                       {section.body}
                     </p>
                   )}
@@ -239,7 +239,7 @@ const LegalPrivacy = () => {
                       {section.list.map((item) => (
                         <li
                           key={item}
-                          className="flex gap-3 text-base leading-7 text-slate-600"
+                          className="flex gap-3 text-base leading-7 text-slate-600 dark:text-white/70"
                         >
                           <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-red-700" />
                           <span>{item}</span>
@@ -249,7 +249,7 @@ const LegalPrivacy = () => {
                   )}
                 </div>
 
-                <div className="hidden h-16 w-16 shrink-0 items-center justify-center border border-slate-200 text-2xl text-slate-400 transition group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white lg:flex">
+                <div className="hidden h-16 w-16 shrink-0 items-center justify-center border border-slate-200 dark:border-white/15 text-2xl text-slate-400 dark:text-white/40 transition group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white lg:flex">
                   ↗
                 </div>
               </div>

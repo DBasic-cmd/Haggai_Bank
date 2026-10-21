@@ -28,7 +28,7 @@ const assurances = [
 
 const WhistleBlower = () => {
   return (
-    <main className="relative min-h-screen text-slate-950">
+    <main className="relative min-h-screen text-slate-950 transition-colors duration-300 dark:text-white">
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -61,7 +61,7 @@ const WhistleBlower = () => {
 
       <section className="relative z-20 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden bg-white/94 shadow-[0_40px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl animate-[mainPanel_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="overflow-hidden bg-white/94 shadow-[0_40px_120px_rgba(0,0,0,0.35)] backdrop-blur-xl dark:bg-[#0c0f17]/95 dark:border dark:border-white/10 animate-[mainPanel_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
               <aside className="relative overflow-hidden bg-[#111111] p-8 text-white sm:p-10 lg:p-12">
                 <div
@@ -101,11 +101,11 @@ const WhistleBlower = () => {
               </aside>
 
               <div className="p-8 sm:p-10 lg:p-12">
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+                <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
                   Report Channels
                 </p>
 
-                <h2 className="mt-5 max-w-2xl text-4xl font-black leading-tight tracking-[-0.05em]">
+                <h2 className="mt-5 max-w-2xl text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white">
                   You may send your report through any of these channels.
                 </h2>
 
@@ -114,7 +114,7 @@ const WhistleBlower = () => {
                     <a
                       key={channel.email}
                       href={`mailto:${channel.email}`}
-                      className="group relative block overflow-hidden border border-slate-200 bg-[#f8f4ed] p-7 transition duration-700 hover:-translate-y-2 hover:border-red-700 hover:bg-white hover:shadow-2xl hover:shadow-red-950/10"
+                      className="group relative block overflow-hidden border border-slate-200 bg-[#f8f4ed] p-7 transition duration-700 hover:-translate-y-2 hover:border-red-700 hover:bg-white hover:shadow-2xl hover:shadow-red-950/10 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.08]"
                       style={{
                         animation:
                           "channelIn 850ms cubic-bezier(.16,1,.3,1) both",
@@ -126,17 +126,17 @@ const WhistleBlower = () => {
 
                       <div className="relative flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
                         <div>
-                          <p className="text-xs font-black uppercase tracking-[0.28em] text-red-700">
+                          <p className="text-xs font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400">
                             {String(index + 1).padStart(2, "0")} /{" "}
                             {channel.label}
                           </p>
 
-                          <h3 className="mt-4 break-all text-2xl font-black tracking-[-0.04em] text-slate-950">
+                          <h3 className="mt-4 break-all text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                             {channel.email}
                           </h3>
                         </div>
 
-                        <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-slate-300 text-xl transition duration-500 group-hover:rotate-45 group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white">
+                        <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-slate-300 dark:border-white/15 dark:text-white text-xl transition duration-500 group-hover:rotate-45 group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white">
                           →
                         </span>
                       </div>
@@ -144,7 +144,7 @@ const WhistleBlower = () => {
                   ))}
                 </div>
 
-                <p className="mt-10 text-base leading-8 text-slate-600">
+                <p className="mt-10 text-base leading-8 text-slate-600 dark:text-white/60">
                   Your feedback is vital in helping us maintain the highest
                   standards of professionalism and integrity.
                 </p>
@@ -159,7 +159,7 @@ const WhistleBlower = () => {
           {assurances.map((item, index) => (
             <article
               key={item.title}
-              className="group relative overflow-hidden bg-white/92 p-8 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-700 hover:-translate-y-3 hover:bg-white"
+              className="group relative overflow-hidden bg-white/92 p-8 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-700 hover:-translate-y-3 hover:bg-white dark:bg-[#0c0f17]/90 dark:hover:bg-[#121622] dark:border dark:border-white/10 dark:text-white"
               style={{
                 animation: "assuranceIn 850ms cubic-bezier(.16,1,.3,1) both",
                 animationDelay: `${index * 130}ms`,
@@ -168,7 +168,7 @@ const WhistleBlower = () => {
               <div className="absolute left-0 top-0 h-full w-1 bg-red-700 transition duration-500 group-hover:w-2" />
               <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-red-700/5 transition duration-700 group-hover:scale-150 group-hover:bg-red-700/10" />
 
-              <p className="relative text-xs font-black uppercase tracking-[0.3em] text-red-700">
+              <p className="relative text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                 Assurance {String(index + 1).padStart(2, "0")}
               </p>
 
@@ -176,7 +176,7 @@ const WhistleBlower = () => {
                 {item.title}
               </h3>
 
-              <p className="relative mt-5 text-base leading-8 text-slate-600">
+              <p className="relative mt-5 text-base leading-8 text-slate-600 dark:text-white/65">
                 {item.text}
               </p>
             </article>
