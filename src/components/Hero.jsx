@@ -1,193 +1,315 @@
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+// Supported local image extensions
+const IMAGE_EXTENSIONS = [
+  "jpg",
+  "jpeg",
+  "png",
+  "webp",
+  "avif",
+  "JPG",
+  "JPEG",
+  "PNG",
+  "WEBP",
+];
+
+// Resolve a local hero image without guessing its extension
+const resolveHeroImage = (imageName) => {
+  return new Promise((resolve) => {
+    let currentIndex = 0;
+
+    const tryNextExtension = () => {
+      if (currentIndex >= IMAGE_EXTENSIONS.length) {
+        console.error(
+          `[Haggai Hero] Image not found: ${imageName}. Check public/images/hero/`
+        );
+
+        resolve(null);
+        return;
+      }
+
+      const extension = IMAGE_EXTENSIONS[currentIndex];
+      currentIndex += 1;
+
+      const imagePath = `/images/hero/${imageName}.${extension}`;
+      const image = new Image();
+
+      image.onload = () => {
+        resolve(imagePath);
+      };
+
+      image.onerror = () => {
+        tryNextExtension();
+      };
+
+      image.src = imagePath;
+    };
+
+    tryNextExtension();
+  });
+};
+
+// Hero content
 const heroSlides = [
   {
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7463.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDYzLmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyNzk5LCJleHAiOjIxMDYxMjI3OTl9.oB-tqJFVpYzCw3F8Pc_mwIWUpsz7gN8A69ZP6dckp_I",
+    imageName: "hero-image-2",
     label: "Family Home Ownership",
     kicker: "Family Home Ownership",
     title: "Move Into More Than a House.",
     description:
       "Mortgage solutions designed to help Nigerian families buy, build, renovate, and secure homes with confidence.",
-    advisoryTitle: "Get guidance before choosing your home finance plan.",
+    advisoryTitle:
+      "Get guidance before choosing your home finance plan.",
+    position: "center center",
   },
   {
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7464.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY0LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODI0LCJleHAiOjIxMDYxMjI4MjR9.fwOpD35kgrcwtC-65Xr9NBswiPvJpt7Z3fsQ20msA-k",
+    imageName: "hero-image-2",
     label: "Modern Residential Living",
     kicker: "Modern Residential Living",
     title: "Build the Future You Want to Live In.",
     description:
       "From construction finance to home completion support, we help you move from plans to keys with clarity.",
-    advisoryTitle: "Let our team guide your construction or completion journey.",
+    advisoryTitle:
+      "Let our team guide your construction or completion journey.",
+    position: "center center",
   },
   {
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7465.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY1LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODQxLCJleHAiOjIxMDYxMjI4NDF9.Nz7XmkW05xTGI8U0cxvb9BeHksercEhHObzX6crdrxQ",
+    imageName: "hero-image-3",
     label: "Premium Mortgage Living",
     kicker: "Premium Mortgage Living",
     title: "Own Property With Greater Confidence.",
     description:
       "Access mortgage products designed around real income patterns, long-term value, and responsible home ownership.",
-    advisoryTitle: "Find the mortgage plan that fits your financial goal.",
+    advisoryTitle:
+      "Find the mortgage plan that fits your financial goal.",
+    position: "center center",
   },
   {
-    image:
-      "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/MGMTPICS/IMG_7466.jpeg?token=eyJraWQiOiI3ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL01HTVRQSUNTL0lNR183NDY2LmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzkwNzYyODY1LCJleHAiOjIxMDYxMjI4NjV9.lqeRmMGp779CYRTV6HG7wYL-TeK_1T3XP0fanNO51-I",
+    imageName: "hero-image-4",
     label: "Secure Home Investment",
     kicker: "Secure Home Investment",
     title: "Secure Land Today. Build Tomorrow.",
     description:
       "Take the first step toward ownership with flexible financing options for land, housing, and property growth.",
-    advisoryTitle: "Speak with an advisor before making your next property move.",
+    advisoryTitle:
+      "Speak with an advisor before making your next property move.",
+    position: "center center",
   },
 ];
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState("personal");
+
+  const [resolvedImages, setResolvedImages] = useState({});
+  const [imagesReady, setImagesReady] = useState(false);
+
+  // Resolve and preload the local hero images
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadHeroImages = async () => {
+      const results = await Promise.all(
+        heroSlides.map(async (slide) => {
+          const imagePath = await resolveHeroImage(
+            slide.imageName
+          );
+
+          return [slide.imageName, imagePath];
+        })
+      );
+
+      if (cancelled) return;
+
+      setResolvedImages(Object.fromEntries(results));
+      setImagesReady(true);
+    };
+
+    loadHeroImages();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section
       id="hero"
       className="relative min-h-[82vh] overflow-hidden bg-slate-950"
     >
+      {/* HERO BACKGROUND SLIDES */}
       <div className="absolute inset-0">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={`${slide.label}-${index}`}
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0"
-            style={{
-              backgroundImage: `url('${slide.image}')`,
-              animation: `heroImageCycle 32s infinite`,
-              animationDelay: `${index * 8}s`,
-            }}
-          />
-        ))}
+        {imagesReady &&
+          heroSlides.map((slide, index) => {
+            const imagePath =
+              resolvedImages[slide.imageName];
+
+            if (!imagePath) return null;
+
+            return (
+              <div
+                key={`${slide.label}-${index}`}
+                className="absolute inset-0 bg-cover bg-no-repeat opacity-0"
+                style={{
+                  backgroundImage: `url("${imagePath}")`,
+                  backgroundPosition: slide.position,
+                  animation: "heroImageCycle 32s infinite",
+                  animationDelay: `${index * 8}s`,
+                }}
+              />
+            );
+          })}
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/58 to-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+      {/* LIGHTER OVERLAYS */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-black/5" />
 
-      <div className="absolute left-0 top-0 h-full w-[44%] border-r border-white/10 bg-black/20 backdrop-blur-[1px]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-black/5" />
 
+      {/* LEFT TEXT SUPPORT */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-[44%] border-r border-white/[0.06] bg-black/8" />
+
+      {/* MAIN CONTENT */}
       <div className="relative z-20 mx-auto flex min-h-[96vh] max-w-7xl items-center px-5 pt-28 sm:px-10 lg:px-16 xl:px-6">
         <div className="max-w-3xl">
           <div className="relative min-h-[360px] sm:min-h-[440px] lg:min-h-[470px]">
-            {heroSlides.map((slide, index) => (
-              <div
-                key={`copy-${slide.label}-${index}`}
-                className="absolute left-0 top-0 w-full opacity-0"
-                style={{
-                  animation: "heroTextCycle 32s infinite",
-                  animationDelay: `${index * 8}s`,
-                }}
-              >
-                <div className="mb-8 flex items-center gap-4">
-                  <span className="h-px w-16 bg-red-500" />
-                  <p className="text-xs font-black uppercase tracking-[0.38em] text-white/80">
-                    {slide.kicker}
+            {imagesReady &&
+              heroSlides.map((slide, index) => (
+                <div
+                  key={`copy-${slide.label}-${index}`}
+                  className="absolute left-0 top-0 w-full opacity-0"
+                  style={{
+                    animation: "heroTextCycle 32s infinite",
+                    animationDelay: `${index * 8}s`,
+                  }}
+                >
+                  <div className="mb-8 flex items-center gap-4">
+                    <span className="h-px w-16 bg-red-500" />
+
+                    <p className="text-xs font-black uppercase tracking-[0.38em] text-white/90">
+                      {slide.kicker}
+                    </p>
+                  </div>
+
+                  <h1 className="max-w-4xl text-5xl font-black leading-[0.9] tracking-[-0.07em] text-white [text-shadow:0_4px_24px_rgba(0,0,0,0.35)] sm:text-7xl lg:text-7xl">
+                    {slide.title}
+                  </h1>
+
+                  <p className="mt-8 max-w-xl text-lg leading-8 text-white/90 [text-shadow:0_2px_12px_rgba(0,0,0,0.4)] sm:text-xl">
+                    {slide.description}
                   </p>
                 </div>
-
-                <h1 className="max-w-4xl text-5xl font-black leading-[0.9] tracking-[-0.07em] text-white sm:text-7xl lg:text-8xl">
-                  {slide.title}
-                </h1>
-
-                <p className="mt-8 max-w-xl text-lg leading-8 text-white/80 sm:text-xl">
-                  {slide.description}
-                </p>
-              </div>
-            ))}
+              ))}
           </div>
 
+          {/* CTA BUTTONS */}
           <div className="mt-2 flex flex-wrap items-center gap-4">
             <Link
               to="/products/haggai-plot-advance"
               className="group relative overflow-hidden bg-red-700 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition duration-500 hover:bg-red-800"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition duration-700 group-hover:translate-x-full" />
-              <span className="relative">Explore Mortgages</span>
+
+              <span className="relative">
+                Explore Mortgages
+              </span>
             </Link>
 
             <Link
               to="/resources/mortgage-calculator"
-              className="border border-white/35 bg-white/10 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-500 hover:bg-white hover:text-slate-950"
+              className="border border-white/40 bg-white/10 px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-white backdrop-blur-sm transition duration-500 hover:bg-white hover:text-slate-950"
             >
               Mortgage Calculator
             </Link>
           </div>
 
-          <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-5 border-l border-white/20 pl-6">
+          {/* METRICS */}
+          <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-5 border-l border-white/25 pl-6">
             <div>
-              <p className="text-3xl font-black text-white">30+</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
+              <p className="text-3xl font-black text-white">
+                30+
+              </p>
+
+              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/65">
                 Years
               </p>
             </div>
 
             <div>
-              <p className="text-3xl font-black text-white">50,000+</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
+              <p className="text-3xl font-black text-white">
+                50,000+
+              </p>
+
+              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/65">
                 Clients
               </p>
             </div>
 
             <div>
-              <p className="text-3xl font-black text-white">CBN</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
+              <p className="text-3xl font-black text-white">
+                CBN
+              </p>
+
+              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/65">
                 Regulated
               </p>
             </div>
 
             <div>
-              <p className="text-3xl font-black text-white">NDIC</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/55">
+              <p className="text-3xl font-black text-white">
+                NDIC
+              </p>
+
+              <p className="mt-1 text-xs uppercase tracking-[0.22em] text-white/65">
                 Insured
               </p>
             </div>
           </div>
 
+          {/* LOWER INFO */}
           <div className="mt-12 max-w-5xl">
-            <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-4 border-t border-white/15 pt-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
               <div className="flex items-center gap-3">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/55">
                     Head Office
                   </p>
 
-                  <p className="text-sm leading-6 text-white/80">
-                    119, Bode Thomas Street,<br className="sm:hidden" />
+                  <p className="text-sm leading-6 text-white/90">
+                    119, Bode Thomas Street,
+                    <br className="sm:hidden" />
                     Surulere, Lagos State, Nigeria
                   </p>
                 </div>
               </div>
 
-              <div className="hidden h-10 w-px bg-white/10 lg:block" />
+              <div className="hidden h-10 w-px bg-white/15 lg:block" />
 
               <div className="flex items-center gap-3">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/55">
                     Email
                   </p>
 
                   <a
                     href="mailto:info@haggaibank.com"
-                    className="text-sm text-white/80 transition hover:text-white"
+                    className="text-sm text-white/90 transition hover:text-white"
                   >
                     info@haggaibank.com
                   </a>
                 </div>
               </div>
 
-              <div className="hidden h-10 w-px bg-white/10 lg:block" />
+              <div className="hidden h-10 w-px bg-white/15 lg:block" />
 
               <div className="flex items-center gap-3">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/45">
+                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-white/55">
                     Regulatory Status
                   </p>
 
-                  <p className="text-sm text-white/80">
+                  <p className="text-sm text-white/90">
                     Licensed by the Central Bank of Nigeria
                   </p>
                 </div>
@@ -197,7 +319,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute top-32 right-8 z-20 hidden w-[320px] text-white lg:block">
+      {/* REMITTANCE */}
+      <div className="absolute right-8 top-32 z-20 hidden w-[320px] text-white lg:block">
         <Link
           to="/products/rccg-remitance"
           className="block w-full bg-red-700 py-4 text-center text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg shadow-red-900/30 transition duration-300 hover:bg-red-800"
@@ -206,27 +329,33 @@ const Hero = () => {
         </Link>
       </div>
 
-      <div className="absolute top-55 right-8 z-20 hidden w-[320px] border border-white/15 bg-black/30 p-6 text-white backdrop-blur-xl lg:block">
-        <p className="mb-8 text-xl font-black leading-tight text-center">
+      {/* INTERNET BANKING */}
+      <div className="absolute right-8 top-55 z-20 hidden w-[320px] border border-white/20 bg-black/20 p-6 text-white backdrop-blur-md lg:block">
+        <p className="mb-8 text-center text-xl font-black leading-tight">
           Internet Banking
         </p>
 
-        <div className="mt-4 flex border-b border-white/10 pb-2">
+        <div className="mt-4 flex border-b border-white/15 pb-2">
           <button
+            type="button"
             onClick={() => setActiveTab("personal")}
-            className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "personal"
-              ? "border-red-600 text-white"
-              : "border-transparent text-white/45 hover:text-white/70"
-              }`}
+            className={`flex-1 border-b-2 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 ${
+              activeTab === "personal"
+                ? "border-red-600 text-white"
+                : "border-transparent text-white/55 hover:text-white/80"
+            }`}
           >
             Personal
           </button>
+
           <button
+            type="button"
             onClick={() => setActiveTab("corporate")}
-            className={`flex-1 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] border-b-2 transition-all duration-300 ${activeTab === "corporate"
-              ? "border-red-600 text-white"
-              : "border-transparent text-white/45 hover:text-white/70"
-              }`}
+            className={`flex-1 border-b-2 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 ${
+              activeTab === "corporate"
+                ? "border-red-600 text-white"
+                : "border-transparent text-white/55 hover:text-white/80"
+            }`}
           >
             Corporate
           </button>
@@ -240,7 +369,7 @@ const Hero = () => {
           }
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 block w-full bg-red-700 py-3.5 text-center text-xs font-black uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-red-800 shadow-md shadow-red-900/10"
+          className="mt-5 block w-full bg-red-700 py-3.5 text-center text-xs font-black uppercase tracking-[0.18em] text-white shadow-md shadow-red-900/10 transition duration-300 hover:bg-red-800"
         >
           Login
         </a>
@@ -248,60 +377,63 @@ const Hero = () => {
         <div className="mt-4 flex items-center justify-center hover:text-red-500">
           <Link
             to="/about/privacy-policy"
-            className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/60 transition hover:text-white underline underline-offset-4"
+            className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/70 underline underline-offset-4 transition hover:text-white"
           >
             Privacy Policy
           </Link>
         </div>
       </div>
 
+      {/* PROGRESS */}
       <div className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 lg:flex">
-        {heroSlides.map((slide, index) => (
-          <span
-            key={`progress-${slide.label}-${index}`}
-            className="h-[3px] w-12 overflow-hidden bg-white/25"
-          >
+        {imagesReady &&
+          heroSlides.map((slide, index) => (
             <span
-              className="block h-full w-full origin-left scale-x-0 bg-red-600"
-              style={{
-                animation: `heroProgress 32s infinite`,
-                animationDelay: `${index * 8}s`,
-              }}
-            />
-          </span>
-        ))}
+              key={`progress-${slide.label}-${index}`}
+              className="h-[3px] w-12 overflow-hidden bg-white/30"
+            >
+              <span
+                className="block h-full w-full origin-left scale-x-0 bg-red-600"
+                style={{
+                  animation: "heroProgress 32s infinite",
+                  animationDelay: `${index * 8}s`,
+                }}
+              />
+            </span>
+          ))}
       </div>
 
+      {/* CAROUSEL ANIMATIONS */}
       <style>
         {`
           @keyframes heroImageCycle {
             0% {
               opacity: 0;
-              transform: scale(1.08) translateX(2%);
+              transform: translateX(1.5%);
               clip-path: inset(0 0 0 100%);
             }
 
             6% {
               opacity: 1;
-              transform: scale(1.04) translateX(0);
+              transform: translateX(0);
               clip-path: inset(0 0 0 0);
             }
 
             24% {
               opacity: 1;
-              transform: scale(1.1) translateX(-1.5%);
+              transform: translateX(0);
               clip-path: inset(0 0 0 0);
             }
 
             30% {
               opacity: 0;
-              transform: scale(1.14) translateX(-3%);
+              transform: translateX(-1.5%);
               clip-path: inset(0 100% 0 0);
             }
 
             100% {
               opacity: 0;
-              transform: scale(1.08) translateX(2%);
+              transform: translateX(1.5%);
               clip-path: inset(0 0 0 100%);
             }
           }

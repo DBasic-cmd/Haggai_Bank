@@ -1,95 +1,124 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Search } from "lucide-react";
+
+// ============================================================
+// HAGGAI MORTGAGE BANK - DOCUMENT DOWNLOADS
+// Local public folder: /public/documents/
+// ============================================================
 
 const downloads = [
   {
     title: "Haggai Account Opening Form Individual",
     category: "Account Opening",
-    url: "#",
+    url: null,
   },
   {
     title: "NMRC Application Form",
     category: "Mortgage",
-    url: "#",
+    url: null,
   },
   {
     title: "Terms & Conditions",
     category: "Legal",
-    url: "#",
+    url: null,
   },
   {
     title: "Mortgage Application Form",
     category: "Mortgage",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Mortgage%20Application%20Form.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9Nb3J0Z2FnZSBBcHBsaWNhdGlvbiBGb3JtLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI2MzIsImV4cCI6MTgxMjcyODYzMn0.E8AW0E5sBpfKs0ZoIlYlwkdBSOC54Rnbeaj55UupBc0",
+    url: "/documents/Mortgage%20Application%20Form.pdf",
   },
   {
     title: "Prerequisites For a Loan - Individual",
     category: "Loans",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Loan%20Prerequisites.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9Mb2FuIFByZXJlcXVpc2l0ZXMucGRmIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTE5MjYxOSwiZXhwIjoxODEyNzI4NjE5fQ.lttQE7tMAfxPfKpDxaQhNGloNDmV9lO-n-o7GBvxaSU",
+    url: "/documents/Loan%20Prerequisites.pdf",
   },
   {
     title: "Prerequisites For a Loan - Churches",
     category: "Loans",
-    url: "#",
+    url: null,
   },
   {
     title: "Funds Transfer Form",
     category: "Banking",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Fund%20Transfer%20Form%20(1).pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9GdW5kIFRyYW5zZmVyIEZvcm0gKDEpLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI1NzQsImV4cCI6MTgxMjcyODU3NH0.TIRbz4A5mOX72CsPlUKBBoYxQ-mdANGrU0-xKcYMBgc",
+    url: "/documents/Fund%20Transfer%20Form%20(1).pdf",
   },
   {
     title: "Treasury Agreement Form",
     category: "Treasury",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Treasury%20Agreement%20Form.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9UcmVhc3VyeSBBZ3JlZW1lbnQgRm9ybS5wZGYiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxMTkyNjYxLCJleHAiOjE4MTI3Mjg2NjF9.J0mN5RtAW4yIuK4eVdxheulT5QEtOXlLUU3VoO9hT7Q",
+    url: "/documents/Treasury%20Agreement%20Form.pdf",
   },
   {
     title: "Outright Purchase Application Form",
     category: "Mortgage",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Outright%20Purchase%20Application%20Form.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9PdXRyaWdodCBQdXJjaGFzZSBBcHBsaWNhdGlvbiBGb3JtLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI2NDcsImV4cCI6MTgxMjcyODY0N30.9AketVBQfzKPm7QjSOeH9bK8JbkGfH1iLWWH_mDtH4I",
+    url: "/documents/Outright%20Purchase%20Application%20Form.pdf",
   },
   {
     title: "Shareholder Form for E-Dividend",
     category: "Investor Relations",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/E-Dividend%20Form%20(1).pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9FLURpdmlkZW5kIEZvcm0gKDEpLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI1NTIsImV4cCI6MTgxMjcyODU1Mn0.FNPxru_yquLntfsluAy3Cxvb3HHdPLPn8K-NjidGQgQ",
+    url: "/documents/E-Dividend%20Form%20.pdf",
+  },
+  {
+    title: "E-Dividend Form (2)",
+    category: "Investor Relations",
+    url: "/documents/E-Dividend%20Form%20.pdf",
   },
   {
     title: "Internet Banking Application Form",
     category: "Electronic Banking",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/iBank%20Application%20Form.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9pQmFuayBBcHBsaWNhdGlvbiBGb3JtLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI1ODYsImV4cCI6MTgxMjcyODU4Nn0.YX_B68CiMJ8C3G_35Uzk56vBQBeJ2WO3CTG8ilkpE60",
+    url: "/documents/iBank%20Application%20Form.pdf",
   },
   {
     title: "Internet Banking Agreement Form",
     category: "Electronic Banking",
-    url: "#",
+    url: null,
   },
   {
     title: "Dud Cheque Form",
     category: "Operations",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Dud%20Cheque%20Form%20(1).pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9EdWQgQ2hlcXVlIEZvcm0gKDEpLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI1NDEsImV4cCI6MTgxMjcyODU0MX0.BC0gAz1_2IcnkC0ZWuyDSGjI6xw1shBzCoFZJik2l-k",
+    url: "/documents/Dud%20Cheque%20Form%20(1).pdf",
   },
   {
     title: "Customer Request Form",
     category: "Customer Service",
-    url: "https://dkcxshokjuwsqtuaycry.supabase.co/storage/v1/object/sign/HAGGAI%20BANK%20WEBSITE/DOWNLOADS/Customer%20Request%20Form%20(1).pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZDk5YzY3Yy00NmFlLTQ0ZjEtYTNiNi02MzY4ZGZhZTRhZDUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJIQUdHQUkgQkFOSyBXRUJTSVRFL0RPV05MT0FEUy9DdXN0b21lciBSZXF1ZXN0IEZvcm0gKDEpLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODExOTI0NzMsImV4cCI6MjA5NjU1MjQ3M30.EvmjKndntsdupRnAuuVebHv7Yj2kcKNN9PhAxrVDHWg",
+    url: "/documents/Customer%20Request%20Form%20.pdf",
   },
 ];
 
+// ============================================================
+// DOWNLOADS COMPONENT
+// ============================================================
+
 const Downloads = () => {
   const [query, setQuery] = React.useState("");
-  const [mouse, setMouse] = React.useState({ x: 50, y: 50 });
+  const [mouse, setMouse] = React.useState({
+    x: 50,
+    y: 50,
+  });
 
+  // Filter documents by title or category
   const filteredDownloads = downloads.filter((item) => {
-    const searchText = `${item.title} ${item.category}`.toLowerCase();
+    const searchText =
+      `${item.title} ${item.category}`.toLowerCase();
+
     return searchText.includes(query.toLowerCase());
   });
 
+  // Interactive background spotlight
   const handleMouseMove = (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
+    const rect =
+      event.currentTarget.getBoundingClientRect();
 
     setMouse({
-      x: ((event.clientX - rect.left) / rect.width) * 100,
-      y: ((event.clientY - rect.top) / rect.height) * 100,
+      x:
+        ((event.clientX - rect.left) /
+          rect.width) *
+        100,
+      y:
+        ((event.clientY - rect.top) /
+          rect.height) *
+        100,
     });
   };
 
@@ -98,6 +127,7 @@ const Downloads = () => {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
     >
+      {/* BACKGROUND IMAGE */}
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
         style={{
@@ -106,14 +136,17 @@ const Downloads = () => {
         }}
       />
 
+      {/* BACKGROUND OVERLAY */}
       <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px]" />
 
+      {/* BACKGROUND WATERMARK */}
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
         <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] sm:text-[14rem] lg:text-[20rem]">
           DOWNLOADS
         </span>
       </div>
 
+      {/* INTERACTIVE SPOTLIGHT */}
       <div
         className="pointer-events-none fixed inset-0 z-0 transition duration-300"
         style={{
@@ -121,10 +154,15 @@ const Downloads = () => {
         }}
       />
 
+      {/* =====================================================
+          HERO SECTION
+      ===================================================== */}
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
           <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
+
             <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
 
             <div className="relative mx-auto max-w-5xl">
@@ -137,8 +175,9 @@ const Downloads = () => {
               </h1>
 
               <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
-                Why spend more time in the bank when you can do the paperwork
-                right there? Check here to see the paperwork you need and
+                Why spend more time in the bank when you
+                can do the paperwork right there? Check
+                here to see the paperwork you need and
                 download it in time.
               </p>
             </div>
@@ -146,10 +185,17 @@ const Downloads = () => {
         </div>
       </section>
 
+      {/* =====================================================
+          DOCUMENT DOWNLOADS SECTION
+      ===================================================== */}
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-6xl">
+
+          {/* SEARCH PANEL */}
           <div className="mb-8 overflow-hidden bg-white/92 p-5 shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
+
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.32em] text-red-700">
                   Document Vault
@@ -167,59 +213,139 @@ const Downloads = () => {
                 />
 
                 <input
+                  type="search"
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  onChange={(event) =>
+                    setQuery(event.target.value)
+                  }
                   placeholder="Search forms..."
+                  aria-label="Search documents"
                   className="w-full border border-slate-200 bg-[#f8f4ed] py-4 pl-12 pr-5 text-sm font-semibold outline-none transition focus:border-red-700 focus:bg-white"
                 />
               </div>
             </div>
           </div>
 
+          {/* =================================================
+              DOCUMENT LIST
+          ================================================= */}
           <div className="overflow-hidden bg-white shadow-[0_35px_110px_rgba(0,0,0,0.18)] animate-[vaultReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+
             {filteredDownloads.length > 0 ? (
-              filteredDownloads.map((item, index) => (
-                <a
-                  key={item.title}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group relative flex flex-col justify-between gap-6 border-b border-slate-200 px-6 py-8 transition-all duration-500 last:border-b-0 hover:bg-[#f8f4ed] sm:flex-row sm:items-center sm:px-8"
-                  style={{
-                    animation: "rowIn 700ms cubic-bezier(.16,1,.3,1) both",
-                    animationDelay: `${index * 55}ms`,
-                  }}
-                >
-                  <div className="absolute left-0 top-0 h-full w-1 bg-red-700 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:w-2" />
+              filteredDownloads.map((item, index) => {
+                const isAvailable = Boolean(item.url);
 
-                  <div className="flex items-start gap-6">
-                    <span className="min-w-10 text-xl font-black text-red-700">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                const rowClassName = `
+                  group relative flex flex-col
+                  justify-between gap-6
+                  border-b border-slate-200
+                  px-6 py-8
+                  transition-all duration-500
+                  last:border-b-0
+                  sm:flex-row sm:items-center sm:px-8
+                  ${
+                    isAvailable
+                      ? "hover:bg-[#f8f4ed]"
+                      : "opacity-65"
+                  }
+                `;
 
-                    <div>
-                      <h3 className="text-2xl font-semibold leading-tight tracking-[-0.035em] text-slate-950 transition duration-300 group-hover:text-red-700">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-2 text-xs font-black uppercase tracking-[0.22em] text-slate-400">
-                        {item.category}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 text-red-700">
-                    <span className="text-sm font-black uppercase tracking-[0.2em]">
-                      Download
-                    </span>
-
-                    <ArrowUpRight
-                      size={22}
-                      className="transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
+                const rowContent = (
+                  <>
+                    {/* HOVER ACCENT */}
+                    <div
+                      className={`absolute left-0 top-0 h-full w-1 bg-red-700 opacity-0 transition duration-500 ${
+                        isAvailable
+                          ? "group-hover:opacity-100 group-hover:w-2"
+                          : ""
+                      }`}
                     />
+
+                    {/* DOCUMENT INFORMATION */}
+                    <div className="flex items-start gap-6">
+                      <span className="min-w-10 text-xl font-black text-red-700">
+                        {String(index + 1).padStart(
+                          2,
+                          "0"
+                        )}
+                      </span>
+
+                      <div>
+                        <h3
+                          className={`text-2xl font-semibold leading-tight tracking-[-0.035em] text-slate-950 transition duration-300 ${
+                            isAvailable
+                              ? "group-hover:text-red-700"
+                              : ""
+                          }`}
+                        >
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-2 text-xs font-black uppercase tracking-[0.22em] text-slate-400">
+                          {item.category}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* DOWNLOAD ACTION */}
+                    <div
+                      className={`flex items-center gap-3 ${
+                        isAvailable
+                          ? "text-red-700"
+                          : "text-slate-400"
+                      }`}
+                    >
+                      <span className="text-sm font-black uppercase tracking-[0.2em]">
+                        {isAvailable
+                          ? "Download"
+                          : "Coming Soon"}
+                      </span>
+
+                      {isAvailable && (
+                        <ArrowUpRight
+                          size={22}
+                          className="transition-transform duration-500 group-hover:translate-x-2 group-hover:-translate-y-2"
+                        />
+                      )}
+                    </div>
+                  </>
+                );
+
+                const animationStyle = {
+                  animation:
+                    "rowIn 700ms cubic-bezier(.16,1,.3,1) both",
+                  animationDelay: `${index * 55}ms`,
+                };
+
+                // Available PDFs open in a new tab.
+                if (isAvailable) {
+                  return (
+                    <a
+                      key={item.title}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={rowClassName}
+                      style={animationStyle}
+                      aria-label={`Open ${item.title} PDF`}
+                    >
+                      {rowContent}
+                    </a>
+                  );
+                }
+
+                // Missing documents do not create broken links.
+                return (
+                  <div
+                    key={item.title}
+                    className={rowClassName}
+                    style={animationStyle}
+                    aria-label={`${item.title} - not yet available`}
+                  >
+                    {rowContent}
                   </div>
-                </a>
-              ))
+                );
+              })
             ) : (
               <div className="p-10 text-center">
                 <h3 className="text-3xl font-black tracking-[-0.04em]">
@@ -227,27 +353,35 @@ const Downloads = () => {
                 </h3>
 
                 <p className="mt-4 text-lg leading-8 text-slate-600">
-                  Try searching with a different form name or category.
+                  Try searching with a different form name
+                  or category.
                 </p>
               </div>
             )}
           </div>
 
+          {/* =================================================
+              ASSISTANCE SECTION
+          ================================================= */}
           <div className="mt-12 overflow-hidden bg-slate-950 p-8 text-center text-white shadow-[0_35px_110px_rgba(0,0,0,0.24)] sm:p-12 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
+
             <p className="text-xs font-black uppercase tracking-[0.35em] text-red-200">
               Need Assistance?
             </p>
 
             <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
-              Can't find the document you're looking for?
+              Can't find the document you're looking
+              for?
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/65">
-              Contact our team and we'll be happy to help you locate the right
-              form or guide for your banking request.
+              Contact our team and we'll be happy to
+              help you locate the right form or guide
+              for your banking request.
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+
               <Link
                 to="/#contact"
                 className="bg-red-700 px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:-translate-y-1 hover:bg-red-800"
@@ -266,6 +400,9 @@ const Downloads = () => {
         </div>
       </section>
 
+      {/* =====================================================
+          PAGE ANIMATIONS
+      ===================================================== */}
       <style>
         {`
           @keyframes heroReveal {
