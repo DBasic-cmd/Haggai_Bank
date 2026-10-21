@@ -84,7 +84,7 @@ async function handleFormSubmit(event) {
 
 const CustomerComplaintForm = () => {
   return (
-    <main className="relative min-h-screen text-slate-950">
+    <main className="relative min-h-screen bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -93,7 +93,7 @@ const CustomerComplaintForm = () => {
         }}
       />
 
-      <div className="fixed inset-0 bg-gradient-to-r from-black/55 via-black/20 to-black/45" />
+      <div className="fixed inset-0 bg-gradient-to-r from-black/55 via-black/20 to-black/45 dark:from-black/80 dark:via-black/50 dark:to-black/75" />
 
       <section className="relative z-10 px-5 pb-20 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
@@ -116,7 +116,7 @@ const CustomerComplaintForm = () => {
 
       <section className="relative z-20 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-6xl">
-          <div className="overflow-hidden bg-white shadow-[0_40px_120px_rgba(0,0,0,0.35)] animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="overflow-hidden border border-transparent bg-white shadow-[0_40px_120px_rgba(0,0,0,0.35)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/50 animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
               <aside className="relative overflow-hidden bg-[#111111] p-8 text-white sm:p-10 lg:p-12">
                 <div
@@ -169,19 +169,20 @@ const CustomerComplaintForm = () => {
 
               <form
                 onSubmit={handleFormSubmit}
-                className="bg-white p-8 sm:p-10 lg:p-12"
+                className="bg-white p-8 dark:bg-[#0c0f17] sm:p-10 lg:p-12"
               >
                 <div className="grid gap-7 sm:grid-cols-2">
                   {fields.map((field, index) => (
                     <div
                       key={field.id}
-                      className={`group relative ${field.id === "complaintTitle" ? "sm:col-span-2" : ""
-                        } animate-[fieldIn_800ms_cubic-bezier(.16,1,.3,1)_both]`}
+                      className={`group relative ${
+                        field.id === "complaintTitle" ? "sm:col-span-2" : ""
+                      } animate-[fieldIn_800ms_cubic-bezier(.16,1,.3,1)_both]`}
                       style={{ animationDelay: `${index * 90}ms` }}
                     >
                       <label
                         htmlFor={field.id}
-                        className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                        className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                       >
                         {index + 1}. {field.label}
                       </label>
@@ -192,7 +193,7 @@ const CustomerComplaintForm = () => {
                         type={field.type}
                         required
                         placeholder={field.placeholder}
-                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
                   ))}
@@ -203,7 +204,7 @@ const CustomerComplaintForm = () => {
                   >
                     <label
                       htmlFor="complaintDetails"
-                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                     >
                       6. Complaint Details
                     </label>
@@ -214,13 +215,13 @@ const CustomerComplaintForm = () => {
                       required
                       rows="8"
                       placeholder="Enter your complaint details"
-                      className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                      className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                     />
                   </div>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-5 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="max-w-md text-sm leading-7 text-slate-500">
+                <div className="mt-10 flex flex-col gap-5 border-t border-slate-200 pt-8 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="max-w-md text-sm leading-7 text-slate-500 dark:text-white/50">
                     By submitting, you confirm that the information provided is
                     accurate to the best of your knowledge.
                   </p>
@@ -230,7 +231,7 @@ const CustomerComplaintForm = () => {
                     className="group relative overflow-hidden bg-red-700 px-9 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition duration-500 hover:-translate-y-1 hover:bg-red-800"
                   >
                     <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition duration-700 group-hover:translate-x-full" />
-                    <span className="relative" >Submit</span>
+                    <span className="relative">Submit</span>
                   </button>
                 </div>
               </form>

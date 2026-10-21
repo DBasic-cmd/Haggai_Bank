@@ -70,16 +70,16 @@ ${formData.additionalInstruction || "None"}`,
   };
 
   return (
-    <div className="bg-white/90 p-8 shadow-xl shadow-slate-900/5 border border-slate-100 backdrop-blur sm:p-10 relative overflow-hidden animate-[slideFromRight_900ms_ease_both]">
+    <div className="relative overflow-hidden border border-slate-100 bg-white/90 p-8 shadow-xl shadow-slate-900/5 backdrop-blur transition-colors duration-300 dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/20 sm:p-10 animate-[slideFromRight_900ms_ease_both]">
       <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
 
       {!submitted ? (
         <form onSubmit={handleSubmit} className="space-y-8">
           <div>
-            <h3 className="text-3xl font-black tracking-[-0.04em] text-slate-900">
+            <h3 className="text-3xl font-black tracking-[-0.04em] text-slate-900 dark:text-white">
               RCCG Remittance Submission
             </h3>
-            <p className="mt-3 text-slate-500 text-sm leading-relaxed">
+            <p className="mt-3 text-sm leading-relaxed text-slate-500 dark:text-white/60">
               When you submit this form, it will not automatically collect your details like name and email address unless you provide them yourself.
             </p>
           </div>
@@ -87,7 +87,7 @@ ${formData.additionalInstruction || "None"}`,
           <div className="grid gap-6 sm:grid-cols-2">
             {/* RRR Number */}
             <div className="sm:col-span-2">
-              <label className="block text-xs font-black uppercase tracking-[0.28em]">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-slate-700 dark:text-white/80">
                 1. RRR Number <span className="text-red-500">*</span>
               </label>
               <input
@@ -96,23 +96,24 @@ ${formData.additionalInstruction || "None"}`,
                 value={formData.rrrNumber}
                 onChange={(e) => updateField("rrrNumber", e.target.value)}
                 placeholder="Enter RRR Number"
-                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
               />
             </div>
 
             {/* Purpose */}
             <div className="sm:col-span-2">
-              <label className="block text-xs font-black uppercase tracking-[0.28em]">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-slate-700 dark:text-white/80">
                 2. Purpose <span className="text-red-500">*</span>
               </label>
               <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 {["Monthly Remittance", "Thanksgiving Remittance", "Others"].map((option) => (
                   <label
                     key={option}
-                    className={`flex items-center gap-3 border p-4 cursor-pointer transition duration-300 font-semibold text-sm ${formData.purpose === option
-                      ? "border-red-700 bg-red-50/50"
-                      : "border-slate-200 bg-[#f8f4ed] text-slate-600 hover:bg-slate-50"
-                      }`}
+                    className={`flex items-center gap-3 border p-4 cursor-pointer transition duration-300 font-semibold text-sm ${
+                      formData.purpose === option
+                        ? "border-red-700 bg-red-50/50 text-red-900 dark:border-red-500 dark:bg-red-950/40 dark:text-white"
+                        : "border-slate-200 bg-[#f8f4ed] text-slate-600 hover:bg-slate-50 dark:border-white/10 dark:bg-white/5 dark:text-white/70 dark:hover:bg-white/10"
+                    }`}
                   >
                     <input
                       type="radio"
@@ -120,7 +121,7 @@ ${formData.additionalInstruction || "None"}`,
                       value={option}
                       checked={formData.purpose === option}
                       onChange={(e) => updateField("purpose", e.target.value)}
-                      className="accent-red-700 h-4 w-4"
+                      className="h-4 w-4 accent-red-700"
                     />
                     {option}
                   </label>
@@ -130,7 +131,7 @@ ${formData.additionalInstruction || "None"}`,
 
             {/* Account To Debit */}
             <div>
-              <label className="block text-xs font-black uppercase tracking-[0.28em]">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-slate-700 dark:text-white/80">
                 3. Account To Debit <span className="text-red-500">*</span>
               </label>
               <input
@@ -139,13 +140,13 @@ ${formData.additionalInstruction || "None"}`,
                 value={formData.accountToDebit}
                 onChange={(e) => updateField("accountToDebit", e.target.value)}
                 placeholder="Enter account number to debit"
-                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
               />
             </div>
 
             {/* Church Name */}
             <div>
-              <label className="block text-xs font-black uppercase tracking-[0.28em]">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-slate-700 dark:text-white/80">
                 4. Church Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -154,13 +155,13 @@ ${formData.additionalInstruction || "None"}`,
                 value={formData.churchName}
                 onChange={(e) => updateField("churchName", e.target.value)}
                 placeholder="Enter RCCG parish/province/region name"
-                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
               />
             </div>
 
             {/* Email Address */}
             <div>
-              <label className="block text-xs font-black uppercase tracking-[0.28em]">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-slate-700 dark:text-white/80">
                 5. Email Address <span className="text-red-500">*</span>
               </label>
               <input
@@ -169,13 +170,13 @@ ${formData.additionalInstruction || "None"}`,
                 value={formData.emailAddress}
                 onChange={(e) => updateField("emailAddress", e.target.value)}
                 placeholder="Enter your email address"
-                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
               />
             </div>
 
             {/* Phone Number */}
             <div>
-              <label className="block text-xs font-black uppercase tracking-[0.28em]">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-slate-700 dark:text-white/80">
                 6. Phone Number <span className="text-red-500">*</span>
               </label>
               <input
@@ -184,13 +185,13 @@ ${formData.additionalInstruction || "None"}`,
                 value={formData.phoneNumber}
                 onChange={(e) => updateField("phoneNumber", e.target.value)}
                 placeholder="Enter your phone number"
-                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                className="mt-3 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
               />
             </div>
 
             {/* Additional Instruction */}
             <div className="sm:col-span-2">
-              <label className="block text-xs font-black uppercase tracking-[0.28em] text-red-700">
+              <label className="block text-xs font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400">
                 7. Additional Instruction
               </label>
               <textarea
@@ -198,13 +199,13 @@ ${formData.additionalInstruction || "None"}`,
                 value={formData.additionalInstruction}
                 onChange={(e) => updateField("additionalInstruction", e.target.value)}
                 placeholder="Enter any additional instructions"
-                className="mt-3 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                className="mt-3 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
               />
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-5 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-md text-xs leading-6 text-slate-400">
+          <div className="mt-8 flex flex-col gap-5 border-t border-slate-200 pt-8 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-md text-xs leading-6 text-slate-400 dark:text-white/40">
               * Required fields. Please make sure all details match your remittance slip.
             </p>
 
@@ -222,17 +223,17 @@ ${formData.additionalInstruction || "None"}`,
           </div>
         </form>
       ) : (
-        <div className="py-12 text-center space-y-6 animate-[fadeIn_500ms_ease_both]">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-50 text-red-700">
+        <div className="space-y-6 py-12 text-center animate-[fadeIn_500ms_ease_both]">
+          <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-red-50 text-red-700 dark:bg-red-950/40 dark:text-red-400">
             <CheckCircle2 size={44} />
           </div>
-          <h3 className="text-4xl font-black tracking-[-0.04em] text-slate-900">
+          <h3 className="text-4xl font-black tracking-[-0.04em] text-slate-900 dark:text-white">
             Remittance Submitted!
           </h3>
-          <p className="text-slate-600 leading-relaxed max-w-lg mx-auto text-lg">
-            Your RCCG remittance request has been received. Your reference ticket ID is <strong className="text-red-700">{ticketId}</strong>.
+          <p className="mx-auto max-w-lg text-lg leading-relaxed text-slate-600 dark:text-white/70">
+            Your RCCG remittance request has been received. Your reference ticket ID is <strong className="text-red-700 dark:text-red-400">{ticketId}</strong>.
           </p>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-400 dark:text-white/40">
             We will verify your RRR details and process the debit from your account shortly.
           </p>
           <button
@@ -248,7 +249,7 @@ ${formData.additionalInstruction || "None"}`,
                 additionalInstruction: "",
               });
             }}
-            className="mt-6 px-8 py-4 border border-slate-200 text-xs font-black uppercase tracking-[0.2em] text-slate-700 hover:bg-slate-50 transition duration-300"
+            className="mt-6 border border-slate-200 px-8 py-4 text-xs font-black uppercase tracking-[0.2em] text-slate-700 transition duration-300 hover:bg-slate-50 dark:border-white/10 dark:text-white/80 dark:hover:bg-white/10"
           >
             Submit Another Remittance
           </button>

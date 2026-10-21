@@ -41,7 +41,7 @@ const BorrowAmount = () => {
   return (
     <main
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
+      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white"
     >
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
@@ -51,10 +51,10 @@ const BorrowAmount = () => {
         }}
       />
 
-      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[8rem] font-black leading-none text-red-700/[0.04] sm:text-[15rem] lg:text-[22rem]">
+        <span className="animate-pulse text-[8rem] font-black leading-none text-red-700/[0.04] dark:text-red-500/[0.05] sm:text-[15rem] lg:text-[22rem]">
           BORROW
         </span>
       </div>
@@ -68,19 +68,19 @@ const BorrowAmount = () => {
 
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40 sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-red-500/10" />
 
-            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
               Mortgage Amount
             </p>
 
-            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] text-slate-950 dark:text-white sm:text-7xl lg:text-8xl">
               Know How Much You Can Borrow.
             </h1>
 
-            <p className="mx-auto mt-8 max-w-4xl text-xl leading-9 text-slate-600">
+            <p className="mx-auto mt-8 max-w-4xl text-xl leading-9 text-slate-600 dark:text-white/60">
               This simple calculation based on your annual net and gross income
               will help you discover how much you can borrow from Haggai. This
               will put you in control of your mortgage and not allow you to get
@@ -92,22 +92,22 @@ const BorrowAmount = () => {
 
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1fr]">
-          <div className="relative overflow-hidden bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
             <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-red-700/5 blur-xl" />
 
             <div className="relative">
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
                 Loan Monthly Repayment Limit
               </p>
 
-              <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+              <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] text-slate-950 dark:text-white sm:text-5xl">
                 Maximum Loan Repayments Permissible
               </h2>
 
               <div className="mt-10 grid gap-6">
                 <div>
-                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                     Gross annual income
                   </label>
 
@@ -115,12 +115,12 @@ const BorrowAmount = () => {
                     type="number"
                     value={grossAnnualIncome}
                     onChange={(e) => setGrossAnnualIncome(e.target.value)}
-                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-2xl font-black outline-none transition focus:border-red-700 focus:bg-white"
+                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-2xl font-black text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-red-500 dark:focus:bg-white/10"
                   />
                 </div>
 
                 <div>
-                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                  <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                     Gross annual net income
                   </label>
 
@@ -128,14 +128,14 @@ const BorrowAmount = () => {
                     type="number"
                     value={grossAnnualNetIncome}
                     onChange={(e) => setGrossAnnualNetIncome(e.target.value)}
-                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-2xl font-black outline-none transition focus:border-red-700 focus:bg-white"
+                    className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-2xl font-black text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-red-500 dark:focus:bg-white/10"
                   />
                 </div>
 
                 <button
                   type="button"
                   onClick={resetCalculator}
-                  className="group inline-flex w-fit items-center gap-3 border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white"
+                  className="group inline-flex w-fit items-center gap-3 border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white dark:border-white/10 dark:bg-white/5 dark:text-white/80 dark:hover:border-red-500 dark:hover:bg-white/10"
                 >
                   <RotateCcw size={17} />
                   Reset Sample
@@ -206,14 +206,14 @@ const BorrowAmount = () => {
           </aside>
         </div>
 
-        <div className="mx-auto mt-12 max-w-7xl overflow-hidden bg-white p-8 text-center shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-12 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
-          <Calculator className="mx-auto text-red-700" size={42} />
+        <div className="mx-auto mt-12 max-w-7xl overflow-hidden border border-transparent bg-white p-8 text-center shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 sm:p-12 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
+          <Calculator className="mx-auto text-red-700 dark:text-red-400" size={42} />
 
-          <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
+          <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl">
             Plan smarter before you borrow.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-white/60">
             This estimate is designed to guide your mortgage planning. For a
             complete assessment, speak with a Haggai Mortgage advisor.
           </p>
@@ -228,7 +228,7 @@ const BorrowAmount = () => {
 
             <Link
               to="/open-account"
-              className="border border-slate-300 bg-white px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-slate-950 transition hover:-translate-y-1 hover:border-red-700 hover:bg-red-700 hover:text-white"
+              className="border border-slate-300 bg-white px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-slate-950 transition hover:-translate-y-1 hover:border-red-700 hover:bg-red-700 hover:text-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-red-500 dark:hover:bg-white/10"
             >
               Open Account
             </Link>

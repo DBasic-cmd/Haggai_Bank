@@ -159,7 +159,7 @@ const RSA = () => {
   return (
     <main
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
+      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white"
     >
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
@@ -169,10 +169,10 @@ const RSA = () => {
         }}
       />
 
-      <div className="fixed inset-0 z-0 bg-white/82 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/82 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[18rem] font-black leading-none text-red-700/[0.04] sm:text-[26rem] lg:text-[34rem]">
+        <span className="animate-pulse text-[18rem] font-black leading-none text-red-700/[0.04] dark:text-red-500/[0.05] sm:text-[26rem] lg:text-[34rem]">
           25%
         </span>
       </div>
@@ -186,20 +186,20 @@ const RSA = () => {
 
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.24)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40 sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[60px]" />
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-red-500/10" />
 
             <div className="relative mx-auto max-w-5xl">
-              <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+              <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
                 RSA Mortgage Guide
               </p>
 
-              <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+              <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] text-slate-950 dark:text-white sm:text-7xl lg:text-8xl">
                 Unlock your RSA. Own your home.
               </h1>
 
-              <p className="mx-auto mt-8 max-w-4xl text-xl leading-9 text-slate-600">
+              <p className="mx-auto mt-8 max-w-4xl text-xl leading-9 text-slate-600 dark:text-white/60">
                 HAGGAI MORTGAGE BANK LTD GUIDELINES ON ACCESSING RETIREMENT
                 SAVINGS ACCOUNT (RSA) BALANCE TOWARDS PAYMENT OF EQUITY
                 CONTRIBUTION FOR RESIDENTIAL MORTGAGE BY RSA HOLDERS
@@ -266,8 +266,8 @@ const RSA = () => {
             </div>
           </div>
 
-          <div className="mb-8 overflow-hidden bg-white/90 p-5 text-center shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl">
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.32em] text-red-700">
+          <div className="mb-8 overflow-hidden border border-transparent bg-white/90 p-5 text-center shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30">
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.32em] text-red-700 dark:text-red-400">
               Click Any Stage
             </p>
 
@@ -283,7 +283,7 @@ const RSA = () => {
                     className={`group relative h-14 w-14 shrink-0 overflow-hidden text-sm font-black transition duration-500 ${
                       active
                         ? "bg-red-700 text-white shadow-xl shadow-red-900/20"
-                        : "bg-[#f8f4ed] text-slate-500 hover:bg-slate-950 hover:text-white"
+                        : "bg-[#f8f4ed] text-slate-500 hover:bg-slate-950 hover:text-white dark:bg-white/5 dark:text-white/60 dark:hover:bg-white/20 dark:hover:text-white"
                     }`}
                   >
                     {String(index + 1).padStart(2, "0")}
@@ -305,7 +305,7 @@ const RSA = () => {
                   className={`group relative min-h-[260px] overflow-hidden p-7 text-left shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition duration-700 hover:-translate-y-3 hover:shadow-[0_35px_110px_rgba(0,0,0,0.22)] ${
                     active
                       ? "bg-red-700 text-white md:col-span-2"
-                      : "bg-white text-slate-950"
+                      : "border border-transparent bg-white text-slate-950 dark:border-white/10 dark:bg-[#0c0f17] dark:text-white dark:shadow-black/20"
                   } ${
                     index % 2 === 0
                       ? "animate-[cinemaLeft_900ms_cubic-bezier(.16,1,.3,1)_both]"
@@ -333,18 +333,14 @@ const RSA = () => {
                         className={`flex h-16 w-16 items-center justify-center text-xl font-black transition duration-500 group-hover:rotate-3 ${
                           active
                             ? "bg-white text-red-700"
-                            : "bg-[#f8f4ed] text-red-700 group-hover:bg-red-700 group-hover:text-white"
+                            : "bg-[#f8f4ed] text-red-700 group-hover:bg-red-700 group-hover:text-white dark:bg-white/5 dark:text-red-400"
                         }`}
                       >
                         {String(index + 1).padStart(2, "0")}
                       </span>
-
-                      {/* <span className="text-4xl font-light transition duration-500 group-hover:-translate-y-1 group-hover:translate-x-1">
-                        ↗
-                      </span> */}
                     </div>
 
-                    <h3 className="mt-7 text-2xl font-black tracking-[-0.04em]">
+                    <h3 className="mt-7 text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                       {step.title}
                     </h3>
 
@@ -352,7 +348,7 @@ const RSA = () => {
                       className={`mt-5 whitespace-pre-line text-base leading-7 ${
                         active
                           ? "text-white/80"
-                          : "line-clamp-5 text-slate-600"
+                          : "line-clamp-5 text-slate-600 dark:text-white/60"
                       }`}
                     >
                       {step.text}
@@ -363,16 +359,16 @@ const RSA = () => {
             })}
           </div>
 
-          <div className="mt-12 overflow-hidden bg-white p-8 text-center shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-12">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <div className="mt-12 overflow-hidden border border-transparent bg-white p-8 text-center shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/40 sm:p-12">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
               Final Call
             </p>
 
-            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
+            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl">
               Take decision today towards owning your dream home.
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-white/60">
               Take decision today towards owning your dream home by opening a
               relationship account with us today at Haggai Mortgage Bank Ltd,
               simply by visiting the link –

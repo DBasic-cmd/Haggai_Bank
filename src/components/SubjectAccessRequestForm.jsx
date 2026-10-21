@@ -67,7 +67,7 @@ const SubjectAccessRequestForm = () => {
   const [openPanel, setOpenPanel] = React.useState(0);
 
   return (
-    <main className="relative min-h-screen text-slate-950">
+    <main className="relative min-h-screen bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -76,7 +76,7 @@ const SubjectAccessRequestForm = () => {
         }}
       />
 
-      <div className="fixed inset-0 bg-gradient-to-r from-black/65 via-black/25 to-black/55" />
+      <div className="fixed inset-0 bg-gradient-to-r from-black/65 via-black/25 to-black/55 dark:from-black/85 dark:via-black/60 dark:to-black/80" />
 
       <section className="relative z-10 px-5 pb-20 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
@@ -104,7 +104,7 @@ const SubjectAccessRequestForm = () => {
             {rights.map((right, index) => (
               <div
                 key={right}
-                className="group relative overflow-hidden bg-white/90 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-700 hover:-translate-y-3 hover:bg-white"
+                className="group relative overflow-hidden border border-transparent bg-white/90 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition duration-700 hover:-translate-y-3 hover:bg-white dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.08]"
                 style={{
                   animation: `rightsIn 850ms cubic-bezier(.16,1,.3,1) both`,
                   animationDelay: `${index * 100}ms`,
@@ -113,11 +113,11 @@ const SubjectAccessRequestForm = () => {
                 <div className="absolute left-0 top-0 h-full w-1 bg-red-700 transition duration-500 group-hover:w-2" />
                 <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-red-700/5 transition duration-700 group-hover:scale-150 group-hover:bg-red-700/10" />
 
-                <p className="relative text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                <p className="relative text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                   Right {String(index + 1).padStart(2, "0")}
                 </p>
 
-                <h3 className="relative mt-5 text-2xl font-black leading-tight tracking-[-0.04em]">
+                <h3 className="relative mt-5 text-2xl font-black leading-tight tracking-[-0.04em] text-slate-950 dark:text-white">
                   {right}
                 </h3>
               </div>
@@ -128,36 +128,36 @@ const SubjectAccessRequestForm = () => {
 
       <section className="relative z-20 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="overflow-hidden bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.25)] backdrop-blur-xl animate-[panelLeft_950ms_cubic-bezier(.16,1,.3,1)_both] sm:p-10">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <div className="overflow-hidden border border-transparent bg-white/92 p-8 shadow-[0_35px_100px_rgba(0,0,0,0.25)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] animate-[panelLeft_950ms_cubic-bezier(.16,1,.3,1)_both] sm:p-10">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
               Important Information
             </p>
 
-            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em]">
+            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white">
               Before making your request.
             </h2>
 
-            <p className="mt-6 text-base leading-8 text-slate-600">
+            <p className="mt-6 text-base leading-8 text-slate-600 dark:text-white/60">
               Haggai Mortgage Bank Limited collects, holds, and processes
               certain personal data of its customers. As a data subject, you
               have a legal right under the NDPR effective 25th January, 2019 to
               find out about our use of your personal data.
             </p>
 
-            <div className="mt-8 border-t border-slate-200 pt-6">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400">
+            <div className="mt-8 border-t border-slate-200 pt-6 dark:border-white/10">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-white/40">
                 Return By Email
               </p>
 
-              <p className="mt-3 text-xl font-black text-red-700">
+              <p className="mt-3 text-xl font-black text-red-700 dark:text-red-400">
                 audit@haggaibank.com
               </p>
 
-              <p className="mt-6 text-xs font-bold uppercase tracking-[0.25em] text-slate-400">
+              <p className="mt-6 text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-white/40">
                 Return By Post
               </p>
 
-              <p className="mt-3 text-base font-semibold leading-7 text-slate-700">
+              <p className="mt-3 text-base font-semibold leading-7 text-slate-700 dark:text-white/80">
                 119, Bode Thomas Street, Surulere, Lagos State
               </p>
             </div>
@@ -172,7 +172,7 @@ const SubjectAccessRequestForm = () => {
                   key={panel.title}
                   type="button"
                   onClick={() => setOpenPanel(isOpen ? null : index)}
-                  className="group w-full overflow-hidden bg-white/92 text-left shadow-xl shadow-black/10 backdrop-blur-xl transition duration-700 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/20"
+                  className="group w-full overflow-hidden border border-transparent bg-white/92 text-left shadow-xl shadow-black/10 backdrop-blur-xl transition duration-700 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/20 dark:border-white/10 dark:bg-white/[0.04] dark:hover:bg-white/[0.08]"
                   style={{
                     animation: `panelRight 900ms cubic-bezier(.16,1,.3,1) both`,
                     animationDelay: `${index * 120}ms`,
@@ -180,19 +180,19 @@ const SubjectAccessRequestForm = () => {
                 >
                   <div className="flex items-center justify-between gap-6 p-7">
                     <div>
-                      <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700">
+                      <p className="text-xs font-black uppercase tracking-[0.3em] text-red-700 dark:text-red-400">
                         {String(index + 1).padStart(2, "0")}
                       </p>
 
-                      <h3 className="mt-3 text-2xl font-black tracking-[-0.04em]">
+                      <h3 className="mt-3 text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                         {panel.title}
                       </h3>
                     </div>
 
                     <span
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center border border-slate-200 text-2xl transition duration-500 ${
+                      className={`flex h-12 w-12 shrink-0 items-center justify-center border border-slate-200 text-2xl transition duration-500 dark:border-white/10 dark:text-white ${
                         isOpen
-                          ? "rotate-45 border-red-700 bg-red-700 text-white"
+                          ? "rotate-45 border-red-700 bg-red-700 text-white dark:border-red-600 dark:bg-red-600"
                           : "group-hover:border-red-700 group-hover:bg-red-700 group-hover:text-white"
                       }`}
                     >
@@ -208,7 +208,7 @@ const SubjectAccessRequestForm = () => {
                     }`}
                   >
                     <div className="min-h-0">
-                      <p className="border-t border-slate-100 px-7 pb-7 pt-5 text-base leading-8 text-slate-600">
+                      <p className="border-t border-slate-100 px-7 pb-7 pt-5 text-base leading-8 text-slate-600 dark:border-white/10 dark:text-white/60">
                         {panel.text}
                       </p>
                     </div>
@@ -222,7 +222,7 @@ const SubjectAccessRequestForm = () => {
 
       <section className="relative z-20 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-6xl">
-          <div className="overflow-hidden bg-white shadow-[0_40px_120px_rgba(0,0,0,0.38)] animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="overflow-hidden border border-transparent bg-white shadow-[0_40px_120px_rgba(0,0,0,0.38)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/50 animate-[formReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
               <aside className="relative overflow-hidden bg-[#111111] p-8 text-white sm:p-10 lg:p-12">
                 <div
@@ -278,7 +278,7 @@ const SubjectAccessRequestForm = () => {
                 action="mailto:audit@haggaibank.com"
                 method="POST"
                 encType="text/plain"
-                className="bg-white p-8 sm:p-10 lg:p-12"
+                className="bg-white p-8 dark:bg-[#0c0f17] sm:p-10 lg:p-12"
               >
                 <div className="grid gap-7 sm:grid-cols-2">
                   {fields.map((field, index) => (
@@ -291,7 +291,7 @@ const SubjectAccessRequestForm = () => {
                     >
                       <label
                         htmlFor={field.id}
-                        className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                        className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                       >
                         {index + 1}. {field.label}
                       </label>
@@ -302,7 +302,7 @@ const SubjectAccessRequestForm = () => {
                         type={field.type}
                         required
                         placeholder={field.placeholder}
-                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
                   ))}
@@ -313,12 +313,12 @@ const SubjectAccessRequestForm = () => {
                   >
                     <label
                       htmlFor="informationRequested"
-                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700"
+                      className="block text-[11px] font-black uppercase tracking-[0.28em] text-red-700 dark:text-red-400"
                     >
                       7. Information Being Requested
                     </label>
 
-                    <p className="mt-3 text-sm leading-7 text-slate-500">
+                    <p className="mt-3 text-sm leading-7 text-slate-500 dark:text-white/50">
                       Please provide specific details, including relevant dates,
                       of the information being requested and any additional
                       information that may help us locate your personal data and
@@ -331,13 +331,13 @@ const SubjectAccessRequestForm = () => {
                       required
                       rows="9"
                       placeholder="Enter your request details"
-                      className="mt-5 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)]"
+                      className="mt-5 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-base font-semibold text-slate-950 outline-none transition duration-300 placeholder:text-slate-400 focus:border-red-700 focus:bg-white focus:shadow-[0_18px_45px_rgba(185,28,28,0.12)] dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                     />
                   </div>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-5 border-t border-slate-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="max-w-md text-sm leading-7 text-slate-500">
+                <div className="mt-10 flex flex-col gap-5 border-t border-slate-200 pt-8 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="max-w-md text-sm leading-7 text-slate-500 dark:text-white/50">
                     When you submit this form, it will not automatically collect
                     your details unless you provide them yourself.
                   </p>

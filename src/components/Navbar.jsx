@@ -508,6 +508,14 @@ const Navbar = ({ theme, setTheme }) => {
               })}
 
               <div className="mt-4 grid gap-3 border-t border-white/10 pt-6 lg:hidden">
+                <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-2.5">
+                  <span className="text-sm font-semibold text-white/80">Theme Mode</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs uppercase tracking-wider text-red-400 font-bold">{theme === "dark" ? "Dark" : "Light"}</span>
+                    <ThemeToggleBtn theme={theme} setTheme={setTheme} />
+                  </div>
+                </div>
+
                 <a
                   href="https://online.haggaisecure.com/haggaionline/"
                   target="_blank"
@@ -550,6 +558,16 @@ const Navbar = ({ theme, setTheme }) => {
               Open Account
             </a>
 
+            {/* <div
+              className={`flex items-center justify-center rounded-full border p-1 shadow-xl backdrop-blur transition ${
+                theme === "dark"
+                  ? "border-white/20 bg-black/40 hover:bg-white/10"
+                  : "border-white/20 bg-white/20 hover:bg-white/30"
+              }`}
+            >
+              <ThemeToggleBtn theme={theme} setTheme={setTheme} />
+            </div> */}
+
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
@@ -566,7 +584,12 @@ const Navbar = ({ theme, setTheme }) => {
         </nav>
       </header>
 
-      <div className="fixed bottom-6 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-black/70 text-white shadow-2xl shadow-black/30 backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:bg-red-700 sm:bottom-8 sm:right-8">
+      <div
+        className={`fixed bottom-6 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full border shadow-2xl backdrop-blur-2xl transition duration-300 hover:-translate-y-1 sm:bottom-8 sm:right-8 ${theme === "dark"
+            ? "border-white/20 bg-black/70 text-white shadow-black/30 hover:bg-red-700"
+            : "border-slate-300/80 bg-white text-slate-900 shadow-slate-900/15 hover:bg-slate-100"
+          }`}
+      >
         <ThemeToggleBtn theme={theme} setTheme={setTheme} />
       </div>
     </>

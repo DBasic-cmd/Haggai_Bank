@@ -287,7 +287,7 @@ Applicant has acknowledged the reactivation requirement.
   return (
     <main
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
+      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 dark:bg-[#05070d] dark:text-white transition-colors duration-300"
     >
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
@@ -297,10 +297,10 @@ Applicant has acknowledged the reactivation requirement.
         }}
       />
 
-      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px] dark:bg-[#05070d]/90" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] sm:text-[14rem] lg:text-[21rem]">
+        <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] sm:text-[14rem] lg:text-[21rem] dark:text-red-500/[0.05]">
           DORMANT
         </span>
       </div>
@@ -314,19 +314,19 @@ Applicant has acknowledged the reactivation requirement.
 
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both] dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-white/5" />
 
-            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
               Dormant Account
             </p>
 
-            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl dark:text-white">
               Reactivate Your Account.
             </h1>
 
-            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600 dark:text-white/60">
               Submit your account details and upload your verification documents to
               reactivate your dormant Haggai Bank account.
             </p>
@@ -336,7 +336,7 @@ Applicant has acknowledged the reactivation requirement.
 
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-          <aside className="relative overflow-hidden bg-slate-950 p-8 text-white shadow-[0_35px_110px_rgba(0,0,0,0.25)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both] lg:sticky lg:top-32 lg:h-fit">
+          <aside className="relative overflow-hidden border border-white/10 bg-slate-950 p-8 text-white shadow-[0_35px_110px_rgba(0,0,0,0.25)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both] lg:sticky lg:top-32 lg:h-fit">
             <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-950 to-red-950/80" />
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/30 blur-[80px]" />
 
@@ -399,17 +399,17 @@ Applicant has acknowledged the reactivation requirement.
             </div>
           </aside>
 
-          <div className="relative overflow-hidden bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromRight_900ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-slate-200/80 bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromRight_900ms_cubic-bezier(.16,1,.3,1)_both] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30">
             <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
-            <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-red-700/5 blur-xl" />
+            <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-red-700/5 blur-xl dark:bg-red-700/10" />
 
             {!submitted ? (
               <form onSubmit={page === 1 ? handleNext : handleSubmit}>
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+                <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
                   Dormant Account Reactivation
                 </p>
 
-                <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+                <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl dark:text-white">
                   {page === 1
                     ? "Provide your account details."
                     : "Upload Required Documents"}
@@ -425,7 +425,7 @@ Applicant has acknowledged the reactivation requirement.
                       ["5. Email Address", "emailAddress", "email"],
                     ].map(([label, field, type]) => (
                       <div key={field}>
-                        <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                        <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/50">
                           {label}
                         </label>
 
@@ -437,13 +437,13 @@ Applicant has acknowledged the reactivation requirement.
                             handleChange(field, e.target.value)
                           }
                           placeholder="Enter your answer"
-                          className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                          className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                         />
                       </div>
                     ))}
 
                     <div>
-                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/50">
                         6. Address
                       </label>
 
@@ -455,7 +455,7 @@ Applicant has acknowledged the reactivation requirement.
                         }
                         placeholder="Enter your answer"
                         rows={4}
-                        className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                        className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
 
@@ -472,7 +472,7 @@ Applicant has acknowledged the reactivation requirement.
                   </div>
                 ) : (
                   <div className="mt-10">
-                    <div className="space-y-6 text-lg leading-8 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600 dark:text-white/60">
                       <p>
                         To ensure a smooth and swift reactivation process,
                         please upload the following verification documents
@@ -480,29 +480,29 @@ Applicant has acknowledged the reactivation requirement.
                       </p>
 
                       <div className="grid gap-4 sm:grid-cols-3">
-                        <div className="border border-slate-200 bg-[#f8f4ed] p-4">
-                          <h3 className="text-base font-black tracking-tight text-slate-950">
+                        <div className="border border-slate-200 bg-[#f8f4ed] p-4 dark:border-white/10 dark:bg-white/5">
+                          <h3 className="text-base font-black tracking-tight text-slate-950 dark:text-white">
                             1. Utility Bill
                           </h3>
-                          <p className="mt-1 text-xs text-slate-600 leading-5">
+                          <p className="mt-1 text-xs text-slate-600 leading-5 dark:text-white/60">
                             Recent bill matching your residential address.
                           </p>
                         </div>
 
-                        <div className="border border-slate-200 bg-[#f8f4ed] p-4">
-                          <h3 className="text-base font-black tracking-tight text-slate-950">
+                        <div className="border border-slate-200 bg-[#f8f4ed] p-4 dark:border-white/10 dark:bg-white/5">
+                          <h3 className="text-base font-black tracking-tight text-slate-950 dark:text-white">
                             2. Valid ID Card
                           </h3>
-                          <p className="mt-1 text-xs text-slate-600 leading-5">
+                          <p className="mt-1 text-xs text-slate-600 leading-5 dark:text-white/60">
                             Govt ID (Passport, Driver's License, NIN, etc.).
                           </p>
                         </div>
 
-                        <div className="border border-slate-200 bg-[#f8f4ed] p-4">
-                          <h3 className="text-base font-black tracking-tight text-slate-950">
+                        <div className="border border-slate-200 bg-[#f8f4ed] p-4 dark:border-white/10 dark:bg-white/5">
+                          <h3 className="text-base font-black tracking-tight text-slate-950 dark:text-white">
                             3. Authorization
                           </h3>
-                          <p className="mt-1 text-xs text-slate-600 leading-5">
+                          <p className="mt-1 text-xs text-slate-600 leading-5 dark:text-white/60">
                             Signed request letter on letterhead if corporate.
                           </p>
                         </div>
@@ -511,15 +511,15 @@ Applicant has acknowledged the reactivation requirement.
                       {/* File Upload Dropzone */}
                       <div className="mt-8">
                         <div className="flex items-center justify-between mb-2">
-                          <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                          <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/50">
                             Attach Documents (JPEG, PNG, PDF • Max 2MB Total)
                           </label>
                           {files.length > 0 && (
                             <span
                               className={`text-xs font-bold ${
                                 totalFilesBytes > MAX_TOTAL_BYTES
-                                  ? "text-red-700"
-                                  : "text-slate-600"
+                                  ? "text-red-700 dark:text-red-400"
+                                  : "text-slate-600 dark:text-white/60"
                               }`}
                             >
                               {totalFilesMB} MB / 2.00 MB ({files.length} file
@@ -539,8 +539,8 @@ Applicant has acknowledged the reactivation requirement.
                           onClick={() => fileInputRef.current?.click()}
                           className={`relative cursor-pointer border-2 border-dashed p-8 text-center transition ${
                             isDragging
-                              ? "border-red-700 bg-red-50/50"
-                              : "border-slate-300 bg-[#f8f4ed] hover:border-red-700 hover:bg-white"
+                              ? "border-red-700 bg-red-50/50 dark:border-red-500 dark:bg-red-950/20"
+                              : "border-slate-300 bg-[#f8f4ed] hover:border-red-700 hover:bg-white dark:border-white/15 dark:bg-white/5 dark:hover:border-red-500 dark:hover:bg-white/10"
                           }`}
                         >
                           <input
@@ -552,17 +552,17 @@ Applicant has acknowledged the reactivation requirement.
                             className="hidden"
                           />
 
-                          <Upload className="mx-auto h-10 w-10 text-red-700/80 mb-3" />
-                          <p className="text-base font-bold text-slate-900">
+                          <Upload className="mx-auto h-10 w-10 text-red-700/80 mb-3 dark:text-red-400" />
+                          <p className="text-base font-bold text-slate-900 dark:text-white">
                             Click to browse or drag & drop files here
                           </p>
-                          <p className="text-xs text-slate-500 mt-1">
+                          <p className="text-xs text-slate-500 mt-1 dark:text-white/50">
                             Accepted formats:{" "}
-                            <span className="font-semibold text-slate-700">
+                            <span className="font-semibold text-slate-700 dark:text-white/80">
                               JPEG, PNG, PNEG, PDF
                             </span>{" "}
                             • Total size limit:{" "}
-                            <span className="font-semibold text-slate-700">
+                            <span className="font-semibold text-slate-700 dark:text-white/80">
                               2 MB
                             </span>
                           </p>
@@ -571,7 +571,7 @@ Applicant has acknowledged the reactivation requirement.
                         {/* Size progress bar */}
                         {files.length > 0 && (
                           <div className="mt-3">
-                            <div className="h-2 w-full overflow-hidden bg-slate-200">
+                            <div className="h-2 w-full overflow-hidden bg-slate-200 dark:bg-white/10">
                               <div
                                 className={`h-full transition-all duration-300 ${
                                   totalFilesBytes > MAX_TOTAL_BYTES
@@ -588,7 +588,7 @@ Applicant has acknowledged the reactivation requirement.
 
                         {/* File error message */}
                         {fileError && (
-                          <div className="mt-3 flex items-center gap-2 border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                          <div className="mt-3 flex items-center gap-2 border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-300">
                             <AlertCircle className="h-4 w-4 shrink-0" />
                             <span>{fileError}</span>
                           </div>
@@ -597,7 +597,7 @@ Applicant has acknowledged the reactivation requirement.
                         {/* Selected files list */}
                         {files.length > 0 && (
                           <div className="mt-4 space-y-2">
-                            <p className="text-xs font-black uppercase tracking-wider text-slate-500">
+                            <p className="text-xs font-black uppercase tracking-wider text-slate-500 dark:text-white/50">
                               Selected Documents ({files.length}):
                             </p>
                             <div className="grid gap-2 sm:grid-cols-2">
@@ -608,22 +608,22 @@ Applicant has acknowledged the reactivation requirement.
                                 return (
                                   <div
                                     key={`${file.name}-${idx}`}
-                                    className="flex items-center justify-between border border-slate-200 bg-white p-3 shadow-sm"
+                                    className="flex items-center justify-between border border-slate-200 bg-white p-3 shadow-sm dark:border-white/10 dark:bg-white/5"
                                   >
                                     <div className="flex items-center gap-3 overflow-hidden">
                                       {isPdf ? (
-                                        <FileText className="h-5 w-5 shrink-0 text-red-700" />
+                                        <FileText className="h-5 w-5 shrink-0 text-red-700 dark:text-red-400" />
                                       ) : (
-                                        <ImageIcon className="h-5 w-5 shrink-0 text-blue-600" />
+                                        <ImageIcon className="h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" />
                                       )}
                                       <div className="overflow-hidden">
                                         <p
-                                          className="truncate text-xs font-bold text-slate-900"
+                                          className="truncate text-xs font-bold text-slate-900 dark:text-white"
                                           title={file.name}
                                         >
                                           {file.name}
                                         </p>
-                                        <p className="text-[11px] text-slate-500">
+                                        <p className="text-[11px] text-slate-500 dark:text-white/40">
                                           {formatBytes(file.size)}
                                         </p>
                                       </div>
@@ -631,7 +631,7 @@ Applicant has acknowledged the reactivation requirement.
                                     <button
                                       type="button"
                                       onClick={() => handleRemoveFile(idx)}
-                                      className="p-1 text-slate-400 hover:text-red-700 transition"
+                                      className="p-1 text-slate-400 hover:text-red-700 transition dark:text-white/40 dark:hover:text-red-400"
                                       title="Remove file"
                                     >
                                       <Trash2 className="h-4 w-4" />
@@ -644,7 +644,7 @@ Applicant has acknowledged the reactivation requirement.
                         )}
                       </div>
 
-                      <label className="flex cursor-pointer items-start gap-4 border border-red-700/20 bg-red-700/5 p-5 mt-6">
+                      <label className="flex cursor-pointer items-start gap-4 border border-red-700/20 bg-red-700/5 p-5 mt-6 dark:border-red-500/20 dark:bg-red-950/20">
                         <input
                           required
                           type="checkbox"
@@ -655,7 +655,7 @@ Applicant has acknowledged the reactivation requirement.
                           className="mt-1 h-5 w-5 accent-red-700"
                         />
 
-                        <span className="text-base font-semibold leading-7 text-slate-700">
+                        <span className="text-base font-semibold leading-7 text-slate-700 dark:text-white/80">
                           I confirm that all provided information and attached
                           documents are accurate and authentic for the purpose of
                           reactivating my dormant account.
@@ -664,7 +664,7 @@ Applicant has acknowledged the reactivation requirement.
                     </div>
 
                     {submitError && (
-                      <div className="mt-4 flex items-center gap-2 border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                      <div className="mt-4 flex items-center gap-2 border border-red-200 bg-red-50 p-4 text-sm text-red-700 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-300">
                         <AlertCircle className="h-5 w-5 shrink-0" />
                         <span>{submitError}</span>
                       </div>
@@ -675,7 +675,7 @@ Applicant has acknowledged the reactivation requirement.
                         type="button"
                         disabled={isSubmitting}
                         onClick={() => setPage(1)}
-                        className="inline-flex items-center justify-center gap-3 border border-slate-300 bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white disabled:opacity-50"
+                        className="inline-flex items-center justify-center gap-3 border border-slate-300 bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white disabled:opacity-50 dark:border-white/10 dark:bg-white/5 dark:text-white/80 dark:hover:border-red-500 dark:hover:bg-red-700 dark:hover:text-white"
                       >
                         <ArrowLeft size={18} />
                         Back
@@ -704,40 +704,40 @@ Applicant has acknowledged the reactivation requirement.
               </form>
             ) : (
               <div className="py-16 text-center">
-                <CheckCircle2 className="mx-auto text-red-700" size={64} />
+                <CheckCircle2 className="mx-auto text-red-700 dark:text-red-500" size={64} />
 
-                <h2 className="mx-auto mt-7 max-w-3xl text-5xl font-black leading-tight tracking-[-0.055em]">
+                <h2 className="mx-auto mt-7 max-w-3xl text-5xl font-black leading-tight tracking-[-0.055em] dark:text-white">
                   Reactivation Request Submitted!
                 </h2>
 
                 {ticketId && (
-                  <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-800">
+                  <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold text-slate-800 dark:text-white/90">
                     Reference ID:{" "}
-                    <span className="text-red-700 font-mono bg-red-50 px-3 py-1 border border-red-200">
+                    <span className="text-red-700 font-mono bg-red-50 px-3 py-1 border border-red-200 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-300">
                       {ticketId}
                     </span>
                   </p>
                 )}
 
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600 dark:text-white/60">
                   Your dormant account reactivation request along with your
                   uploaded verification documents ({files.length} document
                   {files.length === 1 ? "" : "s"}) have been sent to Haggai Bank
                   Customer Service (
-                  <strong className="text-slate-800">
+                  <strong className="text-slate-800 dark:text-white">
                     alwayson@haggaibank.com
                   </strong>
                   ).
                 </p>
 
-                <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-500">
+                <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-500 dark:text-white/50">
                   Our team will review your submitted documents and reach out to
                   you via{" "}
-                  <strong className="text-slate-700">
+                  <strong className="text-slate-700 dark:text-white/80">
                     {formData.emailAddress}
                   </strong>{" "}
                   or{" "}
-                  <strong className="text-slate-700">
+                  <strong className="text-slate-700 dark:text-white/80">
                     {formData.phoneNumber}
                   </strong>
                   .

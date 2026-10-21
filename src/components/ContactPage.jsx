@@ -92,7 +92,7 @@ const ContactPage = () => {
   return (
     <main
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
+      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white"
     >
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
@@ -102,10 +102,10 @@ const ContactPage = () => {
         }}
       />
 
-      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] sm:text-[15rem] lg:text-[24rem]">
+        <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] dark:text-red-500/[0.05] sm:text-[15rem] lg:text-[24rem]">
           CONTACT
         </span>
       </div>
@@ -119,19 +119,19 @@ const ContactPage = () => {
 
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40 sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-red-500/10" />
 
-            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
               Contact
             </p>
 
-            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] text-slate-950 dark:text-white sm:text-7xl lg:text-8xl">
               Get in Touch With Us.
             </h1>
 
-            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600 dark:text-white/60">
               Kindly fill in the form below for your general enquiries or
               comments.
             </p>
@@ -143,28 +143,28 @@ const ContactPage = () => {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.95fr]">
           <form
             onSubmit={handleFormSubmit}
-            className="relative overflow-hidden bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]"
+            className="relative overflow-hidden border border-transparent bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]"
           >
             <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
             <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-red-700/5 blur-xl" />
 
             <div className="relative">
               {submitted ? (
-                <div className="py-12 text-center space-y-6 animate-[fadeIn_500ms_ease_both]">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-50 text-red-700">
-                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <div className="space-y-6 py-12 text-center animate-[fadeIn_500ms_ease_both]">
+                  <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-red-50 text-red-700 dark:bg-red-950/40 dark:text-red-400">
+                    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-3xl font-black tracking-[-0.04em]">
+                  <h3 className="text-3xl font-black tracking-[-0.04em] text-slate-900 dark:text-white">
                     Message Drafted!
                   </h3>
-                  <p className="text-slate-600 leading-relaxed max-w-md mx-auto text-base">
+                  <p className="mx-auto max-w-md text-base leading-relaxed text-slate-600 dark:text-white/60">
                     We have opened your email client with your message details drafted. Please send the draft to finalize.
                   </p>
-                  <p className="text-sm text-slate-400">
+                  <p className="text-sm text-slate-400 dark:text-white/40">
                     If your email client didn't open, you can mail us directly at{" "}
-                    <a href="mailto:[EMAIL_ADDRESS]" className="text-red-700 underline font-semibold">
+                    <a href="mailto:info@haggaibank.com" className="font-semibold text-red-700 underline dark:text-red-400">
                       info@haggaibank.com
                     </a>
                   </p>
@@ -173,24 +173,24 @@ const ContactPage = () => {
                       setSubmitted(false);
                       setFormData({ name: "", email: "", subject: "", message: "" });
                     }}
-                    className="mt-6 px-6 py-3 border border-slate-200 text-xs font-black uppercase tracking-[0.2em] text-slate-700 hover:bg-slate-50 transition duration-300"
+                    className="mt-6 border border-slate-200 px-6 py-3 text-xs font-black uppercase tracking-[0.2em] text-slate-700 transition duration-300 hover:bg-slate-50 dark:border-white/10 dark:text-white/80 dark:hover:bg-white/10"
                   >
                     Send Another Message
                   </button>
                 </div>
               ) : (
                 <>
-                  <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+                  <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
                     Send a message
                   </p>
 
-                  <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+                  <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] text-slate-950 dark:text-white sm:text-5xl">
                     Tell us how we can help.
                   </h2>
 
                   <div className="mt-10 grid gap-6">
                     <div>
-                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                         Your Name
                       </label>
                       <input
@@ -198,12 +198,12 @@ const ContactPage = () => {
                         name="name"
                         value={formData.name}
                         onChange={(e) => handleChange("name", e.target.value)}
-                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                         Your E-mail
                       </label>
                       <input
@@ -212,12 +212,12 @@ const ContactPage = () => {
                         name="email"
                         value={formData.email}
                         onChange={(e) => handleChange("email", e.target.value)}
-                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                         Your Subject
                       </label>
                       <input
@@ -225,12 +225,12 @@ const ContactPage = () => {
                         name="subject"
                         value={formData.subject}
                         onChange={(e) => handleChange("subject", e.target.value)}
-                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                        className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                      <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                         Your Message
                       </label>
                       <textarea
@@ -239,7 +239,7 @@ const ContactPage = () => {
                         name="message"
                         value={formData.message}
                         onChange={(e) => handleChange("message", e.target.value)}
-                        className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                        className="mt-4 w-full resize-none border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                       />
                     </div>
 
@@ -342,12 +342,12 @@ const ContactPage = () => {
 
       <section className="relative z-10 px-5 pb-20 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white p-8 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <div className="relative overflow-hidden border border-transparent bg-white p-8 shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 sm:p-10 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
               Get in touch With Departments
             </p>
 
-            <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+            <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] text-slate-950 dark:text-white sm:text-5xl">
               Department Contacts
             </h2>
 
@@ -355,7 +355,7 @@ const ContactPage = () => {
               {departments.map((department, index) => (
                 <div
                   key={department.title}
-                  className="group relative overflow-hidden border border-slate-200 bg-[#f8f4ed] p-6 transition duration-700 hover:-translate-y-2 hover:border-red-700 hover:bg-white hover:shadow-2xl"
+                  className="group relative overflow-hidden border border-slate-200 bg-[#f8f4ed] p-6 transition duration-700 hover:-translate-y-2 hover:border-red-700 hover:bg-white hover:shadow-2xl dark:border-white/10 dark:bg-white/5 dark:hover:border-red-500 dark:hover:bg-white/10"
                   style={{
                     animation: "cardIn 750ms cubic-bezier(.16,1,.3,1) both",
                     animationDelay: `${index * 120}ms`,
@@ -363,7 +363,7 @@ const ContactPage = () => {
                 >
                   <div className="absolute left-0 top-0 h-full w-1 bg-red-700 transition duration-500 group-hover:w-2" />
 
-                  <h3 className="text-2xl font-black tracking-[-0.04em]">
+                  <h3 className="text-2xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                     {department.title}
                   </h3>
 
@@ -371,7 +371,7 @@ const ContactPage = () => {
                     {department.contacts.map((contact) => (
                       <p
                         key={contact}
-                        className="text-base font-semibold text-slate-600"
+                        className="text-base font-semibold text-slate-600 dark:text-white/60"
                       >
                         {contact}
                       </p>
@@ -385,14 +385,14 @@ const ContactPage = () => {
       </section>
 
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
-        <div className="mx-auto max-w-7xl overflow-hidden bg-white shadow-[0_45px_130px_rgba(0,0,0,0.22)] animate-[mapReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
-          <div className="flex flex-col justify-between gap-6 border-b border-slate-200 p-8 sm:flex-row sm:items-end sm:p-10">
+        <div className="mx-auto max-w-7xl overflow-hidden border border-transparent bg-white shadow-[0_45px_130px_rgba(0,0,0,0.22)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/40 animate-[mapReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="flex flex-col justify-between gap-6 border-b border-slate-200 p-8 dark:border-white/10 sm:flex-row sm:items-end sm:p-10">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+              <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
                 Map Location
               </p>
 
-              <h2 className="mt-4 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+              <h2 className="mt-4 text-4xl font-black tracking-[-0.055em] text-slate-950 dark:text-white sm:text-5xl">
                 Visit Our Head Office.
               </h2>
             </div>
@@ -414,7 +414,7 @@ const ContactPage = () => {
           <iframe
             title="Haggai Mortgage Bank Head Office Map"
             src="https://www.google.com/maps?q=119%2C%20Bode%20Thomas%20Street%2C%20Surulere%2C%20Lagos%2C%20Nigeria&output=embed"
-            className="h-[520px] w-full border-0"
+            className="h-[520px] w-full border-0 dark:opacity-90"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen

@@ -163,10 +163,10 @@ He holds a Bachelor of Science degree in Civil Engineering and a masters’ degr
 
 const BoardOfDirectors = () => {
   return (
-    <main className="min-h-screen bg-[#f8f4ed] text-[#14171d]">
+    <main className="min-h-screen bg-[#f8f4ed] text-[#14171d] transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <section className="px-5 pb-12 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-black uppercase tracking-[0.4em] text-red-700">
+          <p className="text-xs font-black uppercase tracking-[0.4em] text-red-700 dark:text-red-400">
             Leadership
           </p>
 
@@ -174,7 +174,7 @@ const BoardOfDirectors = () => {
             Board of Directors
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#8e8e8e]">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#8e8e8e] dark:text-white/60">
             Meet the distinguished business and industry leaders driving growth,
             strategic oversight, governance, and advisory support at Haggai
             Mortgage Bank.
@@ -194,25 +194,25 @@ const BoardOfDirectors = () => {
               }
               className="group block"
             >
-              <div className="relative aspect-[0.95/1] w-full overflow-hidden rounded-lg bg-slate-100 shadow-md">
+              <div className="relative aspect-[0.95/1] w-full overflow-hidden rounded-lg bg-slate-100 shadow-md dark:bg-white/5 dark:shadow-black/40">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   style={{
                     objectPosition:
-                      member.imagePosition || "center center",
+                    member.imagePosition || "center center",
                   }}
                 />
               </div>
 
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-xl font-semibold leading-tight tracking-[-0.03em] text-[#14171d]">
+                  <h2 className="text-xl font-semibold leading-tight tracking-[-0.03em] text-[#14171d] dark:text-white group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
                     {member.name}
                   </h2>
 
-                  <p className="mt-3 text-lg leading-6 text-[#9a9a9a]">
+                  <p className="mt-3 text-lg leading-6 text-[#9a9a9a] dark:text-white/50">
                     {member.role}
                   </p>
                 </div>

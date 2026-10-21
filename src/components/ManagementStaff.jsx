@@ -257,10 +257,10 @@ Ojo graduated from Kwara State Polytechnic with a Higher National Diploma (HND) 
 
 const ManagementStaff = () => {
   return (
-    <main className="min-h-screen bg-white text-[#14171d]">
+    <main className="min-h-screen bg-white text-[#14171d] transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <section className="px-5 pb-12 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-black uppercase tracking-[0.4em] text-red-700">
+          <p className="text-xs font-black uppercase tracking-[0.4em] text-red-700 dark:text-red-400">
             Leadership
           </p>
 
@@ -268,7 +268,7 @@ const ManagementStaff = () => {
             Management
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#8e8e8e]">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#8e8e8e] dark:text-white/60">
             Meet the professionals leading strategy, operations, technology,
             finance, product, risk, treasury, and service delivery at Haggai
             Mortgage Bank.
@@ -288,7 +288,7 @@ const ManagementStaff = () => {
               }
               className="group block"
             >
-              <div className="aspect-[0.95/1] overflow-hidden rounded-lg bg-slate-100">
+              <div className="aspect-[0.95/1] overflow-hidden rounded-lg bg-slate-100 dark:bg-white/5 shadow-md dark:shadow-black/40">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -298,11 +298,11 @@ const ManagementStaff = () => {
 
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
-                  <h2 className="text-xl font-semibold leading-tight tracking-[-0.03em] text-[#14171d]">
+                  <h2 className="text-xl font-semibold leading-tight tracking-[-0.03em] text-[#14171d] dark:text-white group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors">
                     {member.name}
                   </h2>
 
-                  <p className="mt-3 text-lg leading-6 text-[#9a9a9a]">
+                  <p className="mt-3 text-lg leading-6 text-[#9a9a9a] dark:text-white/50">
                     {member.role}
                   </p>
                 </div>

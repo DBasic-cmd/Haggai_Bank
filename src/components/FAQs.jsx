@@ -101,7 +101,7 @@ const FAQs = () => {
   return (
     <main
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
+      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white"
     >
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
@@ -111,10 +111,10 @@ const FAQs = () => {
         }}
       />
 
-      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[9rem] font-black leading-none text-red-700/[0.04] sm:text-[18rem] lg:text-[28rem]">
+        <span className="animate-pulse text-[9rem] font-black leading-none text-red-700/[0.04] dark:text-red-500/[0.05] sm:text-[18rem] lg:text-[28rem]">
           FAQs
         </span>
       </div>
@@ -128,20 +128,20 @@ const FAQs = () => {
 
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40 sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-red-500/10" />
 
             <div className="relative mx-auto max-w-5xl">
-              <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+              <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
                 FAQs
               </p>
 
-              <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+              <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] text-slate-950 dark:text-white sm:text-7xl lg:text-8xl">
                 Frequently Asked Questions.
               </h1>
 
-              <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
+              <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600 dark:text-white/60">
                 Get quick answers about opening accounts, account operation,
                 banking services, statements, cheque books, branch access and
                 Haggai Mortgage Bank locations.
@@ -153,14 +153,14 @@ const FAQs = () => {
 
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-8 overflow-hidden bg-white/92 p-5 shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="mb-8 overflow-hidden border border-transparent bg-white/92 p-5 shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.32em] text-red-700">
+                <p className="text-xs font-black uppercase tracking-[0.32em] text-red-700 dark:text-red-400">
                   Help Desk
                 </p>
 
-                <h2 className="mt-2 text-3xl font-black tracking-[-0.05em]">
+                <h2 className="mt-2 text-3xl font-black tracking-[-0.05em] text-slate-950 dark:text-white">
                   Search questions
                 </h2>
               </div>
@@ -168,7 +168,7 @@ const FAQs = () => {
               <div className="relative w-full md:max-w-sm">
                 <Search
                   size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-white/40"
                 />
 
                 <input
@@ -178,14 +178,14 @@ const FAQs = () => {
                     setActiveIndex(0);
                   }}
                   placeholder="Search FAQs..."
-                  className="w-full border border-slate-200 bg-[#f8f4ed] py-4 pl-12 pr-5 text-sm font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                  className="w-full border border-slate-200 bg-[#f8f4ed] py-4 pl-12 pr-5 text-sm font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40 dark:focus:border-red-500 dark:focus:bg-white/10"
                 />
               </div>
             </div>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-            <aside className="overflow-hidden bg-slate-950 p-7 text-white shadow-[0_35px_110px_rgba(0,0,0,0.24)] sm:p-8 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both] lg:sticky lg:top-32 lg:h-fit">
+            <aside className="relative overflow-hidden bg-slate-950 p-7 text-white shadow-[0_35px_110px_rgba(0,0,0,0.24)] sm:p-8 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both] lg:sticky lg:top-32 lg:h-fit">
               <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-950 to-red-950/80" />
 
               <div className="relative">
@@ -244,7 +244,9 @@ const FAQs = () => {
                       type="button"
                       onClick={() => setActiveIndex(index)}
                       className={`group relative w-full overflow-hidden p-6 text-left shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition duration-700 hover:-translate-y-2 hover:shadow-[0_35px_110px_rgba(0,0,0,0.2)] ${
-                        open ? "bg-red-700 text-white" : "bg-white text-slate-950"
+                        open
+                          ? "bg-red-700 text-white"
+                          : "border border-transparent bg-white text-slate-950 dark:border-white/10 dark:bg-[#0c0f17] dark:text-white dark:shadow-black/20"
                       } ${
                         index % 2 === 0
                           ? "animate-[slideFromRight_800ms_cubic-bezier(.16,1,.3,1)_both]"
@@ -270,7 +272,7 @@ const FAQs = () => {
                         <div className="flex gap-5">
                           <span
                             className={`mt-1 text-lg font-black ${
-                              open ? "text-white" : "text-red-700"
+                              open ? "text-white" : "text-red-700 dark:text-red-400"
                             }`}
                           >
                             {String(index + 1).padStart(2, "0")}
@@ -291,7 +293,7 @@ const FAQs = () => {
                               <div className="overflow-hidden">
                                 <p
                                   className={`mt-6 whitespace-pre-line text-lg leading-8 ${
-                                    open ? "text-white/78" : "text-slate-600"
+                                    open ? "text-white/78" : "text-slate-600 dark:text-white/60"
                                   }`}
                                 >
                                   {faq.answer}
@@ -305,7 +307,7 @@ const FAQs = () => {
                           className={`flex h-10 w-10 shrink-0 items-center justify-center border transition duration-500 ${
                             open
                               ? "border-white/30 bg-white text-red-700"
-                              : "border-slate-200 bg-[#f8f4ed] text-red-700 group-hover:border-red-700"
+                              : "border-slate-200 bg-[#f8f4ed] text-red-700 group-hover:border-red-700 dark:border-white/10 dark:bg-white/5 dark:text-red-400"
                           }`}
                         >
                           {open ? <Minus size={18} /> : <Plus size={18} />}
@@ -315,12 +317,12 @@ const FAQs = () => {
                   );
                 })
               ) : (
-                <div className="bg-white p-10 text-center shadow-[0_25px_80px_rgba(0,0,0,0.12)]">
-                  <h3 className="text-3xl font-black tracking-[-0.04em]">
+                <div className="border border-transparent bg-white p-10 text-center shadow-[0_25px_80px_rgba(0,0,0,0.12)] dark:border-white/10 dark:bg-[#0c0f17]">
+                  <h3 className="text-3xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                     No question found.
                   </h3>
 
-                  <p className="mt-4 text-lg leading-8 text-slate-600">
+                  <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-white/60">
                     Try searching with a different keyword.
                   </p>
                 </div>
@@ -328,16 +330,16 @@ const FAQs = () => {
             </div>
           </div>
 
-          <div className="mt-12 overflow-hidden bg-white p-8 text-center shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-12 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+          <div className="mt-12 overflow-hidden border border-transparent bg-white p-8 text-center shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 sm:p-12 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
               Need More Help?
             </p>
 
-            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] sm:text-5xl">
+            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-[-0.05em] text-slate-950 dark:text-white sm:text-5xl">
               Not found what you want?
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-white/60">
               Contact us or visit any of our branches.
             </p>
 
@@ -352,13 +354,13 @@ const FAQs = () => {
 
               <Link
                 to="/open-account"
-                className="group border border-slate-300 bg-white px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-slate-950 transition hover:-translate-y-1 hover:border-red-700 hover:bg-red-700 hover:text-white"
+                className="group border border-slate-300 bg-white px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-slate-950 transition hover:-translate-y-1 hover:border-red-700 hover:bg-red-700 hover:text-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-red-500 dark:hover:bg-white/10"
               >
                 <span className="inline-flex items-center gap-2">
                   Open Account
                   <ArrowUpRight
                     size={18}
-                    className="transition duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    className="transition duration-500 group-hover:-translate-y-1 group-hover:translate-x-1"
                   />
                 </span>
               </Link>

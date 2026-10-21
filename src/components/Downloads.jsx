@@ -125,7 +125,7 @@ const Downloads = () => {
   return (
     <main
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950"
+      className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white"
     >
       {/* BACKGROUND IMAGE */}
       <div
@@ -137,11 +137,11 @@ const Downloads = () => {
       />
 
       {/* BACKGROUND OVERLAY */}
-      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/84 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       {/* BACKGROUND WATERMARK */}
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] sm:text-[14rem] lg:text-[20rem]">
+        <span className="animate-pulse text-[7rem] font-black leading-none text-red-700/[0.04] dark:text-red-500/[0.05] sm:text-[14rem] lg:text-[20rem]">
           DOWNLOADS
         </span>
       </div>
@@ -159,26 +159,22 @@ const Downloads = () => {
       ===================================================== */}
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
-
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.22)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40 sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
-
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-red-500/10" />
 
             <div className="relative mx-auto max-w-5xl">
-              <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+              <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
                 Downloads
               </p>
 
-              <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+              <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] text-slate-950 dark:text-white sm:text-7xl lg:text-8xl">
                 Resources At Your Disposal.
               </h1>
 
-              <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
-                Why spend more time in the bank when you
-                can do the paperwork right there? Check
-                here to see the paperwork you need and
-                download it in time.
+              <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600 dark:text-white/60">
+                Why spend more time in the bank when you can do the paperwork
+                right there? Check here to see the paperwork you need and download it in time.
               </p>
             </div>
           </div>
@@ -190,18 +186,15 @@ const Downloads = () => {
       ===================================================== */}
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-6xl">
-
           {/* SEARCH PANEL */}
-          <div className="mb-8 overflow-hidden bg-white/92 p-5 shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
-
+          <div className="mb-8 overflow-hidden border border-transparent bg-white/92 p-5 shadow-[0_25px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 animate-[panelRise_900ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.32em] text-red-700">
+                <p className="text-xs font-black uppercase tracking-[0.32em] text-red-700 dark:text-red-400">
                   Document Vault
                 </p>
 
-                <h2 className="mt-2 text-3xl font-black tracking-[-0.05em]">
+                <h2 className="mt-2 text-3xl font-black tracking-[-0.05em] text-slate-950 dark:text-white">
                   Search available downloads
                 </h2>
               </div>
@@ -209,7 +202,7 @@ const Downloads = () => {
               <div className="relative w-full md:max-w-sm">
                 <Search
                   size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-white/40"
                 />
 
                 <input
@@ -220,7 +213,7 @@ const Downloads = () => {
                   }
                   placeholder="Search forms..."
                   aria-label="Search documents"
-                  className="w-full border border-slate-200 bg-[#f8f4ed] py-4 pl-12 pr-5 text-sm font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                  className="w-full border border-slate-200 bg-[#f8f4ed] py-4 pl-12 pr-5 text-sm font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40 dark:focus:border-red-500 dark:focus:bg-white/10"
                 />
               </div>
             </div>
@@ -229,8 +222,7 @@ const Downloads = () => {
           {/* =================================================
               DOCUMENT LIST
           ================================================= */}
-          <div className="overflow-hidden bg-white shadow-[0_35px_110px_rgba(0,0,0,0.18)] animate-[vaultReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
-
+          <div className="overflow-hidden border border-transparent bg-white shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 animate-[vaultReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             {filteredDownloads.length > 0 ? (
               filteredDownloads.map((item, index) => {
                 const isAvailable = Boolean(item.url);
@@ -238,14 +230,14 @@ const Downloads = () => {
                 const rowClassName = `
                   group relative flex flex-col
                   justify-between gap-6
-                  border-b border-slate-200
+                  border-b border-slate-200 dark:border-white/10
                   px-6 py-8
                   transition-all duration-500
                   last:border-b-0
                   sm:flex-row sm:items-center sm:px-8
                   ${
                     isAvailable
-                      ? "hover:bg-[#f8f4ed]"
+                      ? "hover:bg-[#f8f4ed] dark:hover:bg-white/[0.03]"
                       : "opacity-65"
                   }
                 `;
@@ -263,7 +255,7 @@ const Downloads = () => {
 
                     {/* DOCUMENT INFORMATION */}
                     <div className="flex items-start gap-6">
-                      <span className="min-w-10 text-xl font-black text-red-700">
+                      <span className="min-w-10 text-xl font-black text-red-700 dark:text-red-400">
                         {String(index + 1).padStart(
                           2,
                           "0"
@@ -272,16 +264,16 @@ const Downloads = () => {
 
                       <div>
                         <h3
-                          className={`text-2xl font-semibold leading-tight tracking-[-0.035em] text-slate-950 transition duration-300 ${
+                          className={`text-2xl font-semibold leading-tight tracking-[-0.035em] text-slate-950 transition duration-300 dark:text-white ${
                             isAvailable
-                              ? "group-hover:text-red-700"
+                              ? "group-hover:text-red-700 dark:group-hover:text-red-400"
                               : ""
                           }`}
                         >
                           {item.title}
                         </h3>
 
-                        <p className="mt-2 text-xs font-black uppercase tracking-[0.22em] text-slate-400">
+                        <p className="mt-2 text-xs font-black uppercase tracking-[0.22em] text-slate-400 dark:text-white/40">
                           {item.category}
                         </p>
                       </div>
@@ -291,8 +283,8 @@ const Downloads = () => {
                     <div
                       className={`flex items-center gap-3 ${
                         isAvailable
-                          ? "text-red-700"
-                          : "text-slate-400"
+                          ? "text-red-700 dark:text-red-400"
+                          : "text-slate-400 dark:text-white/40"
                       }`}
                     >
                       <span className="text-sm font-black uppercase tracking-[0.2em]">
@@ -348,13 +340,12 @@ const Downloads = () => {
               })
             ) : (
               <div className="p-10 text-center">
-                <h3 className="text-3xl font-black tracking-[-0.04em]">
+                <h3 className="text-3xl font-black tracking-[-0.04em] text-slate-950 dark:text-white">
                   No document found.
                 </h3>
 
-                <p className="mt-4 text-lg leading-8 text-slate-600">
-                  Try searching with a different form name
-                  or category.
+                <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-white/60">
+                  Try searching with a different form name or category.
                 </p>
               </div>
             )}

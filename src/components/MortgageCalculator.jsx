@@ -55,7 +55,7 @@ const MortgageCalculator = () => {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950">
+    <main className="relative min-h-screen overflow-hidden bg-[#f8f4ed] text-slate-950 transition-colors duration-300 dark:bg-[#05070d] dark:text-white">
       <div
         className="fixed inset-0 z-0 bg-cover bg-center"
         style={{
@@ -64,61 +64,54 @@ const MortgageCalculator = () => {
         }}
       />
 
-      <div className="fixed inset-0 z-0 bg-white/82 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 bg-white/82 backdrop-blur-[2px] transition-colors duration-300 dark:bg-[#05070d]/90" />
 
       <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
-        <span className="animate-pulse text-[12rem] font-black leading-none text-red-700/[0.04] sm:text-[22rem] lg:text-[30rem]">
+        <span className="animate-pulse text-[12rem] font-black leading-none text-red-700/[0.04] dark:text-red-500/[0.05] sm:text-[22rem] lg:text-[30rem]">
           ₦
         </span>
       </div>
 
       <section className="relative z-10 px-5 pb-16 pt-40 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white/92 p-8 text-center shadow-[0_45px_130px_rgba(0,0,0,0.24)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] dark:shadow-black/40 sm:p-12 lg:p-16 animate-[heroReveal_1000ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-[70px]" />
-            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px]" />
+            <div className="absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-slate-950/10 blur-[70px] dark:bg-red-500/10" />
 
-            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700">
+            <p className="text-xs font-black uppercase tracking-[0.42em] text-red-700 dark:text-red-400">
               Mortgage Calculator By Reducing Balance
             </p>
 
-            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] sm:text-7xl lg:text-8xl">
+            <h1 className="mx-auto mt-6 max-w-5xl text-5xl font-black leading-[0.9] tracking-[-0.065em] text-slate-950 dark:text-white sm:text-7xl lg:text-8xl">
               Do the Maths Easily.
             </h1>
 
-            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600">
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-slate-600 dark:text-white/60">
               Know how much repayment you will need to make each month on your
               mortgage from the comfort of your home. Please note that this is
               only a guide and is not absolute.
             </p>
-
-            {/* <Link
-              to="/resources/mortgage-calculator-annuity"
-              className="mt-8 inline-flex border border-red-700 px-7 py-4 text-sm font-black uppercase tracking-[0.22em] text-red-700 transition hover:bg-red-700 hover:text-white"
-            >
-              Click here to calculate by annuity
-            </Link> */}
           </div>
         </div>
       </section>
 
       <section className="relative z-10 px-5 pb-32 sm:px-10 lg:px-16 xl:px-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="relative overflow-hidden bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]">
+          <div className="relative overflow-hidden border border-transparent bg-white p-7 shadow-[0_35px_110px_rgba(0,0,0,0.18)] dark:border-white/10 dark:bg-[#0c0f17] dark:shadow-black/30 sm:p-10 animate-[slideFromLeft_900ms_cubic-bezier(.16,1,.3,1)_both]">
             <div className="absolute left-0 top-0 h-full w-1 bg-red-700" />
             <div className="absolute -right-28 -top-28 h-72 w-72 rounded-full bg-red-700/5 blur-xl" />
 
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-red-700 dark:text-red-400">
               Loan Information
             </p>
 
-            <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] sm:text-5xl">
+            <h2 className="mt-5 text-4xl font-black tracking-[-0.055em] text-slate-950 dark:text-white sm:text-5xl">
               Build your mortgage scenario.
             </h2>
 
             <div className="mt-10 grid gap-6">
               <div>
-                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                   Select the start date:
                 </label>
 
@@ -126,7 +119,7 @@ const MortgageCalculator = () => {
                   <select
                     value={startMonth}
                     onChange={(e) => setStartMonth(e.target.value)}
-                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-red-500 dark:focus:bg-white/10"
                   >
                     {[
                       "Jan",
@@ -142,20 +135,20 @@ const MortgageCalculator = () => {
                       "Nov",
                       "Dec",
                     ].map((month) => (
-                      <option key={month}>{month}</option>
+                      <option key={month} className="dark:bg-[#0c0f17] dark:text-white">{month}</option>
                     ))}
                   </select>
 
                   <input
                     value={startYear}
                     onChange={(e) => setStartYear(e.target.value)}
-                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-red-500 dark:focus:bg-white/10"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                   Enter the loan amount(NGN):
                 </label>
 
@@ -164,22 +157,22 @@ const MortgageCalculator = () => {
                   value={loanAmount}
                   onChange={(e) => setLoanAmount(e.target.value)}
                   placeholder="Amount"
-                  className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-2xl font-black outline-none transition focus:border-red-700 focus:bg-white"
+                  className="mt-4 w-full border border-slate-200 bg-[#f8f4ed] px-5 py-5 text-2xl font-black text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                 />
               </div>
 
               <div>
-                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                   Enter the annual interest rate:
                 </label>
 
-                <div className="mt-4 flex overflow-hidden border border-slate-200 bg-[#f8f4ed] focus-within:border-red-700 focus-within:bg-white">
+                <div className="mt-4 flex overflow-hidden border border-slate-200 bg-[#f8f4ed] focus-within:border-red-700 focus-within:bg-white dark:border-white/10 dark:bg-white/5 dark:focus-within:border-red-500 dark:focus-within:bg-white/10">
                   <input
                     type="number"
                     value={interestRate}
                     onChange={(e) => setInterestRate(e.target.value)}
                     placeholder="Interest Rate"
-                    className="w-full bg-transparent px-5 py-5 text-2xl font-black outline-none"
+                    className="w-full bg-transparent px-5 py-5 text-2xl font-black text-slate-950 outline-none dark:text-white dark:placeholder:text-white/35"
                   />
 
                   <span className="flex items-center bg-red-700 px-6 text-2xl font-black text-white">
@@ -189,7 +182,7 @@ const MortgageCalculator = () => {
               </div>
 
               <div>
-                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500">
+                <label className="text-xs font-black uppercase tracking-[0.25em] text-slate-500 dark:text-white/60">
                   Calculate based on months or years?
                 </label>
 
@@ -197,10 +190,10 @@ const MortgageCalculator = () => {
                   <select
                     value={durationType}
                     onChange={(e) => setDurationType(e.target.value)}
-                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-red-500 dark:focus:bg-white/10"
                   >
-                    <option value="years">Years</option>
-                    <option value="months">Months</option>
+                    <option value="years" className="dark:bg-[#0c0f17] dark:text-white">Years</option>
+                    <option value="months" className="dark:bg-[#0c0f17] dark:text-white">Months</option>
                   </select>
 
                   <input
@@ -208,7 +201,7 @@ const MortgageCalculator = () => {
                     value={duration}
                     onChange={(e) => setDuration(e.target.value)}
                     placeholder={durationType === "years" ? "Years" : "Months"}
-                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold outline-none transition focus:border-red-700 focus:bg-white"
+                    className="w-full border border-slate-200 bg-[#f8f4ed] px-5 py-4 text-lg font-semibold text-slate-950 outline-none transition focus:border-red-700 focus:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/35 dark:focus:border-red-500 dark:focus:bg-white/10"
                   />
                 </div>
               </div>
@@ -226,7 +219,7 @@ const MortgageCalculator = () => {
                 <button
                   type="button"
                   onClick={resetCalculator}
-                  className="border border-slate-300 bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white"
+                  className="border border-slate-300 bg-white px-8 py-5 text-sm font-black uppercase tracking-[0.22em] text-slate-700 transition hover:border-red-700 hover:bg-red-700 hover:text-white dark:border-white/10 dark:bg-white/5 dark:text-white/80 dark:hover:border-red-500 dark:hover:bg-white/10"
                 >
                   Reset
                 </button>
