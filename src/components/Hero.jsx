@@ -54,7 +54,7 @@ const resolveHeroImage = (imageName) => {
 // Hero content
 const heroSlides = [
   {
-    imageName: "hero-image-2",
+    imageName: "hero-image-1",
     label: "Family Home Ownership",
     kicker: "Family Home Ownership",
     title: "Move Into More Than a House.",
@@ -65,7 +65,7 @@ const heroSlides = [
     position: "center center",
   },
   {
-    imageName: "hero-image-2",
+    imageName: "hero-image-1",
     label: "Modern Residential Living",
     kicker: "Modern Residential Living",
     title: "Build the Future You Want to Live In.",
@@ -76,7 +76,7 @@ const heroSlides = [
     position: "center center",
   },
   {
-    imageName: "hero-image-3",
+    imageName: "hero-image-2",
     label: "Premium Mortgage Living",
     kicker: "Premium Mortgage Living",
     title: "Own Property With Greater Confidence.",
@@ -87,7 +87,7 @@ const heroSlides = [
     position: "center center",
   },
   {
-    imageName: "hero-image-4",
+    imageName: "hero-image-2",
     label: "Secure Home Investment",
     kicker: "Secure Home Investment",
     title: "Secure Land Today. Build Tomorrow.",
