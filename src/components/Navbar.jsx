@@ -46,8 +46,7 @@ const contactLinks = [
 ];
 
 const navLinks = [
-  { label: "Projects", href: "https://haggai-homes-marketplace.vercel.app/" },
-  { label: "Haggai History", href: "/history" },
+  { label: "Marketplace", href: "https://haggai-homes-marketplace.vercel.app/" },
 ];
 
 const Navbar = ({ theme, setTheme }) => {
@@ -586,8 +585,8 @@ const Navbar = ({ theme, setTheme }) => {
 
       <div
         className={`fixed bottom-6 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full border shadow-2xl backdrop-blur-2xl transition duration-300 hover:-translate-y-1 sm:bottom-8 sm:right-8 ${theme === "dark"
-            ? "border-white/20 bg-black/70 text-white shadow-black/30 hover:bg-red-700"
-            : "border-slate-300/80 bg-white text-slate-900 shadow-slate-900/15 hover:bg-slate-100"
+          ? "border-white/20 bg-black/70 text-white shadow-black/30 hover:bg-red-700"
+          : "border-slate-300/80 bg-white text-slate-900 shadow-slate-900/15 hover:bg-slate-100"
           }`}
       >
         <ThemeToggleBtn theme={theme} setTheme={setTheme} />
