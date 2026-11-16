@@ -67,7 +67,7 @@ Mrs Owode is married with children.
   {
     name: "Mr. Oluwatunji Adepetun",
     role: "Independent Non-Executive Director",
-    image: "/images/board-of-directors/adepetun-oluwatunji.jpg",
+    image: "/images/board-of-directors/adepetun-oluwatunji.JPG",
     slug: "oluwatunji-adepetun",
     hasProfile: true,
     imagePosition: "center 20%",
