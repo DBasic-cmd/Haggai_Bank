@@ -526,7 +526,7 @@ const Navbar = ({ theme, setTheme }) => {
                 </a>
 
                 <a
-                  href="https://ibank.haggaibank.com/signup"
+                  href="https://apply.haggaisecure.com/apply"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMenus}
@@ -549,7 +549,7 @@ const Navbar = ({ theme, setTheme }) => {
             </a>
 
             <a
-              href="https://ibank.haggaibank.com/signup"
+              href="https://apply.haggaisecure.com/apply"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden rounded-full bg-red-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition duration-300 hover:-translate-y-0.5 hover:bg-red-800 md:inline-flex"

@@ -65,7 +65,7 @@ const heroSlides = [
     position: "center center",
   },
   {
-    imageName: "hero-image-1",
+    imageName: "hero-image-3",
     label: "Modern Residential Living",
     kicker: "Modern Residential Living",
     title: "Build the Future You Want to Live In.",
@@ -87,7 +87,7 @@ const heroSlides = [
     position: "center center",
   },
   {
-    imageName: "hero-image-2",
+    imageName: "hero-image-4",
     label: "Secure Home Investment",
     kicker: "Secure Home Investment",
     title: "Secure Land Today. Build Tomorrow.",
@@ -339,11 +339,10 @@ const Hero = () => {
           <button
             type="button"
             onClick={() => setActiveTab("personal")}
-            className={`flex-1 border-b-2 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 ${
-              activeTab === "personal"
+            className={`flex-1 border-b-2 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 ${activeTab === "personal"
                 ? "border-red-600 text-white"
                 : "border-transparent text-white/55 hover:text-white/80"
-            }`}
+              }`}
           >
             Personal
           </button>
@@ -351,11 +350,10 @@ const Hero = () => {
           <button
             type="button"
             onClick={() => setActiveTab("corporate")}
-            className={`flex-1 border-b-2 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 ${
-              activeTab === "corporate"
+            className={`flex-1 border-b-2 pb-1 text-center text-xs font-black uppercase tracking-[0.15em] transition-all duration-300 ${activeTab === "corporate"
                 ? "border-red-600 text-white"
                 : "border-transparent text-white/55 hover:text-white/80"
-            }`}
+              }`}
           >
             Corporate
           </button>
